@@ -1,7 +1,0 @@
-Building pid-admission mapping, admission-date mapping
-Building admission-dxList mapping
-Building pid-sortedVisits mapping
-Building pids, dates, strSeqs
-Building pids, dates, strSeqs for 3digit ICD9 code
-Converting strSeqs to intSeqs, and making types
-Converting strSeqs to intSeqs, and making types for 3digit ICD9 code
