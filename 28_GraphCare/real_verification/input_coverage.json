@@ -1,0 +1,118 @@
+{
+  "cohort": {
+    "source": "MIMIC-IV Clinical Database Demo 2.2 (public)",
+    "requested_patients": 100,
+    "selected_patients": 31,
+    "complete_selected_admissions": 75,
+    "patients_with_task_samples": 27,
+    "patients_without_task_samples": 4,
+    "task_samples": 35,
+    "positive_next_admission_labels": 7,
+    "cohort_rule": "Hash-order select patients with 2 to 4 complete admissions, before examining model output or labels; retain all admissions for task label chronology.",
+    "task": "original mortality_prediction_mimic4_fn, unchanged function AST",
+    "task_function_sha256": "657803739b1405ae408715b5f876496d6e4ea17c182b3706c946aa82d2d19f71",
+    "history_discharge_after_target_admission_samples": 0,
+    "target_admission_in_input_samples": 0,
+    "timing_policy": "Preserve original author task even if admissions overlap; report overlap without relabeling or reselection.",
+    "complete_mimic_version": "2.2",
+    "author_original_mimic_version": "2.0",
+    "raw_to_category_coverage": {
+      "diagnoses_icd": {
+        "all_selected_subject_source_rows": 1143,
+        "dropped_missing_required_source_fields": 0,
+        "eligible_nonmissing_rows": 1143,
+        "mapped_rows": 1143,
+        "unmapped_rows": 0,
+        "unique_raw_codes": 617,
+        "unique_unmapped_codes": 0,
+        "rows_with_multiple_distinct_target_categories": 0,
+        "mapped_event_rows": 1143,
+        "rows_without_selected_admission": 0
+      },
+      "procedures_icd": {
+        "all_selected_subject_source_rows": 205,
+        "dropped_missing_required_source_fields": 0,
+        "eligible_nonmissing_rows": 205,
+        "mapped_rows": 205,
+        "unmapped_rows": 0,
+        "unique_raw_codes": 139,
+        "unique_unmapped_codes": 0,
+        "rows_with_multiple_distinct_target_categories": 0,
+        "mapped_event_rows": 205,
+        "rows_without_selected_admission": 0
+      },
+      "prescriptions": {
+        "all_selected_subject_source_rows": 5101,
+        "dropped_missing_required_source_fields": 10,
+        "eligible_nonmissing_rows": 5091,
+        "mapped_rows": 4106,
+        "unmapped_rows": 985,
+        "unique_raw_codes": 688,
+        "unique_unmapped_codes": 36,
+        "rows_with_multiple_distinct_target_categories": 321,
+        "mapped_event_rows": 7321,
+        "rows_without_selected_admission": 0
+      }
+    },
+    "next_admission_candidate_visits": 44,
+    "candidate_visits_with_all_three_raw_event_types": 35,
+    "candidate_visits_with_all_three_mapped_event_types": 35,
+    "otherwise_complete_candidate_visits_dropped_by_mapping": 0,
+    "candidate_visits_missing_after_mapping_by_table": {
+      "diagnoses_icd": 0,
+      "procedures_icd": 8,
+      "prescriptions": 4
+    },
+    "candidate_visits_losing_all_codes_in_a_table_due_to_mapping": {
+      "diagnoses_icd": 0,
+      "procedures_icd": 0,
+      "prescriptions": 0
+    },
+    "unmapped_raw_codes": "Original CrossMap behavior returns no mapped code; counts disclosed. No guessing or zero-filling mappings.",
+    "private_sample_file_sha256": "e5b2aeb7cb3c085d79020d10bdbb12b68f88c29529c6d8ea9af6d63e8e0e3a93"
+  },
+  "knowledge": {
+    "real_knowledge_source": "GraphCare author public UMLS subset",
+    "nodes": 564,
+    "real_source_triples": 305,
+    "relations": 38,
+    "ehr_anchor_nodes": 289,
+    "isolated_ehr_anchors": 211,
+    "category_coverage": {
+      "CCSCM": {
+        "unique_categories": 119,
+        "uniquely_mapped_categories": 44,
+        "categories_with_public_edges": 44,
+        "total_history_occurrences": 624,
+        "history_occurrences_with_public_edges": 220
+      },
+      "CCSPROC": {
+        "unique_categories": 52,
+        "uniquely_mapped_categories": 10,
+        "categories_with_public_edges": 10,
+        "total_history_occurrences": 130,
+        "history_occurrences_with_public_edges": 22
+      },
+      "ATC": {
+        "unique_categories": 118,
+        "uniquely_mapped_categories": 118,
+        "categories_with_public_edges": 24,
+        "total_history_occurrences": 1336,
+        "history_occurrences_with_public_edges": 277
+      }
+    },
+    "ccs_exact_mapping_file_sha256": "e6607ffb30bc7697360ffd6e18258b08f907259f094cff4c01261ea8b3298054",
+    "ccs_mapping_source": "Official scispaCy public UMLS2022AB KB",
+    "full_public_knowledge_concepts_scanned": 3920422,
+    "ccs_match_uniqueness_limit": "Unique means within the complete published scispaCy subset, not every concept in the licensed UMLS full release.",
+    "node_numbering": "Isolated categories first, connected concepts last; all node-indexed arrays follow this order. This satisfies original PyG inferred-node-count assumption without adding edges.",
+    "selected_edges_per_anchor_cap": 4,
+    "selection": "First sorted original incident triples per anchor; no invented edges.",
+    "missing_original_resources": [
+      "private CCSCM-to-UMLS and CCSPROC-to-UMLS mapping pickles",
+      "original OpenAI vectors",
+      "original whole-graph clustering inputs"
+    ],
+    "approximation": "Unresolved real category nodes are retained by their actual category names with no added medical edges; graph subset and vectors differ from original pipeline."
+  }
+}

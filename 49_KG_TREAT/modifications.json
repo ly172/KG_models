@@ -1,0 +1,42 @@
+{
+  "source_commit": "aacb50a8dfda6169ebbe37c0294ce8bfa14746ba",
+  "changes": [
+    {
+      "file": "model/bert_custom.py",
+      "kind": "library import compatibility",
+      "effect": "Move chunking/pruning helpers and ModelOutput to their current Transformers modules."
+    },
+    {
+      "file": "model/modeling_kgtreat.py",
+      "kind": "library import compatibility",
+      "effect": "Use Python importlib.metadata, relocated ModelOutput/logging, and installed-module availability check."
+    },
+    {
+      "file": "utils/configuration_utils.py",
+      "kind": "library import compatibility",
+      "effect": "Import PretrainedConfig and logging from their documented current locations."
+    },
+    {
+      "file": "reproduce.py",
+      "kind": "new runner and synthetic inputs",
+      "effect": "Generate paired artificial histories and 1024-dimensional concept input; preserve projection; set CPU threads and UTF-8 logs; use original model loss for two updates."
+    }
+  ],
+  "original_loss_issue_retained": {
+    "nonfactual_gradient_abs_sum": 0.4958292841911316,
+    "description": "Original get_loss averages a head over all samples before treatment masking."
+  },
+  "concept_initialization_behavior_retained": {
+    "source": "author constructor in locked environment",
+    "provided_shape": [
+      32,
+      1024
+    ],
+    "frozen": true,
+    "preserved_values": false,
+    "max_abs_difference": 0.4132114350795746,
+    "input_standard_deviation": 0.09937974810600281,
+    "initialized_table_standard_deviation": 0.02010941319167614,
+    "interpretation": "Original constructor post_init applies BERT embedding initialization, including the frozen concept lookup table. This package preserves this behavior and starts from random weights."
+  }
+}

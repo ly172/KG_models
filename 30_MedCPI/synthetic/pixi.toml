@@ -1,0 +1,22 @@
+[workspace]
+name = "05_medcpi-synthetic"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[dependencies]
+python = "3.11.*"
+
+[pypi-dependencies]
+torch = { version = "==2.5.1+cpu", index = "https://download.pytorch.org/whl/cpu" }
+numpy = "==1.26.4"
+scikit-learn = "==1.5.2"
+
+transformers = "==4.46.3"
+huggingface-hub = "==0.26.5"
+gdown = "==5.2.0"
+
+[tasks]
+smoke = "python reproduce.py"
+reproduce = "python reproduce.py"
+public-ddb = "python reproduce_ddb.py"

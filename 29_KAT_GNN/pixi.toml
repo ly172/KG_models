@@ -1,0 +1,19 @@
+[workspace]
+name = "04_kat_gnn-synthetic"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[dependencies]
+python = "3.11.*"
+
+[pypi-dependencies]
+torch = { version = "==2.5.1+cpu", index = "https://download.pytorch.org/whl/cpu" }
+numpy = "==1.26.4"
+torch-geometric = "==2.6.1"
+scikit-learn = "==1.5.2"
+pandas = "==2.2.3"
+
+[tasks]
+smoke = "python reproduce.py"
+reproduce = "python reproduce.py"

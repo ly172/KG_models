@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "case": "original_dnc_import",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true
+    },
+    {
+      "case": "original_removed_metric_import",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true
+    },
+    {
+      "case": "original_cuda_device",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true
+    },
+    {
+      "case": "original_legacy_vocabulary",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true
+    },
+    {
+      "case": "repaired_imports",
+      "exit_code": 0,
+      "expected_success": true,
+      "expectation_met": true
+    }
+  ],
+  "source_checks": {
+    "code/models.py": {
+      "all_function_and_class_definitions_identical": true,
+      "definition_count": 5
+    },
+    "code/layers.py": {
+      "all_function_and_class_definitions_identical": true,
+      "definition_count": 1
+    },
+    "code/util.py": {
+      "all_function_and_class_definitions_identical": true,
+      "definition_count": 7
+    }
+  },
+  "log_edit": "Only package absolute path replaced with <PACKAGE_ROOT>; errors retained.",
+  "training_schedule_change": "Run entry sets CPU and requested epochs; author default epochs 40 remains when environment override is absent."
+}

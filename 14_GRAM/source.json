@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/mp2893/gram",
+  "commit": "28cb66511c0c42629386b96dafe18c2b316c184f",
+  "archive_url": "https://codeload.github.com/mp2893/gram/zip/28cb66511c0c42629386b96dafe18c2b316c184f",
+  "archive_sha256": "058987d5829fd8ccb9e1a365be98defda2c09cb0075f79ffd25d4328c77ee0f8",
+  "files": {
+    "LICENSE": "9b96ade3b8f0aa2258b557c1b52d23757772d7563bf43e151052146a8ec87d4e",
+    "README.md": "dc0377dba2807f2a1719934573b016cf156021d4c9c499618ba19e2e3aa77071",
+    "build_trees.py": "d851cf9563e59e89cb7ea37ee0f28c7e0f6710cb9b329f4ec37208fbaa4c589c",
+    "create_glove_comap.py": "814f0c6e3fc780ea4f1d124cb9fdfb07e394ef88b12cad0f27cf349135837d5c",
+    "glove.py": "50bb403393b5602960de66f220be47f227e2b674c34d834591893282a3da0e76",
+    "gram.py": "f03ba8a59565cd84b949b9dcc8e31899c228cd1ca19d8e391b19070b2d56b1ca",
+    "process_mimic.py": "04062b4eba6aa349401a8d4eb573affa8abebd719336e1f50553dbb5accc40f2"
+  }
+}

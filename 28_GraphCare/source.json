@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/pat-jj/GraphCare",
+  "commit": "fe92aa67add80b62d4b5108d570b6483ee69a5d4",
+  "files": {
+    "graphcare.py": "6b7d940de33ae4a4e95faa502c23af2e210eb9cab076216140bae1465727017a",
+    "graphcare_/__init__.py": "69e852a8266dfd1bc622d1406e485172e0f393904a6e0acd8d2146823abc26bd",
+    "graphcare_/gnns.py": "38c0234d399ab07e4532e6b8610c6b03ce86626a479bbfb04a54ab62c586e163",
+    "graphcare_/model.py": "4455a6109b0de010906f175a64e0cbe4ac92efd88ef3d6a61503c416f3846422",
+    "graphcare_/splitter.py": "4d772fd17b9497880dcdf84f3e1b694a84773bf64755ff78971ad409712bfa66",
+    "graphcare_/utils.py": "8592b750f4af712a49518f4c3f4f18656cc8954818aba63b6a57bcd6eaf06a63",
+    "README.md": "19e42808068bc6d7623c274167c41c42ed0b200765885da69f402f1711a7fcec",
+    "LICENSE": "b7585842313ff1c90a768cef885929ddc1887c03ef57c8ca0c5cb6a9080005f9"
+  },
+  "original_file_hashes": {
+    "graphcare.py": "40898002fcb8ef1207718b1c1d274a6ade48190f2527d308b93f77e3b29ef3a6"
+  },
+  "publication_sanitization": {
+    "file": "graphcare.py",
+    "line": 417,
+    "change": "Clear hard-coded author online logging api_token string in unused single_run entry."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "first_complete_run_passed": true,
+  "fresh_directory_complete_run_passed": true,
+  "fresh_environment_and_generated_inputs_from_scratch": true,
+  "final_files_identical_to_fresh_run": true,
+  "costs_identical": true,
+  "costs": [
+    {
+      "train": 61.774253,
+      "validation": 56.132467,
+      "test": 52.476367
+    }
+  ],
+  "input_bytes_identical_after_csv_reader_optimization": {
+    "ADMISSIONS.csv": true,
+    "DIAGNOSES_ICD.csv": true
+  },
+  "initial_direct_interpreter_diagnostic": {
+    "exit_code": 3228369023,
+    "hex": "C06D007F",
+    "classified_as": "native_library_environment_startup_failure",
+    "formal_pixi_entry_exit_code": 0
+  },
+  "unfixed_loader_original_exit_code": 1,
+  "fixed_loader_with_author_model_exit_code": 0,
+  "seed_change_note": "Python string-hash seed fixed to 0 after preliminary runs showed different code numbering; author model formulas and dropout stream retained."
+}

@@ -1,0 +1,82 @@
+{
+  "tree_tables": [
+    {
+      "level": 1,
+      "shape": [
+        0,
+        2
+      ],
+      "dtype": "int32",
+      "original_exception": "IndexError: tuple index out of range"
+    },
+    {
+      "level": 2,
+      "shape": [
+        96,
+        3
+      ],
+      "dtype": "int32",
+      "nonempty_values_and_dtypes_identical": true
+    },
+    {
+      "level": 3,
+      "shape": [
+        168,
+        4
+      ],
+      "dtype": "int32",
+      "nonempty_values_and_dtypes_identical": true
+    },
+    {
+      "level": 4,
+      "shape": [
+        492,
+        5
+      ],
+      "dtype": "int32",
+      "nonempty_values_and_dtypes_identical": true
+    },
+    {
+      "level": 5,
+      "shape": [
+        284,
+        6
+      ],
+      "dtype": "int32",
+      "nonempty_values_and_dtypes_identical": true
+    }
+  ],
+  "empty_attention_shape": [
+    0,
+    2
+  ],
+  "empty_embedding_shape": [
+    0,
+    128
+  ],
+  "other_author_functions_identical": {
+    "unzip": true,
+    "numpy_floatX": true,
+    "get_random_weight": true,
+    "load_embedding": true,
+    "init_params": true,
+    "init_tparams": true,
+    "dropout_layer": true,
+    "_slice": true,
+    "gru_layer": true,
+    "generate_attention": true,
+    "softmax_layer": true,
+    "build_model": true,
+    "load_data": true,
+    "adadelta": true,
+    "padMatrix": true,
+    "calculate_cost": true,
+    "print2file": true,
+    "train_GRAM": true,
+    "parse_arguments": true,
+    "calculate_dimSize": true,
+    "get_rootCode": true
+  },
+  "added_patients_or_nodes": 0,
+  "python3_conversion": "Standard lib2to3 syntax/iterator conversion; no division or random-stream replacement."
+}

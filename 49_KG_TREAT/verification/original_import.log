@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<PACKAGE_ROOT>\upstream\model\modeling_kgtreat.py", line 28, in <module>
+    from transformers.utils.versions import importlib_metadata
+ImportError: cannot import name 'importlib_metadata' from 'transformers.utils.versions' (<PACKAGE_ROOT>\.pixi\envs\default\Lib\site-packages\transformers\utils\versions.py)

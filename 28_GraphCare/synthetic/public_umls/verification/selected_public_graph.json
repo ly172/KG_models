@@ -1,0 +1,701 @@
+{
+  "seed_cui": "C0011849",
+  "seed_name": "Diabetes mellitus",
+  "nodes": [
+    {
+      "cui": "C0011849",
+      "name": "Diabetes mellitus"
+    },
+    {
+      "cui": "C0000992",
+      "name": "Acetohexamide"
+    },
+    {
+      "cui": "C0004606",
+      "name": "Nonproliferative diabetic retinopathy"
+    },
+    {
+      "cui": "C0005330",
+      "name": "Bezafibrate"
+    },
+    {
+      "cui": "C0006938",
+      "name": "Captopril"
+    },
+    {
+      "cui": "C0008287",
+      "name": "Chlorpropamide"
+    },
+    {
+      "cui": "C0011854",
+      "name": "Type 1 diabetes mellitus"
+    },
+    {
+      "cui": "C0011860",
+      "name": "Type 2 diabetes mellitus"
+    },
+    {
+      "cui": "C0011871",
+      "name": "Diabetic peripheral angiopathy"
+    },
+    {
+      "cui": "C0011876",
+      "name": "Cataract due to diabetes mellitus"
+    },
+    {
+      "cui": "C0011877",
+      "name": "Diabetic coma with ketoacidosis"
+    },
+    {
+      "cui": "C0011880",
+      "name": "Diabetic ketoacidosis"
+    },
+    {
+      "cui": "C0011881",
+      "name": "Kidney disorder due to diabetes mellitus"
+    },
+    {
+      "cui": "C0011882",
+      "name": "Diabetic neuropathy"
+    },
+    {
+      "cui": "C0011884",
+      "name": "Retinopathy due to diabetes mellitus"
+    },
+    {
+      "cui": "C0014130",
+      "name": "Disorder of endocrine system"
+    },
+    {
+      "cui": "C0014136",
+      "name": "Structure of endocrine system"
+    },
+    {
+      "cui": "C0017628",
+      "name": "Glyburide"
+    },
+    {
+      "cui": "C0017631",
+      "name": "Gliclazide"
+    },
+    {
+      "cui": "C0017642",
+      "name": "Glipizide"
+    },
+    {
+      "cui": "C0017667",
+      "name": "Nodular glomerulosclerosis"
+    },
+    {
+      "cui": "C0025598",
+      "name": "Metformin"
+    },
+    {
+      "cui": "C0026088",
+      "name": "Mifepristone"
+    },
+    {
+      "cui": "C0040372",
+      "name": "Tolazamide"
+    },
+    {
+      "cui": "C0040374",
+      "name": "Tolbutamide"
+    },
+    {
+      "cui": "C0050393",
+      "name": "Acarbose"
+    },
+    {
+      "cui": "C0061323",
+      "name": "Glimepiride-containing product"
+    },
+    {
+      "cui": "C0061328",
+      "name": "Gliquidone-containing product"
+    },
+    {
+      "cui": "C0065374",
+      "name": "Lisinopril"
+    },
+    {
+      "cui": "C0066535",
+      "name": "Miglitol-containing product"
+    },
+    {
+      "cui": "C0071097",
+      "name": "Pioglitazone-containing product"
+    },
+    {
+      "cui": "C0072973",
+      "name": "Ramipril"
+    }
+  ],
+  "relations": [
+    "cause_of",
+    "finding_site_of",
+    "has_active_ingredient",
+    "is_associated_with",
+    "isa",
+    "may_cause",
+    "may_treat",
+    "possibly_equivalent_to",
+    "same_as",
+    "was_a"
+  ],
+  "triples": [
+    [
+      "C0000992",
+      "has_active_ingredient",
+      "C0000992"
+    ],
+    [
+      "C0000992",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0000992",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0000992",
+      "same_as",
+      "C0000992"
+    ],
+    [
+      "C0004606",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0004606",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0004606",
+      "same_as",
+      "C0004606"
+    ],
+    [
+      "C0005330",
+      "has_active_ingredient",
+      "C0005330"
+    ],
+    [
+      "C0005330",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0005330",
+      "same_as",
+      "C0005330"
+    ],
+    [
+      "C0006938",
+      "has_active_ingredient",
+      "C0006938"
+    ],
+    [
+      "C0006938",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0006938",
+      "may_treat",
+      "C0011881"
+    ],
+    [
+      "C0008287",
+      "has_active_ingredient",
+      "C0008287"
+    ],
+    [
+      "C0008287",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0008287",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0011849",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011849",
+      "isa",
+      "C0011854"
+    ],
+    [
+      "C0011849",
+      "isa",
+      "C0011860"
+    ],
+    [
+      "C0011849",
+      "isa",
+      "C0011881"
+    ],
+    [
+      "C0011849",
+      "possibly_equivalent_to",
+      "C0011880"
+    ],
+    [
+      "C0011849",
+      "same_as",
+      "C0011849"
+    ],
+    [
+      "C0011854",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011854",
+      "may_cause",
+      "C0011880"
+    ],
+    [
+      "C0011854",
+      "may_cause",
+      "C0011884"
+    ],
+    [
+      "C0011854",
+      "possibly_equivalent_to",
+      "C0011854"
+    ],
+    [
+      "C0011854",
+      "same_as",
+      "C0011854"
+    ],
+    [
+      "C0011860",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011860",
+      "is_associated_with",
+      "C0011854"
+    ],
+    [
+      "C0011860",
+      "may_cause",
+      "C0011884"
+    ],
+    [
+      "C0011860",
+      "possibly_equivalent_to",
+      "C0011860"
+    ],
+    [
+      "C0011860",
+      "same_as",
+      "C0011860"
+    ],
+    [
+      "C0011871",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011871",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011876",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011876",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011877",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011877",
+      "cause_of",
+      "C0011880"
+    ],
+    [
+      "C0011877",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011880",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011880",
+      "possibly_equivalent_to",
+      "C0011849"
+    ],
+    [
+      "C0011880",
+      "possibly_equivalent_to",
+      "C0011880"
+    ],
+    [
+      "C0011880",
+      "was_a",
+      "C0011880"
+    ],
+    [
+      "C0011881",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011881",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011881",
+      "isa",
+      "C0017667"
+    ],
+    [
+      "C0011881",
+      "possibly_equivalent_to",
+      "C0011881"
+    ],
+    [
+      "C0011881",
+      "possibly_equivalent_to",
+      "C0017667"
+    ],
+    [
+      "C0011881",
+      "same_as",
+      "C0011881"
+    ],
+    [
+      "C0011882",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011882",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011882",
+      "possibly_equivalent_to",
+      "C0011882"
+    ],
+    [
+      "C0011884",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0011884",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0011884",
+      "isa",
+      "C0004606"
+    ],
+    [
+      "C0011884",
+      "same_as",
+      "C0011884"
+    ],
+    [
+      "C0011884",
+      "was_a",
+      "C0011884"
+    ],
+    [
+      "C0014130",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0014130",
+      "isa",
+      "C0011849"
+    ],
+    [
+      "C0014130",
+      "same_as",
+      "C0014130"
+    ],
+    [
+      "C0014130",
+      "was_a",
+      "C0014130"
+    ],
+    [
+      "C0017628",
+      "has_active_ingredient",
+      "C0017628"
+    ],
+    [
+      "C0017628",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0017628",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0017628",
+      "same_as",
+      "C0017628"
+    ],
+    [
+      "C0017631",
+      "has_active_ingredient",
+      "C0017631"
+    ],
+    [
+      "C0017631",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0017631",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0017642",
+      "has_active_ingredient",
+      "C0017642"
+    ],
+    [
+      "C0017642",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0017642",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0017667",
+      "cause_of",
+      "C0011849"
+    ],
+    [
+      "C0017667",
+      "finding_site_of",
+      "C0014136"
+    ],
+    [
+      "C0017667",
+      "isa",
+      "C0017667"
+    ],
+    [
+      "C0017667",
+      "possibly_equivalent_to",
+      "C0011881"
+    ],
+    [
+      "C0017667",
+      "possibly_equivalent_to",
+      "C0017667"
+    ],
+    [
+      "C0025598",
+      "has_active_ingredient",
+      "C0025598"
+    ],
+    [
+      "C0025598",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0025598",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0026088",
+      "has_active_ingredient",
+      "C0026088"
+    ],
+    [
+      "C0026088",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0026088",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0026088",
+      "same_as",
+      "C0026088"
+    ],
+    [
+      "C0040372",
+      "has_active_ingredient",
+      "C0040372"
+    ],
+    [
+      "C0040372",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0040372",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0040374",
+      "has_active_ingredient",
+      "C0040374"
+    ],
+    [
+      "C0040374",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0040374",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0050393",
+      "has_active_ingredient",
+      "C0050393"
+    ],
+    [
+      "C0050393",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0050393",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0050393",
+      "same_as",
+      "C0050393"
+    ],
+    [
+      "C0061323",
+      "has_active_ingredient",
+      "C0061323"
+    ],
+    [
+      "C0061323",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0061323",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0061328",
+      "has_active_ingredient",
+      "C0061328"
+    ],
+    [
+      "C0061328",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0061328",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0065374",
+      "has_active_ingredient",
+      "C0065374"
+    ],
+    [
+      "C0065374",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0066535",
+      "has_active_ingredient",
+      "C0066535"
+    ],
+    [
+      "C0066535",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0066535",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0071097",
+      "has_active_ingredient",
+      "C0071097"
+    ],
+    [
+      "C0071097",
+      "may_treat",
+      "C0011849"
+    ],
+    [
+      "C0071097",
+      "may_treat",
+      "C0011860"
+    ],
+    [
+      "C0072973",
+      "has_active_ingredient",
+      "C0072973"
+    ],
+    [
+      "C0072973",
+      "may_treat",
+      "C0011849"
+    ]
+  ],
+  "selection": "Seed C0011849 fixed before model output; take the first 31 unique neighbor CUIs in lexical order, then retain all source triples whose endpoints are in the 32-node set.",
+  "source_rows_scanned": 1212586,
+  "seed_incident_rows": 306,
+  "seed_unique_neighbors": 292,
+  "selected_source_rows": 109,
+  "unique_selected_triples": 109,
+  "invented_or_reversed_edges": 0,
+  "edge_weight_handling": "The fourth source column is not supplied to GraphCare; the author UMLS sampling script also represents a triple by source, relation, target only."
+}

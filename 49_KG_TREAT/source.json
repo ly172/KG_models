@@ -1,0 +1,46 @@
+{
+  "repository": "https://github.com/ruoqi-liu/KG-TREAT",
+  "commit": "aacb50a8dfda6169ebbe37c0294ce8bfa14746ba",
+  "files": [
+    {
+      "path": "upstream/model/bert_custom.py",
+      "sha256": "658cffedcd1e322f652bd71947f27e53f975e1d81cacb6d156cc4d00b95e0bc9",
+      "git_blob": "d73282bf3299320bd018b2ec75506ab9157914a3"
+    },
+    {
+      "path": "upstream/model/gnn.py",
+      "sha256": "2af9acbbc30e6b64a6eec61473a8be37186d797e8f16dcd172fd378f83b6abe6",
+      "git_blob": "f2d443cfe751f99b96672f99205b969d0db75c42"
+    },
+    {
+      "path": "upstream/model/modeling_kgtreat.py",
+      "sha256": "e772598be825641d8d7ef4a93c7e549a14c2b492c816bf591b2fde981d35ccf3",
+      "git_blob": "4105257fe46a71aa19f709d5f2cf95b8e5a6ae36"
+    },
+    {
+      "path": "upstream/utils/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "git_blob": "8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": "upstream/utils/configuration_utils.py",
+      "sha256": "f15e62c8b9d833bbaab2feaa2bdfb408a22cb71bf1856707158016f1a569616e",
+      "git_blob": "791fa9de8b9742e248397539e3513eaa3162d5f4"
+    },
+    {
+      "path": "upstream/train.py",
+      "sha256": "a9a16dcb053fb6bcda71b88343fe8023c2e4e18bff43a659521edaa51bc951de",
+      "git_blob": "9a19d84b89e338b2ef4c5578baa008492a1db9ec"
+    },
+    {
+      "path": "upstream/LICENSE",
+      "sha256": "b08ed2e31509d2f6b15ff8632a84ebd74a61ed757edc734fdeafc129497621bc",
+      "git_blob": "e77d5b539d75b959c631be7818d099bd2379cbae"
+    },
+    {
+      "path": "upstream/README.md",
+      "sha256": "ca5d84759873210a49a355ef4973d52779bcf8042db6763565a242b3c321b215",
+      "git_blob": "9caf77f55d255db5034e03c23a67702ea94c7946"
+    }
+  ]
+}

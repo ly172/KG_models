@@ -1,0 +1,44 @@
+[
+  {
+    "file": "envs/block_pushing.py",
+    "before": "skimage.draw.circle(\n                        pos[0]*10 + 5, pos[1]*10 + 5, 5, im.shape)",
+    "after": "skimage.draw.disk(\n                        (pos[0]*10 + 5, pos[1]*10 + 5), 5, shape=im.shape[:2])",
+    "reason": "Use the renamed filled-circle drawing function in Shapes."
+  },
+  {
+    "file": "envs/block_pushing.py",
+    "before": "return state_obs, reward, done, None",
+    "after": "return state_obs, reward, done, {}",
+    "reason": "Gym TimeLimit stores its episode-end marker in the info dictionary."
+  },
+  {
+    "file": "eval.py",
+    "before": "num_workers=4",
+    "after": "num_workers=0",
+    "reason": "Avoid Windows process spawning in the unguarded author entry point."
+  },
+  {
+    "file": "eval.py",
+    "before": "eval_loader.__iter__().next()",
+    "after": "next(iter(eval_loader))",
+    "reason": "Use the current Python iterator interface."
+  },
+  {
+    "file": "train.py",
+    "before": "num_workers=4",
+    "after": "num_workers=0",
+    "reason": "Avoid Windows process spawning in the unguarded author entry point."
+  },
+  {
+    "file": "train.py",
+    "before": "train_loader.__iter__().next()",
+    "after": "next(iter(train_loader))",
+    "reason": "Use the current Python iterator interface."
+  },
+  {
+    "file": "utils.py",
+    "before": "return zeros.scatter_(1, indices.unsqueeze(1), 1)",
+    "after": "return zeros.scatter_(1, indices.long().unsqueeze(1), 1)",
+    "reason": "Windows native action integers can be int32; scatter requires int64 indices. The integer action values are preserved."
+  }
+]

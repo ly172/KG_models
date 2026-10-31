@@ -1,0 +1,103 @@
+{
+  "real_source": "MIMIC-IV Clinical Database Demo 2.2 (public)",
+  "synthetic_patient_rows": 0,
+  "patient_splits_disjoint": true,
+  "aligned_event_counts": {
+    "diagnosis_mapped": 507,
+    "diagnosis_unmapped": 8,
+    "medication_mapped": 1022,
+    "medication_unmapped": 400,
+    "patients": 15,
+    "procedure_mapped": 102,
+    "visits": 37
+  },
+  "knowledge_anchor_coverage": {
+    "diagnosis_events": 515,
+    "diagnosis_umls_anchor_events": 507,
+    "procedure_events": 102,
+    "procedure_umls_anchor_events": 102,
+    "medication_events": 1422,
+    "medication_umls_anchor_events": 982,
+    "medication_rxnorm_only_events": 40,
+    "medication_unmapped_events": 400,
+    "diagnosis_unmapped_events": 8
+  },
+  "unmapped_events_used_as_kg_anchors": 0,
+  "temporal_check": {
+    "instances": 22,
+    "target_visit_in_history": 0,
+    "history_discharge_after_prediction_instances": 0,
+    "interpretation": "Author history is ordered by admission. Overlapping admissions can contain events after the target admission begins."
+  },
+  "construct": {
+    "allowed_semantic_group_ids": [
+      "CHEM",
+      "DISO",
+      "PROC"
+    ],
+    "construct_protocol": "split_then_construct_then_evaluate",
+    "dataset": "mimic4",
+    "global_expansion_hops": 1,
+    "num_edges": 1200,
+    "num_kept_raw_relations": 55,
+    "num_nodes": 1025,
+    "num_train_anchor_concepts": 418,
+    "schema_dataset": "shared",
+    "schema_decision_source": "llm",
+    "schema_resolution": "shared_task",
+    "schema_scope": "task_specific_shared_across_datasets",
+    "schema_shared_across_datasets": true,
+    "schema_task": "mortality",
+    "stats": {
+      "canonical_relation_has_causative_agent": 201,
+      "canonical_relation_has_pathophysiology": 6,
+      "canonical_relation_treated_by": 993,
+      "num_anchor_incident_kept_edges_after_semantic_filter": 1200,
+      "num_anchor_incident_kept_edges_before_semantic_filter": 1257,
+      "num_anchor_nodes_in_graph": 73,
+      "num_anchor_nodes_outside_smed": 0,
+      "num_edges": 1200,
+      "num_edges_dropped_by_semantic_group_filter": 57,
+      "num_induced_kept_edges": 1200,
+      "num_non_anchor_nodes_in_graph": 952
+    },
+    "task": "mortality",
+    "train_anchor_scope": "training_split_only"
+  },
+  "personalize": {
+    "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+    "dataset": "mimic4",
+    "granularity": "visit",
+    "split_stats": [
+      {
+        "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+        "num_anchor_concepts_total": 1078,
+        "num_instances": 19,
+        "num_pkg_edges": 5424,
+        "num_pkg_nodes": 4971,
+        "split": "train"
+      },
+      {
+        "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+        "num_anchor_concepts_total": 29,
+        "num_instances": 1,
+        "num_pkg_edges": 182,
+        "num_pkg_nodes": 171,
+        "split": "valid"
+      },
+      {
+        "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+        "num_anchor_concepts_total": 58,
+        "num_instances": 2,
+        "num_pkg_edges": 226,
+        "num_pkg_nodes": 227,
+        "split": "test"
+      }
+    ],
+    "stage": "personalize",
+    "task": "mortality"
+  },
+  "scope": "Author model on a small MIMIC cohort with the documented public terminology subset.",
+  "mapping_policy": "Author mapper outputs feed graph construction; comparisons with public sources are saved alongside the mappings.",
+  "api_use": "Uses a GPT-5 relation schema published by the authors, plus local public terminology files."
+}

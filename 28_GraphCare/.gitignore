@@ -1,0 +1,11 @@
+.pixi/
+.private/
+.run/
+outputs/
+__pycache__/
+public_umls/.assets/
+public_umls/.pixi/
+public_umls/outputs/
+/resources/*.csv
+/resources/*.part
+/resources/*.download

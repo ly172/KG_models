@@ -1,0 +1,7 @@
+{
+  "original_file_sha256": "40898002fcb8ef1207718b1c1d274a6ade48190f2527d308b93f77e3b29ef3a6",
+  "published_file_sha256": "6b7d940de33ae4a4e95faa502c23af2e210eb9cab076216140bae1465727017a",
+  "file": "upstream/graphcare.py",
+  "field": "api_token",
+  "scope": "Unused online logging configuration only"
+}

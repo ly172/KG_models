@@ -1,0 +1,25 @@
+{
+  "first_run_passed": true,
+  "fresh_directory_passed": true,
+  "fresh_environment_and_inputs_created_from_scratch": true,
+  "metrics_identical": true,
+  "final_executable_files_identical_to_fresh_run": {
+    "pixi.lock": true,
+    "pixi.toml": true,
+    "prepare_author.py": true,
+    "read_legacy_vocabulary.py": true,
+    "reproduce.py": true,
+    "simulate_inputs.py": true,
+    "verify_compatibility.py": true,
+    "upstream/LICENSE": true,
+    "upstream/README.md": true,
+    "upstream/code/layers.py": true,
+    "upstream/code/models.py": true,
+    "upstream/code/train_GAMENet.py": true,
+    "upstream/code/util.py": true,
+    "upstream/data/ddi_A_final.pkl": true,
+    "upstream/data/ehr_adj_final.pkl": true,
+    "upstream/data/voc_final.pkl": true
+  },
+  "log_redaction": "Package directories and user/MIMIC root paths replaced with placeholders; original error and numerical text retained."
+}

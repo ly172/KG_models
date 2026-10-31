@@ -1,0 +1,74 @@
+{
+  "entry": "gamenet",
+  "package": "27_GAMENet",
+  "command": [
+    "pixi",
+    "run",
+    "--locked",
+    "smoke"
+  ],
+  "exit_code": 0,
+  "seconds": 537.112,
+  "result": {
+    "status": "passed",
+    "model": "Author GAMENet with DDI",
+    "inputs": {
+      "kind": "public_MIMIC_IV_Demo_2_2",
+      "source": "https://physionet.org/content/mimic-iv-demo/2.2/",
+      "patients": 23,
+      "visits": 68,
+      "matching_counts": {
+        "diagnoses_icd.csv.gz_rows": 4506,
+        "diagnoses_icd.csv.gz_matched": 2078,
+        "procedures_icd.csv.gz_rows": 722,
+        "procedures_icd.csv.gz_matched": 387,
+        "prescription_rows": 18087,
+        "prescription_rows_matched": 9380
+      },
+      "vocab_sizes": {
+        "diag_voc": 1960,
+        "pro_voc": 1432,
+        "med_voc": 153
+      },
+      "split": {
+        "train_patients": 15,
+        "test_patients": 4,
+        "validation_patients": 4
+      },
+      "selection": "Patients with at least two admissions containing matched ICD-9 diagnoses, ICD-9 procedures and medications.",
+      "mapping": "Exact author ICD-9 vocabulary match; author NDC to RxNorm table, first author ATC entry per RxNorm code, and four-character ATC medication groups.",
+      "excluded": "ICD-10 codes, unmatched prescriptions, visits missing a required code group, and patients with fewer than two retained visits.",
+      "graphs": "Author public EHR medication co-occurrence and DDI graphs.",
+      "vocabulary_serialization": {
+        "canonical_sha256": "4cff545af1717ef18a61a32d44adfe3fdc42c61a30efe1510a1f46378b308158",
+        "counts": {
+          "diag_voc": 1960,
+          "med_voc": 153,
+          "pro_voc": 1432
+        },
+        "scope": "Original index-to-code and code-to-index dictionaries retained; obsolete serialized class methods are unnecessary for author training."
+      }
+    },
+    "epochs": 1,
+    "embedding_dim": 64,
+    "device": "cpu",
+    "steps": [
+      {
+        "stage": "train",
+        "exit_code": 0,
+        "seconds": 105.321
+      },
+      {
+        "stage": "test",
+        "exit_code": 0,
+        "seconds": 49.53
+      }
+    ],
+    "metrics": {
+      "ddi_rate": 0.0408,
+      "jaccard": 0.2534,
+      "prauc": 0.4423
+    },
+    "checkpoint_sha256": "96186ff9f13ce4d39e897b031adbc85477651e68eb4e90ce1a4d1ff9594a88d0"
+  }
+}

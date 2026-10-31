@@ -1,0 +1,37 @@
+{
+  "repository": "https://github.com/hw146/MedCPI",
+  "commit": "9413431d8741dfb875d12a2a8d516c94643d9748",
+  "source_policy": "Fixed author files are verified before use. The formal trainer has two duplicate report fields removed because they refer to an undefined variable.",
+  "files": [
+    {
+      "path": "scripts/integrate_model.py",
+      "url": "https://raw.githubusercontent.com/hw146/MedCPI/9413431d8741dfb875d12a2a8d516c94643d9748/scripts/integrate_model.py",
+      "sha256": "b732319425d48f657f868ffab8b41caa539258fde9955f9cbba102e5e7b3c2bb",
+      "bytes": 17552
+    },
+    {
+      "path": "scripts/integrate_dataset.py",
+      "url": "https://raw.githubusercontent.com/hw146/MedCPI/9413431d8741dfb875d12a2a8d516c94643d9748/scripts/integrate_dataset.py",
+      "sha256": "65cf30ff8427a4eef3857beef39e3ec12128725e1c7c5bce7f9fd69ff4fe2f4e",
+      "bytes": 12046
+    },
+    {
+      "path": "scripts/path_roots.py",
+      "url": "https://raw.githubusercontent.com/hw146/MedCPI/9413431d8741dfb875d12a2a8d516c94643d9748/scripts/path_roots.py",
+      "sha256": "9e22495e02b50d7cce7b0858f8e8439135a4dafb7c3ddb5c70baf1474d7791e9",
+      "bytes": 1854
+    },
+    {
+      "path": "scripts/sapbert_map_mentions.py",
+      "url": "https://raw.githubusercontent.com/hw146/MedCPI/9413431d8741dfb875d12a2a8d516c94643d9748/scripts/sapbert_map_mentions.py",
+      "sha256": "901aeef0c10cc050cbacf34de2a1018573fcc4c311af057dac087a3e7ce315e1",
+      "bytes": 23644
+    },
+    {
+      "path": "scripts/train_integrate_formal.py",
+      "url": "https://raw.githubusercontent.com/hw146/MedCPI/9413431d8741dfb875d12a2a8d516c94643d9748/scripts/train_integrate_formal.py",
+      "sha256": "c896b629354c06b5f275a61246d1cff2631e9eb544cce9d3eadd70d590699233",
+      "bytes": 25094
+    }
+  ]
+}

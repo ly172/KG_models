@@ -1,0 +1,254 @@
+{
+  "status": "passed",
+  "cohort": {
+    "source": "MIMIC-IV Clinical Database Demo 2.2 (public)",
+    "requested_patients": 100,
+    "selected_patients": 31,
+    "complete_selected_admissions": 75,
+    "patients_with_task_samples": 27,
+    "patients_without_task_samples": 4,
+    "task_samples": 35,
+    "positive_next_admission_labels": 7,
+    "cohort_rule": "Hash-order select patients with 2 to 4 complete admissions, before examining model output or labels; retain all admissions for task label chronology.",
+    "task": "original mortality_prediction_mimic4_fn, unchanged function AST",
+    "task_function_sha256": "657803739b1405ae408715b5f876496d6e4ea17c182b3706c946aa82d2d19f71",
+    "history_discharge_after_target_admission_samples": 0,
+    "target_admission_in_input_samples": 0,
+    "timing_policy": "Preserve original author task even if admissions overlap; report overlap without relabeling or reselection.",
+    "complete_mimic_version": "2.2",
+    "author_original_mimic_version": "2.0",
+    "raw_to_category_coverage": {
+      "diagnoses_icd": {
+        "all_selected_subject_source_rows": 1143,
+        "dropped_missing_required_source_fields": 0,
+        "eligible_nonmissing_rows": 1143,
+        "mapped_rows": 1143,
+        "unmapped_rows": 0,
+        "unique_raw_codes": 617,
+        "unique_unmapped_codes": 0,
+        "rows_with_multiple_distinct_target_categories": 0,
+        "mapped_event_rows": 1143,
+        "rows_without_selected_admission": 0
+      },
+      "procedures_icd": {
+        "all_selected_subject_source_rows": 205,
+        "dropped_missing_required_source_fields": 0,
+        "eligible_nonmissing_rows": 205,
+        "mapped_rows": 205,
+        "unmapped_rows": 0,
+        "unique_raw_codes": 139,
+        "unique_unmapped_codes": 0,
+        "rows_with_multiple_distinct_target_categories": 0,
+        "mapped_event_rows": 205,
+        "rows_without_selected_admission": 0
+      },
+      "prescriptions": {
+        "all_selected_subject_source_rows": 5101,
+        "dropped_missing_required_source_fields": 10,
+        "eligible_nonmissing_rows": 5091,
+        "mapped_rows": 4106,
+        "unmapped_rows": 985,
+        "unique_raw_codes": 688,
+        "unique_unmapped_codes": 36,
+        "rows_with_multiple_distinct_target_categories": 321,
+        "mapped_event_rows": 7321,
+        "rows_without_selected_admission": 0
+      }
+    },
+    "next_admission_candidate_visits": 44,
+    "candidate_visits_with_all_three_raw_event_types": 35,
+    "candidate_visits_with_all_three_mapped_event_types": 35,
+    "otherwise_complete_candidate_visits_dropped_by_mapping": 0,
+    "candidate_visits_missing_after_mapping_by_table": {
+      "diagnoses_icd": 0,
+      "procedures_icd": 8,
+      "prescriptions": 4
+    },
+    "candidate_visits_losing_all_codes_in_a_table_due_to_mapping": {
+      "diagnoses_icd": 0,
+      "procedures_icd": 0,
+      "prescriptions": 0
+    },
+    "unmapped_raw_codes": "Original CrossMap behavior returns no mapped code; counts disclosed. No guessing or zero-filling mappings.",
+    "private_sample_file_sha256": "e5b2aeb7cb3c085d79020d10bdbb12b68f88c29529c6d8ea9af6d63e8e0e3a93"
+  },
+  "knowledge": {
+    "real_knowledge_source": "GraphCare author public UMLS subset",
+    "nodes": 564,
+    "real_source_triples": 305,
+    "relations": 38,
+    "ehr_anchor_nodes": 289,
+    "isolated_ehr_anchors": 211,
+    "category_coverage": {
+      "CCSCM": {
+        "unique_categories": 119,
+        "uniquely_mapped_categories": 44,
+        "categories_with_public_edges": 44,
+        "total_history_occurrences": 624,
+        "history_occurrences_with_public_edges": 220
+      },
+      "CCSPROC": {
+        "unique_categories": 52,
+        "uniquely_mapped_categories": 10,
+        "categories_with_public_edges": 10,
+        "total_history_occurrences": 130,
+        "history_occurrences_with_public_edges": 22
+      },
+      "ATC": {
+        "unique_categories": 118,
+        "uniquely_mapped_categories": 118,
+        "categories_with_public_edges": 24,
+        "total_history_occurrences": 1336,
+        "history_occurrences_with_public_edges": 277
+      }
+    },
+    "ccs_exact_mapping_file_sha256": "e6607ffb30bc7697360ffd6e18258b08f907259f094cff4c01261ea8b3298054",
+    "ccs_mapping_source": "Official scispaCy public UMLS2022AB KB",
+    "full_public_knowledge_concepts_scanned": 3920422,
+    "ccs_match_uniqueness_limit": "Unique means within the complete published scispaCy subset, not every concept in the licensed UMLS full release.",
+    "node_numbering": "Isolated categories first, connected concepts last; all node-indexed arrays follow this order. This satisfies original PyG inferred-node-count assumption without adding edges.",
+    "selected_edges_per_anchor_cap": 4,
+    "selection": "First sorted original incident triples per anchor; no invented edges.",
+    "missing_original_resources": [
+      "private CCSCM-to-UMLS and CCSPROC-to-UMLS mapping pickles",
+      "original OpenAI vectors",
+      "original whole-graph clustering inputs"
+    ],
+    "approximation": "Unresolved real category nodes are retained by their actual category names with no added medical edges; graph subset and vectors differ from original pipeline."
+  },
+  "vector_encoding": {
+    "encoder": "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+    "revision": "a9af15a6372d7d6b25e9fb07c2ccb9e1fe645644",
+    "device": "cpu",
+    "dtype": "float32",
+    "model_dtype": "float32",
+    "attention": "eager, bidirectional",
+    "batch_size": 4,
+    "max_tokens": 128,
+    "pooling": "last unpadded token, followed by L2 normalization",
+    "input_texts": 602,
+    "concepts": 564,
+    "relations": 38,
+    "output_width": 1536,
+    "minimum_norm": 0.9999998211860657,
+    "maximum_norm": 1.000000238418579,
+    "vector_bytes_sha256": "5066c9ed9b96f948c32d726e0b72b8767a1e5a945efd54e2a6ad71fff5da09b4",
+    "inference_api_calls": 0,
+    "input_text_origin": "Author-public UMLS concept and relation names, plus published PyHealth names for unresolved real CCS/ATC categories.",
+    "loading_method": "Direct import of hash-checked local Qwen2Model class, retaining its conditional optional FlashAttention import and selecting its eager CPU implementation.",
+    "reused_checked_encoded_vectors": true,
+    "cache_graph_sha256": "b894aef348808444780887c5df6b013c46895e267779cec77435ae04263353c1",
+    "cache_ordered_texts_sha256": "1991fc015aea91276f8580f3d12433a38c8bd3a07d202df360a5c9d7fac1fd3f",
+    "cache_npz_sha256": "5adadd46a776998f293b78260cd6c29c2759e6f987df24e0f2f06413123b7faa"
+  },
+  "source_checks": {
+    "graphcare.py:train": {
+      "original": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c",
+      "runtime": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c"
+    },
+    "graphcare.py:evaluate": {
+      "original": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2",
+      "runtime": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2"
+    },
+    "graphcare.py:get_mode_and_out_channels_and_loss_func": {
+      "original": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0",
+      "runtime": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0"
+    },
+    "graphcare_/model.py:GraphCare": {
+      "original": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918",
+      "runtime": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918"
+    },
+    "graphcare_/model.py:BiAttentionGNNConv": {
+      "original": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d",
+      "runtime": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d"
+    },
+    "graphcare.py:get_subgraph": {
+      "original": "ad318cfc0c32d73737b34eea80ca7ac6a92a852855ec4fd8924a7eac6bb2409e",
+      "runtime": "ad318cfc0c32d73737b34eea80ca7ac6a92a852855ec4fd8924a7eac6bb2409e"
+    },
+    "graphcare.py:get_dataloader": {
+      "original": "b2e920acfc4ad262076d443bf9193307142482c0dff9250272c0a726aff928a6",
+      "runtime": "b2e920acfc4ad262076d443bf9193307142482c0dff9250272c0a726aff928a6"
+    },
+    "graphcare.py:Dataset": {
+      "original": "536881d0dd94dfdef09cf8114857f0157a3eec0da03e9f414475225fd8ae1aa0",
+      "runtime": "536881d0dd94dfdef09cf8114857f0157a3eec0da03e9f414475225fd8ae1aa0"
+    },
+    "graphcare.py:label_ehr_nodes": {
+      "original": "3ed8ccac2affbb73292ee04bee58c4bb29f806d7f17bae0dfcc2a6c97e3d63dd",
+      "runtime": "3ed8ccac2affbb73292ee04bee58c4bb29f806d7f17bae0dfcc2a6c97e3d63dd"
+    }
+  },
+  "split_function_sha256": "38c5ce1d070a7829a5e620991d9bb4e9bb6b0481d1eef8073e936ab61fc37bbc",
+  "pad_function_sha256": "9f3fa7557d3404e706b9884a50fb1de9b89765bf002fa8cb817b09f2dc05af5f",
+  "splits": [
+    {
+      "samples": 25,
+      "patients": 21,
+      "positive_labels": 5
+    },
+    {
+      "samples": 6,
+      "patients": 3,
+      "positive_labels": 2
+    },
+    {
+      "samples": 4,
+      "patients": 3,
+      "positive_labels": 0
+    }
+  ],
+  "batch_size": 1,
+  "batches": [
+    25,
+    6,
+    4
+  ],
+  "actual_evaluated": [
+    25,
+    6,
+    4
+  ],
+  "epochs": 1,
+  "optimizer_updates": 25,
+  "training_history": [
+    {
+      "epoch": 1,
+      "mean_training_loss": 0.581523666381836
+    }
+  ],
+  "evaluation": [
+    {
+      "evaluated_samples": 6,
+      "positive_labels": 2,
+      "auroc": 0.125,
+      "average_precision": 0.29166666666666663
+    },
+    {
+      "evaluated_samples": 4,
+      "positive_labels": 0,
+      "auroc": null,
+      "average_precision": null
+    }
+  ],
+  "parameter_tensors_changed": 18,
+  "strict_checkpoint_reload_identical_predictions": true,
+  "graph_encoder": "original BAT 3 layers, hidden 128; edge attention enabled",
+  "configuration_scope": "actual author single_run default switches, including alpha=False and beta=False",
+  "original_total_entry_not_called": "Author single_run requires unavailable private files; this runner preserves its actual default model switches and calls original task/train/evaluate.",
+  "private_patient_and_model_outputs": ".private/",
+  "seconds": 134.798,
+  "scope": "Author GraphCare prediction network on MIMIC-IV histories with a public UMLS subset and local GTE name vectors.",
+  "command": "pixi run --locked smoke --encoded-cache .private",
+  "data_source": {
+    "name": "MIMIC-IV Clinical Database Demo",
+    "version": "2.2",
+    "public": true,
+    "patients": 100,
+    "url": "https://physionet.org/content/mimic-iv-demo/2.2/",
+    "doi": "10.13026/dp1f-ex47",
+    "license": "Open Data Commons Open Database License v1.0",
+    "verified_files": 34,
+    "archive_sha256": "97301a03820e8f41af211cf3462ddc19aefe75bbed05f11753859affaafeb8ec"
+  }
+}

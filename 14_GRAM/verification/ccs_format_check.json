@@ -1,0 +1,18 @@
+{
+  "raw_distinct": 9143,
+  "with_surrounding_whitespace": 0,
+  "raw_match": 9143,
+  "trim_match": 9143,
+  "decimal_removed_match": 9143,
+  "trimmed_distinct": 9143,
+  "rows_total": 2908741,
+  "rows_trim_match": 2908741,
+  "initial_check_error": {
+    "reported_match": 5877,
+    "reported_missing": 3266,
+    "reason": "Initial local check removed quotation marks but left space padding inside the quoted CCS field. This was a check-script error, not absent ICD-9 coverage.",
+    "author_normalization": "tokens[0][1:-1].strip()",
+    "corrected_distinct_covered": 9143,
+    "corrected_diagnosis_rows_covered": 2908741
+  }
+}

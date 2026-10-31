@@ -1,0 +1,200 @@
+[
+  {
+    "id": "gram",
+    "name": "GRAM",
+    "paper": "14",
+    "path": "14_GRAM",
+    "input": "公开MIMIC-IV Demo病史与CCS疾病分类",
+    "scope": "作者预处理、分类树、训练和验证测试",
+    "default": true,
+    "task": "smoke",
+    "evidence": "14_GRAM/smoke_result.json"
+  },
+  {
+    "id": "gamenet",
+    "name": "GAMENet",
+    "paper": "27",
+    "path": "27_GAMENet",
+    "input": "公开MIMIC-IV Demo病史、作者术语表与药物图",
+    "scope": "作者训练和测试",
+    "default": true,
+    "task": "smoke",
+    "evidence": "27_GAMENet/verification/smoke.json"
+  },
+  {
+    "id": "graphcare",
+    "name": "GraphCare",
+    "paper": "28",
+    "path": "28_GraphCare",
+    "input": "公开MIMIC-IV Demo病史、公开部分UMLS、本地GTE向量",
+    "scope": "作者任务、BAT训练、评估和重载",
+    "default": true,
+    "task": "smoke",
+    "evidence": "28_GraphCare/smoke_result.json"
+  },
+  {
+    "id": "kat-gnn",
+    "name": "KAT-GNN",
+    "paper": "29",
+    "path": "29_KAT_GNN",
+    "input": "人工诊断图、检验图和标签",
+    "scope": "作者双图网络、训练、选模和回退",
+    "default": true,
+    "task": "smoke",
+    "evidence": "29_KAT_GNN/verification/smoke.json"
+  },
+  {
+    "id": "medcpi",
+    "name": "MedCPI",
+    "paper": "30",
+    "path": "30_MedCPI",
+    "input": "公开MIMIC-IV Demo病史、RxNorm及部分UMLS",
+    "scope": "作者映射、Construct、Personalize和Integrate训练测试",
+    "default": true,
+    "task": "smoke",
+    "evidence": "30_MedCPI/smoke_result.json"
+  },
+  {
+    "id": "greaselm",
+    "name": "GreaseLM",
+    "paper": "36",
+    "path": "36_GreaseLM",
+    "input": "作者公开MedQA题目、配套图和SapBERT",
+    "scope": "作者训练、测试、完整保存和重载",
+    "default": true,
+    "task": "smoke",
+    "evidence": "36_GreaseLM/verification/smoke.json"
+  },
+  {
+    "id": "gnp",
+    "name": "Graph Neural Prompting",
+    "paper": "37",
+    "path": "37_Graph_Neural_Prompting",
+    "input": "公开OpenBookQA题目、作者ConceptNet配套图和完整FLAN-T5-XL",
+    "scope": "作者图网络与语言模型前向、图网络训练、严格重载和答案生成",
+    "default": true,
+    "task": "smoke",
+    "evidence": "37_Graph_Neural_Prompting/verification/result.json"
+  },
+  {
+    "id": "c-swm",
+    "name": "C-SWM",
+    "paper": "41",
+    "path": "41_C_SWM",
+    "input": "作者Shapes环境生成的画面和动作",
+    "scope": "作者环境、训练和多步评估",
+    "default": true,
+    "task": "smoke",
+    "evidence": "41_C_SWM/verification/smoke.json"
+  },
+  {
+    "id": "malec-psi",
+    "name": "Malec PSI检索组件",
+    "paper": "46",
+    "path": "46_Malec_Confounders",
+    "input": "12条人工概念关系，作者原检索表达式",
+    "scope": "原PSI建立三份向量索引，原Search查询候选共同原因",
+    "default": true,
+    "task": "smoke",
+    "evidence": "46_Malec_Confounders/verification/result.json"
+  },
+  {
+    "id": "causalkg",
+    "name": "CausalKG",
+    "paper": "47",
+    "path": "47_CausalKG",
+    "input": "人工药物、适应证、结局和混杂变量表",
+    "scope": "作者中介分析阶段",
+    "default": true,
+    "task": "smoke",
+    "evidence": "47_CausalKG/verification/smoke.json"
+  },
+  {
+    "id": "caml",
+    "name": "CaML",
+    "paper": "48",
+    "path": "48_CaML",
+    "input": "人工七时间窗病史与结局、作者744种药物向量",
+    "scope": "作者网络、任务内适应、任务间更新和新药物任务预测",
+    "default": true,
+    "task": "smoke",
+    "evidence": "48_CaML/verification/result.json"
+  },
+  {
+    "id": "kg-treat",
+    "name": "KG-TREAT",
+    "paper": "49",
+    "path": "49_KG_TREAT",
+    "input": "人工病史、成对医学图、概念向量和结局",
+    "scope": "作者网络、原损失、更新和重载",
+    "default": true,
+    "task": "smoke",
+    "evidence": "49_KG_TREAT/verification/smoke.json"
+  },
+  {
+    "id": "rgcn-2018",
+    "name": "R-GCN 2018",
+    "paper": "67",
+    "path": "67_R_GCN_Original",
+    "input": "真实公开AIFB图及原训练测试标签",
+    "scope": "原作者Keras节点分类训练和测试",
+    "default": true,
+    "task": "smoke",
+    "evidence": "67_R_GCN_Original/verification/result.json"
+  },
+  {
+    "id": "gamenet-synthetic",
+    "name": "GAMENet人工病史",
+    "paper": "27",
+    "path": "27_GAMENet",
+    "input": "人工病史与作者公开药物图",
+    "scope": "作者训练和测试",
+    "default": false,
+    "task": "smoke-synthetic",
+    "evidence": "27_GAMENet/verification/smoke_gamenet_synthetic.json"
+  },
+  {
+    "id": "graphcare-public-kg",
+    "name": "GraphCare人工病史和公开图",
+    "paper": "28",
+    "path": "28_GraphCare/synthetic/public_umls",
+    "input": "人工病史、公开UMLS小图和本地GTE向量",
+    "scope": "作者BAT训练、评估和重载",
+    "default": false,
+    "task": "smoke",
+    "evidence": "28_GraphCare/synthetic/public_umls/verification/smoke.json"
+  },
+  {
+    "id": "graphcare-synthetic",
+    "name": "GraphCare人工病史和图",
+    "paper": "28",
+    "path": "28_GraphCare/synthetic",
+    "input": "人工病史、医学图和向量",
+    "scope": "作者BAT训练、评估和重载",
+    "default": false,
+    "task": "smoke",
+    "evidence": "28_GraphCare/synthetic/verification/smoke.json"
+  },
+  {
+    "id": "medcpi-public-kg",
+    "name": "MedCPI人工病史和公开图",
+    "paper": "30",
+    "path": "30_MedCPI/synthetic",
+    "input": "人工病史、作者公开DDB图和SapBERT映射",
+    "scope": "公开术语映射及作者Integrate训练测试",
+    "default": false,
+    "task": "public-ddb",
+    "evidence": "30_MedCPI/synthetic/verification/smoke_medcpi_ddb.json"
+  },
+  {
+    "id": "medcpi-synthetic",
+    "name": "MedCPI人工病史和图",
+    "paper": "30",
+    "path": "30_MedCPI/synthetic",
+    "input": "人工病史和医学图",
+    "scope": "作者Integrate训练和测试",
+    "default": false,
+    "task": "smoke",
+    "evidence": "30_MedCPI/synthetic/verification/smoke.json"
+  }
+]

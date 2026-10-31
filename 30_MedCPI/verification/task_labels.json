@@ -1,0 +1,33 @@
+{
+  "dataset": "mimic4",
+  "task": "mortality",
+  "seed": 2025,
+  "train_ratio": 0.8,
+  "valid_ratio": 0.1,
+  "num_source_rows": 22,
+  "num_rows_after_task_filter": 22,
+  "split_stats": {
+    "test": {
+      "label_distribution": {
+        "0": 2
+      },
+      "num_instances": 2,
+      "num_patients": 2
+    },
+    "train": {
+      "label_distribution": {
+        "0": 17,
+        "1": 2
+      },
+      "num_instances": 19,
+      "num_patients": 12
+    },
+    "valid": {
+      "label_distribution": {
+        "1": 1
+      },
+      "num_instances": 1,
+      "num_patients": 1
+    }
+  }
+}

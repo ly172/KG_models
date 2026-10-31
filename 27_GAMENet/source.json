@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/sjy1203/GAMENet",
+  "commit": "da695b4fc9390882f3a681c82115e81291ae6380",
+  "files": {
+    "code/models.py": "0e34adaf0e17a1d8bdeb3676d31e12cee476ac16546b0dbd7f20a81c4be2714d",
+    "code/layers.py": "9717e46d8c29e6e0ed0229e4f2c894016e716e3fdaa44cde0e13f100f930b7bc",
+    "code/train_GAMENet.py": "ced56d39848cb4e571eb5e62a0209399f7b4968b644754c6bae4ca47e9efadad",
+    "code/util.py": "cfcbf374ca910e9f0c31d2b1699563a760317389612ba6c0e9bc2b1dc4f30563",
+    "data/voc_final.pkl": "b563002a978f02a97d12af35242ca3224262c574d358305352886978c79cf333",
+    "data/ehr_adj_final.pkl": "1dd53587c8513816b624acd2ca36faedc066a1d7c2dbf77d5b4d60d53e80864f",
+    "data/ddi_A_final.pkl": "d9899241ef1cd8bfa9c79c3981257c4a588ee4349baee5948dce65f9b6088be4",
+    "README.md": "9089618ecc4cd1a668eee89ac58727c3d26ae1451c70d6a8ac80d3b825ece497",
+    "LICENSE": "4b8a60adeeaeb5407714a8e86bcbd07e5930912fb821b7969d5a6f0075a9add5"
+  }
+}

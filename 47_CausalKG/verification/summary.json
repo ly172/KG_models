@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "command": "pixi run --locked reproduce",
+  "os": "Windows",
+  "first_exit_code": 0,
+  "fresh_exit_code": 0,
+  "fresh_started_without_environment_or_data": true,
+  "identical_result_json": true,
+  "input_sha256": "d26de85c6dc5aa281aef35b95dacd65573a8ed1346998a03417f1a6d495d06bc",
+  "author_sha256": "e2e32243834f251d7c93d6c729d2f7d35824699377c7d5688ef2f8d3f74709bb",
+  "scope": "Original author statistical mediation model on 2048 artificial observations. Full KG-to-cohort pipeline not executed.",
+  "path_redaction": "Only local package roots replaced with <PACKAGE_ROOT>; numerical values and error messages preserved.",
+  "known_initial_environment_error": "R failed at startup in a Chinese path; both successful copies use ASCII paths.",
+  "metrics": {
+    "n": "2048",
+    "acme_control": "0.0642681998896769",
+    "acme_treated": "0.102744312783904",
+    "acme_average": "0.0835062563367905",
+    "direct_effect_average": "0.15242801515593",
+    "total_effect": "0.235934271492721",
+    "interaction_p": "0.239925255925179",
+    "fitted_noninteraction": "TRUE"
+  }
+}

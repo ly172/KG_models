@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<PACKAGE_ROOT>\verify_loading.py", line 17, in main
+    check_imports(str(source))
+  File "<PACKAGE_ROOT>\.pixi\envs\default\lib\site-packages\transformers\dynamic_module_utils.py", line 181, in check_imports
+    raise ImportError(
+ImportError: This modeling file requires the following packages that were not found in your environment: flash_attn. Run `pip install flash_attn`

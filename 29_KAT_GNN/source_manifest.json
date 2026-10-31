@@ -1,0 +1,103 @@
+{
+  "repository": "https://github.com/DHLab-TSENG/kat-gnn-ehr-risk",
+  "commit": "87b369377552d30c01177dff187a16ab4c2967c9",
+  "source_policy": "Whole author files downloaded at runtime, byte-for-byte verified; no source patch.",
+  "files": [
+    {
+      "path": "models/__init__.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/models/__init__.py",
+      "sha256": "497971420791615369a9ba5d61b455f87a906a5c0005892fd805d9fedf085862",
+      "bytes": 163
+    },
+    {
+      "path": "models/gcn_model.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/models/gcn_model.py",
+      "sha256": "bc5ce8896656fd8aecb8473cffb946e24b661ea87d059a3f88d5b07002c52301",
+      "bytes": 3420
+    },
+    {
+      "path": "models/gat_model.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/models/gat_model.py",
+      "sha256": "73418ad3abb8462e2b78adfd3a18f6219b92c4210c489ae893dff89452cdb444",
+      "bytes": 3490
+    },
+    {
+      "path": "models/gatv2_model.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/models/gatv2_model.py",
+      "sha256": "f81dcf4605309e01cb0f96a7c94d417dc3c56a94a54560c9f3adfbeb9ac1fe86",
+      "bytes": 3502
+    },
+    {
+      "path": "models/attention_utils.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/models/attention_utils.py",
+      "sha256": "87c39b37837a3bbdcad3f0ba948b31384499118a59ec32ec31958f6571f18c40",
+      "bytes": 1826
+    },
+    {
+      "path": "train/__init__.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/train/__init__.py",
+      "sha256": "f68edc28e8a3e6352626fd20d236cb524d54f7916ead5eed5c9ab8bea9f47405",
+      "bytes": 183
+    },
+    {
+      "path": "train/init_model.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/train/init_model.py",
+      "sha256": "f7d185db359743035c53d1dc5d6b58150f71228caf8273a2f9284b5370b8b806",
+      "bytes": 987
+    },
+    {
+      "path": "train/loop.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/train/loop.py",
+      "sha256": "8ba7d4aa4fed86e3dd897a71c7a8a89904b366ed2dcd46c08ceb9bcb1145de6c",
+      "bytes": 3185
+    },
+    {
+      "path": "utils/__init__.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/utils/__init__.py",
+      "sha256": "54c9097d9fcc20b289b832b354c1cc20eb02c6bf2d0cd81146a6b34f4c9b853b",
+      "bytes": 397
+    },
+    {
+      "path": "utils/seed.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/utils/seed.py",
+      "sha256": "11a8ee007e14bc41dff75bb46632ed506daeb5bb462ef872b1cf9c7dc66a935c",
+      "bytes": 434
+    },
+    {
+      "path": "utils/argument_parser.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/utils/argument_parser.py",
+      "sha256": "48f5add310960593b370482b93e593f7157530e4c438850a03988395ead41a2d",
+      "bytes": 5271
+    },
+    {
+      "path": "utils/checkpoint.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/utils/checkpoint.py",
+      "sha256": "095d62c47c17a8fbcbbb98eb536e9052e1e71300800310f91b9377082f906753",
+      "bytes": 927
+    },
+    {
+      "path": "utils/metrics.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/utils/metrics.py",
+      "sha256": "4ef073a8bfaf21ff409ff42b1871ef319dc0f197ee0bd2c891de9e3cb6448a66",
+      "bytes": 3365
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/LICENSE",
+      "sha256": "fd00e5cfe9eaa4f3a757a738576c617e47ea058f5887c8d863aed58b7d108931",
+      "bytes": 1081
+    },
+    {
+      "path": "private_all_fusion_gcn_setting.txt",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/private_all_fusion_gcn_setting.txt",
+      "sha256": "4a003a2f79727eb7ba0659080ccdea223053d90a977dce9b2e519f3faf83a80c",
+      "bytes": 461
+    },
+    {
+      "path": "private_all.py",
+      "url": "https://raw.githubusercontent.com/DHLab-TSENG/kat-gnn-ehr-risk/87b369377552d30c01177dff187a16ab4c2967c9/private_all.py",
+      "sha256": "652c213ebced03ad9f006b4d37432f9486a0f3beac3d494833e4e5056ae1aef2",
+      "bytes": 6523
+    }
+  ]
+}

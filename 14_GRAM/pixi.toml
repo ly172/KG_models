@@ -1,0 +1,19 @@
+[workspace]
+name = "gram-mimic-iv-input"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[tasks]
+smoke = "python smoke.py"
+reproduce = "python reproduce.py"
+
+[dependencies]
+python = "3.8.*"
+numpy = "1.23.5.*"
+scipy = "1.10.1.*"
+six = "1.16.*"
+pip = "*"
+
+[pypi-dependencies]
+Theano = "==1.0.5"

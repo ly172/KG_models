@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/bio-ontology-research-group/Mediation-Analysis-using-Causal-Knowledge-Graph",
+  "commit": "8175041abd25e771b0de83c7fbae791c8dc8ffac",
+  "url": "https://raw.githubusercontent.com/bio-ontology-research-group/Mediation-Analysis-using-Causal-Knowledge-Graph/8175041abd25e771b0de83c7fbae791c8dc8ffac/src/mediation_analysis.R",
+  "sha256": "e2e32243834f251d7c93d6c729d2f7d35824699377c7d5688ef2f8d3f74709bb",
+  "git_blob": "72e6530da1e986c9b8573deb9eb2bb3b05eb982a",
+  "license_note": "The inspected repository has no LICENSE file. The script is downloaded to the ignored run directory and is not redistributed in this package."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "01_GRAM",
+  "exit_code": 0,
+  "seconds": 175.625,
+  "initial_state": {
+    "no_environment": true,
+    "no_generated_inputs": true,
+    "copied_files": [
+      ".gitattributes",
+      ".gitignore",
+      "adapt_mimic.py",
+      "LICENSE",
+      "pixi.lock",
+      "pixi.toml",
+      "prepare_author.py",
+      "README.md",
+      "reproduce.py",
+      "run_author.py",
+      "source.json",
+      "verify_compatibility.py",
+      "resources/ccs_multi_dx_tool_2015.csv",
+      "resources/source.json",
+      "upstream/build_trees.py",
+      "upstream/create_glove_comap.py",
+      "upstream/glove.py",
+      "upstream/gram.py",
+      "upstream/LICENSE",
+      "upstream/process_mimic.py",
+      "upstream/README.md"
+    ]
+  },
+  "dependency_cache_reused": true,
+  "environment_and_generated_data_reused": false
+}

@@ -1,0 +1,88 @@
+{
+  "sources": [
+    {
+      "path": "graphcare/ICD9CM.ttl",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/ICD9CM.ttl",
+      "bytes": 10513957,
+      "sha256": "4962ab521373b775a9a2fec263e8bed1c9910aba2f2dfc09202e0ae539d347e7"
+    },
+    {
+      "path": "graphcare/ATC.ttl",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/ATC.ttl",
+      "bytes": 3637237,
+      "sha256": "e077f1aa56897a7512f8d67f63d218d06b465c2e24840c51e6d565bd8806819f"
+    },
+    {
+      "path": "graphcare/ICD9CM_to_UMLS.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/ICD9CM_to_UMLS.csv",
+      "bytes": 366167,
+      "sha256": "6ffe2af22618da64aa1f832f3b8945155e819bd7fc527f60dedf5c943672bea3"
+    },
+    {
+      "path": "graphcare/ATC_to_UMLS.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/ATC_to_UMLS.csv",
+      "bytes": 115056,
+      "sha256": "e1d259dbdbe06844e47704613226f926873828ff2eaacd51c30d5b8b3fc7e455"
+    },
+    {
+      "path": "graphcare/RxNorm_to_UMLS.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/RxNorm_to_UMLS.csv",
+      "bytes": 1838620,
+      "sha256": "c9a06c568f896266a37191d7340f15812d649a73a291596cbba853dc57278ade"
+    },
+    {
+      "path": "graphcare/umls/umls.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/umls/umls.csv",
+      "bytes": 41711904,
+      "sha256": "21767d8a6c5aa613046722b06c8144e7dfc3931ee805e0c45b546e0fc0ab5ee6"
+    },
+    {
+      "path": "graphcare/umls/concepts.txt",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/umls/concepts.txt",
+      "bytes": 2681343,
+      "sha256": "51e7c0feb204ab719dfdd35dc6667a4843c8c1c9177380bbd567778d86088d9a"
+    },
+    {
+      "path": "graphcare/umls/concept_names.txt",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/umls/concept_names.txt",
+      "bytes": 12958021,
+      "sha256": "f92cc881d3a2ec917b6a155eaf4fa9c630f46080e02d6149edef7c81cfea773c"
+    },
+    {
+      "path": "graphcare/umls/relations.txt",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/umls/relations.txt",
+      "bytes": 2020,
+      "sha256": "399ff6ed4ebf2c96ba8eba157af97563759732631ce335e6a0161938505c5d05"
+    },
+    {
+      "path": "SemGroups.txt",
+      "url": "https://www.nlm.nih.gov/research/umls/knowledge_sources/semantic_network/SemGroups.txt",
+      "bytes": 5469,
+      "sha256": "b8d44c26ad236cc0f64065b420ade8756ad64a23f4cfdcae1f8b4aac534efd7e"
+    },
+    {
+      "path": "scispacy_public_subset/assets/umls_2022_ab_cat0129.jsonl",
+      "url": "https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/data/kbs/2023-04-23/umls_2022_ab_cat0129.jsonl",
+      "bytes": 658702592,
+      "sha256": "1e5d2e0257ca7874daf559f5bf433ec5955bb98b9ae32f716007bd6288d2eeeb"
+    },
+    {
+      "path": "RxNorm_full_prescribe_10052026.zip",
+      "url": "https://download.nlm.nih.gov/rxnorm/RxNorm_full_prescribe_10052026.zip",
+      "bytes": 74994831,
+      "sha256": "8ed351c29f3cb56bedeb8e2bcb8fa56931f8d7eb88e2280dc9772d7d3eb16977"
+    },
+    {
+      "path": "RxNorm_full_prescribe_12012014.zip",
+      "url": "https://download.nlm.nih.gov/rxnorm/RxNorm_full_prescribe_12012014.zip",
+      "bytes": 51919060,
+      "sha256": "348b68206229a4a9b26b9917b4cc65f9860f6885776485da74d926aaee56b968"
+    },
+    {
+      "path": "RxNorm_full_prescribe_12022019.zip",
+      "url": "https://download.nlm.nih.gov/rxnorm/RxNorm_full_prescribe_12022019.zip",
+      "bytes": 72944795,
+      "sha256": "5bd1cb752eb4091ff9241a1dee1c49fde5aca1dca4c9c38c9803dac6faee4ded"
+    }
+  ]
+}

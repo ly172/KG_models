@@ -1,0 +1,20 @@
+{
+  "status": "prepared",
+  "source": "MIMIC-IV Clinical Database Demo 2.2 (public)",
+  "selection": "15 fixed-hash selected patients with 2-4 admissions, complete admission times and diagnoses, ICD-9 diagnosis/procedure histories only; all selected admissions preserved",
+  "selection_seed": "medcpi-real-20261030",
+  "eligible_patients": 15,
+  "selected_patients": 15,
+  "rows": {
+    "admissions": 37,
+    "diagnoses_icd": 515,
+    "procedures_icd": 106,
+    "prescriptions": 2498
+  },
+  "input_sha256": {
+    "admissions": "9ffb631e459355aef16a515fa3c07430c0c34bb01873bf31a758eaf048c48d6c",
+    "diagnoses_icd": "b981d3ed8d50fd4b8a253ea52ec655de1b01c78430d7fb0401d0169c3f1c8ddf",
+    "procedures_icd": "70f1a088a39de38f34398c92c49086ada574f8ce1248c6fb426a5e3b22edbdb0",
+    "prescriptions": "ae962af7e7f0dcb66abdc5dfcd07d3d30ede051f9b5cbc2aa7bf815819f235e1"
+  }
+}

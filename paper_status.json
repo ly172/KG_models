@@ -1,0 +1,283 @@
+{
+  "checked_date": "2026-10-30",
+  "records": [
+    {
+      "name": "GRAM",
+      "display_name": "GRAM",
+      "input": "按就诊先后排列的诊断编号，以及诊断到上级疾病类别的对应表。",
+      "output": "下一次就诊可能出现的各类诊断及其分数。",
+      "operation": "先把每个诊断与其上级类别合起来表示，再按就诊顺序读取病史，预测下一次诊断。",
+      "paper_url": "https://arxiv.org/abs/1611.07012",
+      "citation": "Choi, E., Bahadori, M. T., Song, L., Stewart, W. F., Sun, J. (2017). GRAM: Graph-based Attention Model for Healthcare Representation Learning. Proceedings of the 23rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 787–795.",
+      "status": "公开输入跑通",
+      "package": "14_GRAM",
+      "documentation": "14_GRAM",
+      "finding": "公开 Demo 病史，原预处理、分类树、训练和测试完成。",
+      "data_source": "公开MIMIC-IV Demo病史与CCS疾病分类",
+      "execution_scope": "作者预处理、分类树、训练和验证测试",
+      "evidence": "14_GRAM/smoke_result.json",
+      "routes": [
+        "gram"
+      ],
+      "reference": "14",
+      "in_original_pdf": true
+    },
+    {
+      "name": "GAMENet",
+      "display_name": "GAMENet",
+      "input": "当前及过去就诊的诊断、操作、用药编号，药物共用关系和药物相互作用关系。",
+      "output": "本次就诊每种候选药的推荐分数和推荐组合。",
+      "operation": "从病史形成当前用药需求，再读取药物关系和过去用药，输出药物组合。",
+      "paper_url": "https://arxiv.org/abs/1809.01852",
+      "citation": "Shang, J., Xiao, C., Ma, T., Li, H., Sun, J. (2019). GAMENet: Graph Augmented MEmory Networks for Recommending Medication Combination. Proceedings of the AAAI Conference on Artificial Intelligence, 33, 1126–1133.",
+      "status": "公开输入跑通",
+      "package": "27_GAMENet",
+      "documentation": "27_GAMENet",
+      "finding": "公开 Demo 病史，预测整次住院用药集合；另有人工病史例子。",
+      "data_source": "公开MIMIC-IV Demo病史、作者术语表与药物图",
+      "execution_scope": "作者训练和测试",
+      "evidence": "27_GAMENet/verification/smoke.json",
+      "routes": [
+        "gamenet",
+        "gamenet-synthetic"
+      ],
+      "reference": "27",
+      "in_original_pdf": true
+    },
+    {
+      "name": "GraphCare",
+      "display_name": "GraphCare",
+      "input": "按时间排列的诊断、操作、处方，医学概念之间的关系，以及概念名称对应的数值向量。",
+      "output": "所选临床任务的预测分数；本仓库例子预测下一次住院的死亡结局。",
+      "operation": "把病史编码接到医学图上，让相关概念交换信息，再汇总成患者表示并预测结局。",
+      "paper_url": "https://arxiv.org/abs/2309.08851",
+      "citation": "Jiang, P., Xiao, C., Cross, A., Sun, J. (2024). GraphCare: Enhancing Healthcare Predictions with Personalized Knowledge Graphs. International Conference on Learning Representations.",
+      "status": "替代知识输入跑通",
+      "package": "28_GraphCare",
+      "documentation": "28_GraphCare",
+      "finding": "公开病史、部分 UMLS 和 GTE 向量；按作者入口关闭 alpha、beta。",
+      "data_source": "公开MIMIC-IV Demo病史、公开部分UMLS、本地GTE向量",
+      "execution_scope": "作者任务、BAT训练、评估和重载",
+      "evidence": "28_GraphCare/smoke_result.json",
+      "routes": [
+        "graphcare",
+        "graphcare-public-kg",
+        "graphcare-synthetic"
+      ],
+      "reference": "28",
+      "in_original_pdf": true
+    },
+    {
+      "name": "KAT_GNN",
+      "display_name": "KAT-GNN",
+      "input": "随时间排列的诊断图、检验图和患者结局标签。",
+      "output": "两类风险的分数。",
+      "operation": "分别读取诊断和检验两张图，再结合不同时间的信息做风险预测。",
+      "paper_url": "https://arxiv.org/abs/2511.01249",
+      "citation": "Lin, K.-W., Kuo, Y.-C., Wang, H.-Y., Tseng, Y.-J. (2025). KAT-GNN: A Knowledge-Augmented Temporal Graph Neural Network for Risk Prediction in Electronic Health Records. arXiv:2511.01249.",
+      "status": "人工输入跑通",
+      "package": "29_KAT_GNN",
+      "documentation": "29_KAT_GNN",
+      "finding": "人工双图上完成作者训练、AUPRC 选模和权重回退。",
+      "data_source": "人工诊断图、检验图和标签",
+      "execution_scope": "作者双图网络、训练、选模和回退",
+      "evidence": "29_KAT_GNN/verification/smoke.json",
+      "routes": [
+        "kat-gnn"
+      ],
+      "reference": "29",
+      "in_original_pdf": true
+    },
+    {
+      "name": "MedCPI",
+      "display_name": "MedCPI",
+      "input": "患者既往病史、医学术语和关系、任务关系定义。",
+      "output": "目标住院结局的预测分数。",
+      "operation": "先把病史对应到医学概念，建立通用图，再取出各患者相关的小图，与患者记录交互后预测。",
+      "paper_url": "https://github.com/hw146/MedCPI",
+      "citation": "Wang, H., Dong, H., Liu, L. (2026). MedCPI: A Construct-Personalize-Integrate Framework for KG-enhanced Clinical Prediction. Findings of the Association for Computational Linguistics: ACL 2026, 24266–24282.",
+      "status": "替代知识输入跑通",
+      "package": "30_MedCPI",
+      "documentation": "30_MedCPI",
+      "finding": "公开病史和医学资料，作者映射、构图、训练及测试完成。",
+      "data_source": "公开MIMIC-IV Demo病史、RxNorm及部分UMLS",
+      "execution_scope": "作者映射、Construct、Personalize和Integrate训练测试",
+      "evidence": "30_MedCPI/smoke_result.json",
+      "routes": [
+        "medcpi",
+        "medcpi-public-kg",
+        "medcpi-synthetic"
+      ],
+      "reference": "30",
+      "in_original_pdf": true
+    },
+    {
+      "name": "GreaseLM",
+      "display_name": "GreaseLM",
+      "input": "医学题目、候选答案，以及从医学图取出的概念和关系。",
+      "output": "每个候选答案的分数及选中的答案。",
+      "operation": "文字和医学图分别读取信息，多轮互相传递，再给各个候选答案打分。",
+      "paper_url": "https://arxiv.org/abs/2201.08860",
+      "citation": "Zhang, X., Bosselut, A., Yasunaga, M., Ren, H., Liang, P., Manning, C. D., Leskovec, J. (2022). GreaseLM: Graph REASoning Enhanced Language Models. International Conference on Learning Representations.",
+      "status": "公开输入跑通",
+      "package": "36_GreaseLM",
+      "documentation": "36_GreaseLM",
+      "finding": "公开 MedQA，原训练与完整保存重载完成。",
+      "data_source": "作者公开MedQA题目、配套图和SapBERT",
+      "execution_scope": "作者训练、测试、完整保存和重载",
+      "evidence": "36_GreaseLM/verification/smoke.json",
+      "routes": [
+        "greaselm"
+      ],
+      "reference": "36",
+      "in_original_pdf": true
+    },
+    {
+      "name": "Graph_Neural_Prompting",
+      "display_name": "Graph Neural Prompting",
+      "input": "问题文字、候选答案，以及问题相关的知识子图。",
+      "output": "语言模型给出的答案。",
+      "operation": "先把知识图汇总成若干可供语言模型读取的向量，再与问题文字一起生成答案。",
+      "paper_url": "https://arxiv.org/abs/2309.15427",
+      "citation": "Tian, Y., Song, H., Wang, Z., et al. (2024). Graph Neural Prompting with Large Language Models. Proceedings of the AAAI Conference on Artificial Intelligence, 38(17), 19080–19088.",
+      "status": "公开输入跑通",
+      "package": "37_Graph_Neural_Prompting",
+      "documentation": "37_Graph_Neural_Prompting",
+      "finding": "公开 OpenBookQA，完成两次更新、重载和生成。",
+      "data_source": "公开OpenBookQA题目、作者ConceptNet配套图和完整FLAN-T5-XL",
+      "execution_scope": "作者图网络与语言模型前向、图网络训练、严格重载和答案生成",
+      "evidence": "37_Graph_Neural_Prompting/verification/result.json",
+      "routes": [
+        "gnp"
+      ],
+      "reference": "37",
+      "in_original_pdf": true
+    },
+    {
+      "name": "C_SWM",
+      "display_name": "C-SWM",
+      "input": "连续两帧环境画面以及两帧之间的动作。",
+      "output": "各物体的下一步内部状态表示和候选后继状态的匹配分数。",
+      "operation": "先从画面中分离物体表示，再让物体交换信息，结合动作预测下一步。",
+      "paper_url": "https://arxiv.org/abs/1911.12247",
+      "citation": "Kipf, T., van der Pol, E., Welling, M. (2020). Contrastive Learning of Structured World Models. International Conference on Learning Representations.",
+      "status": "作者环境跑通",
+      "package": "41_C_SWM",
+      "documentation": "41_C_SWM",
+      "finding": "作者 Shapes 环境，完成训练和多步状态预测。",
+      "data_source": "作者Shapes环境生成的画面和动作",
+      "execution_scope": "作者环境、训练和多步评估",
+      "evidence": "41_C_SWM/verification/smoke.json",
+      "routes": [
+        "c-swm"
+      ],
+      "reference": "41",
+      "in_original_pdf": true
+    },
+    {
+      "name": "Malec_Confounders",
+      "display_name": "Malec confounder selection",
+      "input": "文献中抽取的药物、疾病和关系，以及临床分析所需的队列。",
+      "output": "待调整的混杂因素和临床关联估计。",
+      "operation": "先用文献关系寻找可能同时影响用药与结局的因素，再用于临床分析。",
+      "paper_url": "https://doi.org/10.1016/j.jbi.2021.103719",
+      "citation": "Malec, S. A., Wei, P., Bernstam, E. V., Boyce, R. D., Cohen, T. (2021). Using computable knowledge mined from the literature to elucidate confounders for EHR-based pharmacovigilance. Journal of Biomedical Informatics, 117, 103719.",
+      "status": "检索组件跑通",
+      "package": "46_Malec_Confounders",
+      "documentation": "46_Malec_Confounders",
+      "finding": "人工三元组上完成原 PSI 建索引和共同原因查询。",
+      "data_source": "12条人工概念关系，作者原检索表达式",
+      "execution_scope": "原PSI建立三份向量索引，原Search查询候选共同原因",
+      "evidence": "46_Malec_Confounders/verification/result.json",
+      "routes": [
+        "malec-psi"
+      ],
+      "reference": "46",
+      "in_original_pdf": true
+    },
+    {
+      "name": "CausalKG",
+      "display_name": "CausalKG",
+      "input": "知识图产生的候选药物关系，以及患者的药物、适应证、不良事件和混杂变量表。",
+      "output": "药物与不良事件的关系估计及中介分析结果。",
+      "operation": "先筛选候选关系，再拟合患者表中的统计关系，分析适应证与结局之间的路径。",
+      "paper_url": "https://doi.org/10.1093/bioinformatics/btaf661",
+      "citation": "Toonsi, S., Schofield, P. N., Hoehndorf, R. (2026). Causal knowledge graph analysis identifies adverse drug effects. Bioinformatics, 42(1), btaf661. Published online 12 December 2025.",
+      "status": "统计分析跑通",
+      "package": "47_CausalKG",
+      "documentation": "47_CausalKG",
+      "finding": "人工变量表上完成作者 R 中介分析。",
+      "data_source": "人工药物、适应证、结局和混杂变量表",
+      "execution_scope": "作者中介分析阶段",
+      "evidence": "47_CausalKG/verification/smoke.json",
+      "routes": [
+        "causalkg"
+      ],
+      "reference": "47",
+      "in_original_pdf": true
+    },
+    {
+      "name": "CaML",
+      "display_name": "CaML",
+      "input": "按不同药物干预组织的患者任务、患者特征、治疗标签、结局和药物描述向量。",
+      "output": "个体治疗效果估计。",
+      "operation": "在多个干预任务之间学习共同的适应规则，再根据新任务的药物表示作出预测。",
+      "paper_url": "https://arxiv.org/abs/2301.12292",
+      "citation": "Nilforoshan, H., Moor, M., Roohani, Y., et al. (2023). Zero-shot causal learning. Advances in Neural Information Processing Systems, 36, 6862–6901.",
+      "status": "人工输入跑通",
+      "package": "48_CaML",
+      "documentation": "48_CaML",
+      "finding": "人工七时间窗病史、作者药物表示，完成原任务内和任务间更新。",
+      "data_source": "人工七时间窗病史与结局、作者744种药物向量",
+      "execution_scope": "作者网络、任务内适应、任务间更新和新药物任务预测",
+      "evidence": "48_CaML/verification/result.json",
+      "routes": [
+        "caml"
+      ],
+      "reference": "48",
+      "in_original_pdf": true
+    },
+    {
+      "name": "KG_TREAT",
+      "display_name": "KG-TREAT",
+      "input": "纵向病史、治疗选择、结局、治疗相关和结局相关的医学图，以及概念向量。",
+      "output": "不同治疗分支下的结局分数及其差值。",
+      "operation": "病史与两类医学图多轮交换信息，再分别预测治疗分支的结局。",
+      "paper_url": "https://arxiv.org/abs/2403.03791",
+      "citation": "Liu, R., Wu, L., Zhang, P. (2024). KG-TREAT: Pre-training for Treatment Effect Estimation by Synergizing Patient Data with Knowledge Graphs. Proceedings of the AAAI Conference on Artificial Intelligence, 38.",
+      "status": "人工输入跑通",
+      "package": "49_KG_TREAT",
+      "documentation": "49_KG_TREAT",
+      "finding": "人工病史与成对医学图，完成原网络及原损失训练。",
+      "data_source": "人工病史、成对医学图、概念向量和结局",
+      "execution_scope": "作者网络、原损失、更新和重载",
+      "evidence": "49_KG_TREAT/verification/smoke.json",
+      "routes": [
+        "kg-treat"
+      ],
+      "reference": "49",
+      "in_original_pdf": true
+    },
+    {
+      "name": "R_GCN_Original",
+      "display_name": "R-GCN 2018",
+      "input": "实体、关系类型、边和部分实体标签。",
+      "output": "实体类别；原论文还研究关系预测。",
+      "operation": "每种关系分别传递邻居信息，再合起来预测实体或关系。",
+      "paper_url": "https://arxiv.org/abs/1703.06103",
+      "citation": "Schlichtkrull, M., Kipf, T. N., Bloem, P., van den Berg, R., Titov, I., Welling, M. (2018). Modeling Relational Data with Graph Convolutional Networks. The Semantic Web: ESWC 2018, Lecture Notes in Computer Science 10843, 593–607.",
+      "status": "公开输入跑通",
+      "package": "67_R_GCN_Original",
+      "documentation": "67_R_GCN_Original",
+      "finding": "2018 年原 Keras 实现，公开 AIFB 节点分类完成。",
+      "data_source": "真实公开AIFB图及原训练测试标签",
+      "execution_scope": "原作者Keras节点分类训练和测试",
+      "evidence": "67_R_GCN_Original/verification/result.json",
+      "routes": [
+        "rgcn-2018"
+      ],
+      "reference": "67",
+      "in_original_pdf": true
+    }
+  ]
+}

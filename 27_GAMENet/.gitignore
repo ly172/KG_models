@@ -1,0 +1,8 @@
+.pixi/
+.run/
+outputs/
+__pycache__/
+*.pyc
+
+/public_tables/
+/outputs_demo/

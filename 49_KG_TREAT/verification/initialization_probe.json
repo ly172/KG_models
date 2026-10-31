@@ -1,0 +1,13 @@
+{
+  "source": "author constructor in locked environment",
+  "provided_shape": [
+    32,
+    1024
+  ],
+  "frozen": true,
+  "preserved_values": false,
+  "max_abs_difference": 0.4132114350795746,
+  "input_standard_deviation": 0.09937974810600281,
+  "initialized_table_standard_deviation": 0.02010941319167614,
+  "interpretation": "Original constructor post_init applies BERT embedding initialization, including the frozen concept lookup table. This package preserves this behavior and starts from random weights."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "command": "pixi run --locked reproduce",
+  "os": "Windows",
+  "first_exit_code": 0,
+  "fresh_exit_code": 0,
+  "fresh_started_without_environment_or_data": true,
+  "identical_results_except_elapsed_time": true,
+  "artificial_concepts_sha256": "170920e41f6c9ad8fe1825c7792bee7870219a38e5a1caa5e9a1964d9c3bffed",
+  "patients": 4,
+  "parameters": 118161350,
+  "training_updates": 2,
+  "concept_input_dimension": 1024,
+  "concept_projection": [
+    "kgtreat.concept_emb.cpt_transform"
+  ],
+  "original_import_exit_code": 1,
+  "scope": "Original default-size author network including 1024-to-200 projection, original loss, random initialization and artificial inputs only.",
+  "path_redaction": "Local package paths use <PACKAGE_ROOT>."
+}

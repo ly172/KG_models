@@ -1,0 +1,15 @@
+WARNING (theano.configdefaults): g++ not available, if using conda: `conda install m2w64-toolchain`
+<PACKAGE_ROOT>\.pixi\envs\default\lib\site-packages\theano\configdefaults.py:560: UserWarning: DeprecationWarning: there is no c++ compiler.This is deprecated and with Theano 0.11 a c++ compiler will be mandatory
+  warnings.warn("DeprecationWarning: there is no c++ compiler."
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+Building the model ...  done!!
+Constructing the optimizer ...  done!!
+Loading data ...  <PACKAGE_ROOT>\.run\author\gram.py:150: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sequences = np.array(pickle.load(open(seqFile, 'rb')))
+<PACKAGE_ROOT>\.run\author\gram.py:151: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  labels = np.array(pickle.load(open(labelFile, 'rb')))
+done!!
+Optimization start !!
+Epoch:0, Iteration:0/2, Train_Cost:69.614611
+Epoch:0, Duration:7.453957, Train_Cost:61.774253, Valid_Cost:56.132467, Test_Cost:52.476367
+Best Epoch:0, Avg_Duration:7.453957, Train_Cost:61.774253, Valid_Cost:56.132467, Test_Cost:52.476367

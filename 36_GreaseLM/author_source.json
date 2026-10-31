@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/snap-stanford/GreaseLM",
+  "commit": "6ccbc964152eeae6a040f3bbe39116c3baa75616",
+  "files": {
+    "modeling/modeling_greaselm.py": "1749fd1cf4266bfe7b78b7f3ff82f71d55293427ea82ce7f799f186b70c1ef24",
+    "modeling/modeling_gnn.py": "3f05cfddd8539660d3b0c9f49bc90bd980b387883d2867f5cc36b776dfae1e29",
+    "utils/layers.py": "a86b6beda8bfa1f0ec615d0ed9c75a2c3d9b3dd4cba0ff74ed2d977860dc0fc2",
+    "utils/utils.py": "2813910dafa0e4470813285099cead8747a6ca766e2a947c1f733e59790a91ae",
+    "utils/data_utils.py": "b93ca6c9527d00ce3b332147a217a39054c1413c40c4d7eadaf70bd9a7286b89",
+    "preprocess_utils/conceptnet.py": "161871163e1a9feadeef42ae2d1ba32597cd7d01100b1f0b66824f0785eaa586",
+    "LICENSE": "4d7c9376c6f72d9f601b4092655c6af8d944ea0061e59ad0bc74c328dd22feab",
+    "README.md": "7da00b66b9a1fc254a3c9d2b49f032caba8b1e53f6f570b20fbf73296d7803cb",
+    "greaselm.py": "9a8ead1bc63bde8233939d1dd320428a419a1561c51121bac51f311cd326f6d5",
+    "utils/parser_utils.py": "b97ee3ba6b781d3d53170befd185adb137489217bcdab084f1d587029aa216ee",
+    "utils/optimization_utils.py": "3a7b625ec7507beea1e14eb081260a603bf7088c9185d4c04ebcfe14095965d3"
+  }
+}

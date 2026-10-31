@@ -1,0 +1,18 @@
+{
+  "commit": "4bec1341dd46b72bf482f7ed26c2dca4533577f6",
+  "files": {
+    "setup.py": "f54e5cb0ad722eb0e62bc7ae7c29f7f3e9557b7ceaf04fc75df51a3606d4e836",
+    "rgcn/data_utils.py": "169073ca4711ebe29fbe473faef401bcab043a4456200238d7169566e7dd1033",
+    "rgcn/prepare_dataset.py": "841eb209ff0462607c0fb862a69d06a082453c2950eba5486b0548877d43592f",
+    "rgcn/train.py": "f1dde2b4b144b00e1dc80709b903e7cf75e7de4578f51e55b47af5fe3969630e",
+    "rgcn/utils.py": "ef46556871564dfdbc0681f8ae3fadb6631221c82e6dc598fbd535c15133f79b",
+    "rgcn/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rgcn/data/aifb/strip_targets.py": "8be8131b6eb5c93350c93bc1fc69e16e445d12e285f40de815f34fd7498c728d",
+    "rgcn/data/am/strip_targets.py": "8550e7aa074629523539695ea9ec0a8345980ab4e0190285c16fa04c9e2f2b6f",
+    "rgcn/data/bgs/strip_targets.py": "e17671f088a658a0b50e15ceaa001b723251cba5c83b2fb138570999a01653ec",
+    "rgcn/data/mutag/strip_targets.py": "1140e3910a562e7921bde5203f3e1588d8dced61ee3f5c0e4ddb20e1e3caf509",
+    "rgcn/layers/graph.py": "83f35e85b61d73ce738012802a730b804d998a2f0d4e6c891bbb75cb6e3a274d",
+    "rgcn/layers/input_adj.py": "a59e82a466987ae65d37e7df48fb97e5f99a9ed4827854cbd297a71626957035",
+    "rgcn/layers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

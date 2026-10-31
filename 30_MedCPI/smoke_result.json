@@ -1,0 +1,239 @@
+{
+  "status": "passed",
+  "command": "pixi run --locked smoke",
+  "cohort": {
+    "status": "prepared",
+    "source": "MIMIC-IV Clinical Database Demo 2.2 (public)",
+    "selection": "15 fixed-hash selected patients with 2-4 admissions, complete admission times and diagnoses, ICD-9 diagnosis/procedure histories only; all selected admissions preserved",
+    "selection_seed": "medcpi-real-20261030",
+    "eligible_patients": 15,
+    "selected_patients": 15,
+    "rows": {
+      "admissions": 37,
+      "diagnoses_icd": 515,
+      "procedures_icd": 106,
+      "prescriptions": 2498
+    },
+    "input_sha256": {
+      "admissions": "9ffb631e459355aef16a515fa3c07430c0c34bb01873bf31a758eaf048c48d6c",
+      "diagnoses_icd": "b981d3ed8d50fd4b8a253ea52ec655de1b01c78430d7fb0401d0169c3f1c8ddf",
+      "procedures_icd": "70f1a088a39de38f34398c92c49086ada574f8ce1248c6fb426a5e3b22edbdb0",
+      "prescriptions": "ae962af7e7f0dcb66abdc5dfcd07d3d30ede051f9b5cbc2aa7bf815819f235e1"
+    }
+  },
+  "mapping": {
+    "diagnosis": {
+      "counts": {
+        "native_outputs": 273,
+        "source_confirmed": 273,
+        "confirmed_exact_code": 273,
+        "source_unavailable_or_ambiguous": 6
+      },
+      "seconds": 148.482,
+      "original_mapper_exit_code": 0,
+      "all_native_outputs_passed_unchanged": true
+    },
+    "procedure": {
+      "counts": {
+        "native_outputs": 71,
+        "source_confirmed": 71,
+        "confirmed_exact_code": 71,
+        "source_unavailable_or_ambiguous": 0
+      },
+      "seconds": 20.619,
+      "original_mapper_exit_code": 0,
+      "all_native_outputs_passed_unchanged": true
+    },
+    "medication": {
+      "counts": {
+        "native_outputs": 392,
+        "source_confirmed": 335,
+        "confirmed_code_system_lexical_subset": 241,
+        "native_output_disagrees_with_exact_source": 57,
+        "confirmed_exact_text": 84,
+        "confirmed_code_system_subset": 10,
+        "source_unavailable_or_ambiguous": 116
+      },
+      "seconds": 78.303,
+      "original_mapper_exit_code": 0,
+      "all_native_outputs_passed_unchanged": true
+    },
+    "mapping_policy": "All native author mapper outputs are passed to the author alignment and graph stages unchanged. Source disagreements are recorded separately.",
+    "native_outputs_replaced_by_wrapper": 0
+  },
+  "pipeline": {
+    "real_source": "MIMIC-IV Clinical Database Demo 2.2 (public)",
+    "synthetic_patient_rows": 0,
+    "patient_splits_disjoint": true,
+    "aligned_event_counts": {
+      "diagnosis_mapped": 507,
+      "diagnosis_unmapped": 8,
+      "medication_mapped": 1022,
+      "medication_unmapped": 400,
+      "patients": 15,
+      "procedure_mapped": 102,
+      "visits": 37
+    },
+    "knowledge_anchor_coverage": {
+      "diagnosis_events": 515,
+      "diagnosis_umls_anchor_events": 507,
+      "procedure_events": 102,
+      "procedure_umls_anchor_events": 102,
+      "medication_events": 1422,
+      "medication_umls_anchor_events": 982,
+      "medication_rxnorm_only_events": 40,
+      "medication_unmapped_events": 400,
+      "diagnosis_unmapped_events": 8
+    },
+    "unmapped_events_used_as_kg_anchors": 0,
+    "temporal_check": {
+      "instances": 22,
+      "target_visit_in_history": 0,
+      "history_discharge_after_prediction_instances": 0,
+      "interpretation": "Author history is ordered by admission. Overlapping admissions can contain events after the target admission begins."
+    },
+    "construct": {
+      "allowed_semantic_group_ids": [
+        "CHEM",
+        "DISO",
+        "PROC"
+      ],
+      "construct_protocol": "split_then_construct_then_evaluate",
+      "dataset": "mimic4",
+      "global_expansion_hops": 1,
+      "num_edges": 1200,
+      "num_kept_raw_relations": 55,
+      "num_nodes": 1025,
+      "num_train_anchor_concepts": 418,
+      "schema_dataset": "shared",
+      "schema_decision_source": "llm",
+      "schema_resolution": "shared_task",
+      "schema_scope": "task_specific_shared_across_datasets",
+      "schema_shared_across_datasets": true,
+      "schema_task": "mortality",
+      "stats": {
+        "canonical_relation_has_causative_agent": 201,
+        "canonical_relation_has_pathophysiology": 6,
+        "canonical_relation_treated_by": 993,
+        "num_anchor_incident_kept_edges_after_semantic_filter": 1200,
+        "num_anchor_incident_kept_edges_before_semantic_filter": 1257,
+        "num_anchor_nodes_in_graph": 73,
+        "num_anchor_nodes_outside_smed": 0,
+        "num_edges": 1200,
+        "num_edges_dropped_by_semantic_group_filter": 57,
+        "num_induced_kept_edges": 1200,
+        "num_non_anchor_nodes_in_graph": 952
+      },
+      "task": "mortality",
+      "train_anchor_scope": "training_split_only"
+    },
+    "personalize": {
+      "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+      "dataset": "mimic4",
+      "granularity": "visit",
+      "split_stats": [
+        {
+          "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+          "num_anchor_concepts_total": 1078,
+          "num_instances": 19,
+          "num_pkg_edges": 5424,
+          "num_pkg_nodes": 4971,
+          "split": "train"
+        },
+        {
+          "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+          "num_anchor_concepts_total": 29,
+          "num_instances": 1,
+          "num_pkg_edges": 182,
+          "num_pkg_nodes": 171,
+          "split": "valid"
+        },
+        {
+          "construction_state": "ehr_plus_concept_1hop_plus_bridge_paths",
+          "num_anchor_concepts_total": 58,
+          "num_instances": 2,
+          "num_pkg_edges": 226,
+          "num_pkg_nodes": 227,
+          "split": "test"
+        }
+      ],
+      "stage": "personalize",
+      "task": "mortality"
+    },
+    "scope": "Author model on a small MIMIC cohort with the documented public terminology subset.",
+    "mapping_policy": "Author mapper outputs feed graph construction; comparisons with public sources are saved alongside the mappings.",
+    "api_use": "Uses a GPT-5 relation schema published by the authors, plus local public terminology files."
+  },
+  "training": {
+    "batch_size": 32,
+    "best_epoch": 1,
+    "best_valid_loss": 0.6962978839874268,
+    "best_valid_metric": -0.6962978839874268,
+    "concept_vocab_size": 1220,
+    "cuda_available": false,
+    "dataset": "mimic4",
+    "device": "cpu",
+    "dropout": 0.1,
+    "embedding_dim": 64,
+    "epoch_summaries": [
+      {
+        "epoch": 1,
+        "seed": 0,
+        "selection_metric": -0.6962978839874268,
+        "selection_metric_name": "auroc",
+        "train_loss": 0.721184492111206,
+        "valid_auprc": null,
+        "valid_auroc": null,
+        "valid_loss": 0.6962978839874268
+      }
+    ],
+    "epochs_ran": 1,
+    "epochs_requested": 1,
+    "fusion_strategy": "cross_attention",
+    "granularity": "visit",
+    "hidden_dim": 64,
+    "lr": 0.0003,
+    "num_heads": 4,
+    "num_htt_layers": 1,
+    "num_parameters": 429186,
+    "num_rgcn_layers": 2,
+    "num_test_examples": 2,
+    "num_train_examples": 19,
+    "num_trainable_parameters": 429186,
+    "num_valid_examples": 1,
+    "patience": 10,
+    "relation_vocab_size": 15,
+    "seed": 0,
+    "selection_metric_name": "auroc",
+    "status": "completed",
+    "task": "mortality",
+    "test_metrics": {
+      "auprc": null,
+      "auroc": null,
+      "loss": 0.6877440810203552,
+      "num_examples": 2,
+      "positive_rate": 0.0
+    },
+    "weight_decay": 0.0001,
+    "original_and_fixed_state_tensors_identical": true,
+    "reloaded_test_metrics_identical": true,
+    "repair": "Removed two duplicate report dictionary fields referencing undefined seed_results. Existing parameter counts remain; model, optimizer, loss, batches and selection unchanged.",
+    "original_file_sha256": "c896b629354c06b5f275a61246d1cff2631e9eb544cce9d3eadd70d590699233",
+    "original_normalized_text_sha256": "c896b629354c06b5f275a61246d1cff2631e9eb544cce9d3eadd70d590699233",
+    "patched_file_sha256": "e11110125522934eea0b0f6bb5f4fa83b894c8fb3fa849316ea0ccb5f8f6ccb7",
+    "patched_normalized_text_sha256": "cb67c9ca890f99506c3387f948c94b65f7fa50b9ba0660c06d2991f89ec2a643"
+  },
+  "data_source": {
+    "name": "MIMIC-IV Clinical Database Demo",
+    "version": "2.2",
+    "public": true,
+    "patients": 100,
+    "url": "https://physionet.org/content/mimic-iv-demo/2.2/",
+    "doi": "10.13026/dp1f-ex47",
+    "license": "Open Data Commons Open Database License v1.0",
+    "verified_files": 34,
+    "archive_sha256": "97301a03820e8f41af211cf3462ddc19aefe75bbed05f11753859affaafeb8ec"
+  },
+  "model": "MedCPI",
+  "optimizer_updates_per_training_run": 1
+}

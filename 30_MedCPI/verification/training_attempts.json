@@ -1,0 +1,14 @@
+[
+  {
+    "version": "original",
+    "exit_code": 1,
+    "seconds": 24.307,
+    "expected_report_NameError": true
+  },
+  {
+    "version": "report_fixed",
+    "exit_code": 0,
+    "seconds": 10.131,
+    "expected_report_NameError": false
+  }
+]

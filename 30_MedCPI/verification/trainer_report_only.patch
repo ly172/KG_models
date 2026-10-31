@@ -1,0 +1,11 @@
+--- author/train_integrate_formal.py
++++ runtime/train_integrate_formal.py
+@@ -553,8 +553,6 @@
+         "num_htt_layers": args.num_htt_layers,
+         "num_rgcn_layers": args.num_rgcn_layers,
+         "dropout": args.dropout,
+-        "num_parameters": seed_results[0]["num_parameters"],
+-        "num_trainable_parameters": seed_results[0]["num_trainable_parameters"],
+         "concept_vocab_size": len(concept_vocab["concept_to_id"]),
+         "relation_vocab_size": len(relation_vocab["relation_to_id"]),
+         "num_train_examples": len(train_dataset),

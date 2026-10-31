@@ -1,0 +1,36 @@
+parameters 455002
+
+Train--Epoch: 0, Step: 0/24, L_p cnt: 2, L_neg cnt: 0
+Train--Epoch: 0, Step: 1/24, L_p cnt: 4, L_neg cnt: 1
+Train--Epoch: 0, Step: 2/24, L_p cnt: 8, L_neg cnt: 1
+Train--Epoch: 0, Step: 3/24, L_p cnt: 10, L_neg cnt: 1
+Train--Epoch: 0, Step: 4/24, L_p cnt: 13, L_neg cnt: 1
+Train--Epoch: 0, Step: 5/24, L_p cnt: 17, L_neg cnt: 1
+Train--Epoch: 0, Step: 6/24, L_p cnt: 19, L_neg cnt: 1
+Train--Epoch: 0, Step: 7/24, L_p cnt: 22, L_neg cnt: 1
+Train--Epoch: 0, Step: 8/24, L_p cnt: 26, L_neg cnt: 1
+Train--Epoch: 0, Step: 9/24, L_p cnt: 28, L_neg cnt: 1
+Train--Epoch: 0, Step: 10/24, L_p cnt: 31, L_neg cnt: 1
+Train--Epoch: 0, Step: 11/24, L_p cnt: 35, L_neg cnt: 1
+Train--Epoch: 0, Step: 12/24, L_p cnt: 37, L_neg cnt: 1
+Train--Epoch: 0, Step: 13/24, L_p cnt: 40, L_neg cnt: 1
+Train--Epoch: 0, Step: 14/24, L_p cnt: 44, L_neg cnt: 1
+Train--Epoch: 0, Step: 15/24, L_p cnt: 46, L_neg cnt: 1
+Train--Epoch: 0, Step: 16/24, L_p cnt: 49, L_neg cnt: 1
+Train--Epoch: 0, Step: 17/24, L_p cnt: 53, L_neg cnt: 1
+Train--Epoch: 0, Step: 18/24, L_p cnt: 55, L_neg cnt: 1
+Train--Epoch: 0, Step: 19/24, L_p cnt: 58, L_neg cnt: 1
+Train--Epoch: 0, Step: 20/24, L_p cnt: 62, L_neg cnt: 1
+Train--Epoch: 0, Step: 21/24, L_p cnt: 63, L_neg cnt: 2
+Train--Epoch: 0, Step: 22/24, L_p cnt: 66, L_neg cnt: 2
+Train--Epoch: 0, Step: 23/24, L_p cnt: 70, L_neg cnt: 2
+
+Eval--Epoch: 0, Step: 0/6
+Eval--Epoch: 0, Step: 1/6
+Eval--Epoch: 0, Step: 2/6
+Eval--Epoch: 0, Step: 3/6
+Eval--Epoch: 0, Step: 4/6
+Eval--Epoch: 0, Step: 5/6	DDI Rate: 0.0000, Jaccard: 0.0000,  PRAUC: 0.0755, AVG_PRC: 0.0000, AVG_RECALL: 0.0000, AVG_F1: 0.0000
+	Epoch: 0, Loss: 0.6075, One Epoch Time: 0.05m, Appro Left Time: 0.00h
+
+best_epoch: 0

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "author_commit": "4bec1341dd46b72bf482f7ed26c2dca4533577f6",
+  "data": "Original public AIFB graph and author split",
+  "epochs": 2,
+  "nodes": 8285,
+  "relations_including_reverse_and_self": 91,
+  "train_people": 140,
+  "test_people": 36,
+  "test_loss": 0.8069732785224915,
+  "test_accuracy": 0.9444444444444444,
+  "prediction_shape": [
+    8285,
+    4
+  ],
+  "compatibility_patch": "Python 2 dictionary iteration, generator next, list range, string type and integer division adapted to Python 3."
+}

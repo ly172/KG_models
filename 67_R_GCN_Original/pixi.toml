@@ -1,0 +1,28 @@
+[workspace]
+name = "rgcn-original"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[dependencies]
+python = "3.8.*"
+pip = "24.3.*"
+numpy = "==1.23.5"
+scipy = "==1.10.1"
+pandas = "==1.5.3"
+
+[pypi-dependencies]
+keras = "==1.2.1"
+theano = "==0.9.0"
+rdflib = "==4.2.2"
+wget = "==3.2"
+pyyaml = "==6.0.2"
+
+[activation.env]
+PYTHONUTF8 = "1"
+KERAS_BACKEND = "theano"
+THEANO_FLAGS = "device=cpu,floatX=float32,cxx=,blas.ldflags=,optimizer=None"
+OMP_NUM_THREADS = "2"
+
+[tasks]
+smoke = "python reproduce.py"

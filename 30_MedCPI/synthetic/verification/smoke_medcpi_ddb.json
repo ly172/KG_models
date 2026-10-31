@@ -1,0 +1,133 @@
+{
+  "entry": "medcpi-public-kg",
+  "package": "30_MedCPI/synthetic",
+  "command": [
+    "pixi",
+    "run",
+    "--locked",
+    "public-ddb"
+  ],
+  "exit_code": 0,
+  "seconds": 245.961,
+  "result": {
+    "status": "passed",
+    "data_kind": "synthetic_patients_with_public_DDB_graph",
+    "training_runner": "author_run_single_seed",
+    "report_fix": "Removed two duplicate fields referring to undefined seed_results; parameter counts use the existing local variables.",
+    "selection_metric": "validation_auroc",
+    "seed": 20261029,
+    "device": "cpu",
+    "threads": 2,
+    "examples": {
+      "train": 32,
+      "validation": 8,
+      "test": 8
+    },
+    "network": {
+      "concept_vocab_size": 98,
+      "relation_vocab_size": 34,
+      "embedding_dim": 64,
+      "hidden_dim": 64,
+      "num_heads": 4,
+      "num_htt_layers": 1,
+      "num_rgcn_layers": 2,
+      "dropout": 0.1,
+      "granularity": "visit",
+      "fusion_strategy": "cross_attention"
+    },
+    "parameters": 441218,
+    "updated_parameter_groups": {
+      "ehr_encoder.": true,
+      "pkg_encoder.": true,
+      "cross_attention.": true,
+      "concat_fusion.": true,
+      "prediction_head.": true
+    },
+    "checkpoint_reloaded_predictions_equal": true,
+    "output_shape": [
+      8
+    ],
+    "training": {
+      "dataset": "generated_visits",
+      "task": "mortality",
+      "seed": 20261029,
+      "granularity": "visit",
+      "device": "cpu",
+      "cuda_available": false,
+      "fusion_strategy": "cross_attention",
+      "selection_metric_name": "auroc",
+      "output_suffix": "smoke_seed20261029",
+      "num_parameters": 441218,
+      "num_trainable_parameters": 441218,
+      "batch_size": 8,
+      "epochs_requested": 3,
+      "epochs_ran": 3,
+      "patience": 10,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "embedding_dim": 64,
+      "hidden_dim": 64,
+      "num_heads": 4,
+      "num_htt_layers": 1,
+      "num_rgcn_layers": 2,
+      "dropout": 0.1,
+      "concept_vocab_size": 98,
+      "relation_vocab_size": 34,
+      "num_train_examples": 32,
+      "num_valid_examples": 8,
+      "num_test_examples": 8,
+      "best_epoch": 1,
+      "best_valid_metric": 0.25,
+      "best_valid_loss": 0.6963574886322021,
+      "best_checkpoint_path": "<PACKAGE_ROOT>\\outputs\\public_ddb\\best_valid_formal_smoke_seed20261029.pt",
+      "epoch_summaries": [
+        {
+          "seed": 20261029,
+          "epoch": 1,
+          "train_loss": 0.6960852444171906,
+          "valid_loss": 0.6963574886322021,
+          "valid_auroc": 0.25,
+          "valid_auprc": 0.4571428571428572,
+          "selection_metric_name": "auroc",
+          "selection_metric": 0.25
+        },
+        {
+          "seed": 20261029,
+          "epoch": 2,
+          "train_loss": 0.6936532109975815,
+          "valid_loss": 0.6959526538848877,
+          "valid_auroc": 0.25,
+          "valid_auprc": 0.4571428571428572,
+          "selection_metric_name": "auroc",
+          "selection_metric": 0.25
+        },
+        {
+          "seed": 20261029,
+          "epoch": 3,
+          "train_loss": 0.6906418204307556,
+          "valid_loss": 0.6956213116645813,
+          "valid_auroc": 0.125,
+          "valid_auprc": 0.3946428571428572,
+          "selection_metric_name": "auroc",
+          "selection_metric": 0.125
+        }
+      ],
+      "test_metrics": {
+        "loss": 0.6951615214347839,
+        "num_examples": 8,
+        "positive_rate": 0.5,
+        "auroc": 0.5625,
+        "auprc": 0.6678571428571428
+      },
+      "progress_path": "<PACKAGE_ROOT>\\outputs\\public_ddb\\formal_train_progress_smoke_seed20261029.json"
+    },
+    "test": {
+      "loss": 0.6951615214347839,
+      "num_examples": 8,
+      "positive_rate": 0.5,
+      "auroc": 0.5625,
+      "auprc": 0.6678571428571428
+    },
+    "author_files_verified": 5
+  }
+}

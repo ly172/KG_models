@@ -1,0 +1,55 @@
+--- author/rgcn/data_utils.py
++++ work/rgcn/data_utils.py
+@@ -287,7 +287,7 @@
+                 print('%d adjacency matrices loaded ' % i)
+ 
+         nodes_u_dict = {np.unicode(to_unicode(key)): val for key, val in
+-                        nodes_dict.iteritems()}
++                        nodes_dict.items()}
+ 
+         labels_set = set(labels_df[label_header].values.tolist())
+         labels_dict = {lab: i for i, lab in enumerate(list(labels_set))}
+@@ -357,7 +357,7 @@
+ 
+ 
+ def to_unicode(input):
+-    if isinstance(input, unicode):
++    if isinstance(input, str):
+         return input
+     elif isinstance(input, str):
+         return input.decode('utf-8', errors='replace')
+--- author/rgcn/prepare_dataset.py
++++ work/rgcn/prepare_dataset.py
+@@ -27,8 +27,8 @@
+ A, X, y, labeled_nodes_idx, train_idx, test_idx, rel_dict, train_names, test_names = load_data(
+     DATASET)
+ 
+-rel_list = range(len(A))
+-for key, value in rel_dict.iteritems():
++rel_list = list(range(len(A)))
++for key, value in rel_dict.items():
+     if value * 2 >= len(A):
+         continue
+     rel_list[value * 2] = key
+@@ -48,7 +48,7 @@
+ bfs_generator = bfs_relational(A, labeled_nodes_idx)
+ lvls = list()
+ lvls.append(set(labeled_nodes_idx))
+-lvls.append(set.union(*bfs_generator.next()))
++lvls.append(set.union(*next(bfs_generator)))
+ print("Done! Elapsed time " + str(time.time() - t))
+ 
+ # Delete unnecessary rows in adjacencies for memory efficiency
+--- author/rgcn/utils.py
++++ work/rgcn/utils.py
+@@ -136,8 +136,8 @@
+     # Make dataset splits
+     # np.random.shuffle(train_idx)
+     if validation:
+-        idx_train = train_idx[len(train_idx) / 5:]
+-        idx_val = train_idx[:len(train_idx) / 5]
++        idx_train = train_idx[len(train_idx) // 5:]
++        idx_val = train_idx[:len(train_idx) // 5]
+         idx_test = idx_val  # report final score on validation set for hyperparameter optimization
+     else:
+         idx_train = train_idx

@@ -1,0 +1,72 @@
+Pixi task (reproduce): python reproduce.py
+{"step": 1, "loss": 1.4058914184570312}
+{"step": 2, "loss": 1.3795487880706787}
+{
+  "status": "passed",
+  "scope": "original author forward/loss/backward and two updates on artificial inputs",
+  "real_patient_data": false,
+  "original_import_exit_code": 1,
+  "network_classes_ast_unchanged": true,
+  "original_loss_unchanged": true,
+  "seed": 20261029,
+  "patients": 4,
+  "graph_entries": 8,
+  "parameters": 118161350,
+  "default_hidden_size": 768,
+  "default_layers": 12,
+  "default_graph_layers": 5,
+  "default_concept_dim": 200,
+  "concept_input_dimension": 1024,
+  "concept_projection_modules": [
+    "kgtreat.concept_emb.cpt_transform"
+  ],
+  "initial_loss": 1.3850274085998535,
+  "training_losses": [
+    1.4058914184570312,
+    1.3795487880706787
+  ],
+  "final_loss": 1.3729767799377441,
+  "nonfactual_branch_gradient_abs_sum": 0.4958292841911316,
+  "changed_parameter_tensors": 304,
+  "final_probabilities_y0": [
+    [
+      0.4979826807975769,
+      0.5020173192024231
+    ],
+    [
+      0.4889729917049408,
+      0.5110270380973816
+    ],
+    [
+      0.4888409674167633,
+      0.5111590027809143
+    ],
+    [
+      0.4938034117221832,
+      0.5061965584754944
+    ]
+  ],
+  "final_probabilities_y1": [
+    [
+      0.5022826790809631,
+      0.49771732091903687
+    ],
+    [
+      0.4935752749443054,
+      0.5064246654510498
+    ],
+    [
+      0.4955274760723114,
+      0.504472553730011
+    ],
+    [
+      0.4979083836078644,
+      0.5020915865898132
+    ]
+  ],
+  "artificial_concepts_sha256": "170920e41f6c9ad8fe1825c7792bee7870219a38e5a1caa5e9a1964d9c3bffed",
+  "python": "3.12.16",
+  "torch": "2.9.0+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "elapsed_seconds": 63.87801339999987
+}

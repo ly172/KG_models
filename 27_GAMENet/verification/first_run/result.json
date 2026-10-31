@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "model": "Author GAMENet with DDI",
+  "inputs": {
+    "kind": "entirely_simulated_patient_sequences",
+    "seed": 20261029,
+    "patients": 36,
+    "visits": 108,
+    "visits_per_patient": [
+      2,
+      3,
+      4
+    ],
+    "codes_per_visit": {
+      "diagnoses": 4,
+      "procedures": 2,
+      "medications": 5
+    },
+    "generation": "Uniform sampling without replacement from author vocabulary indices; no patient rows, disease rules, or clinical relationship are used.",
+    "vocabulary_sizes": [
+      1960,
+      1432,
+      153
+    ],
+    "vocabulary_serialization_compatibility": {
+      "canonical_sha256": "4cff545af1717ef18a61a32d44adfe3fdc42c61a30efe1510a1f46378b308158",
+      "counts": {
+        "diag_voc": 1960,
+        "med_voc": 153,
+        "pro_voc": 1432
+      },
+      "scope": "Original index-to-code and code-to-index dictionaries retained; obsolete serialized class methods are unnecessary for author training."
+    },
+    "graphs": "Unchanged author-public EHR and DDI adjacency matrices.",
+    "split": {
+      "train_patients": 24,
+      "test_patients": 6,
+      "validation_patients": 6
+    },
+    "optimizer_steps_per_epoch": 72
+  },
+  "epochs": 1,
+  "embedding_dim": 64,
+  "device": "cpu",
+  "steps": [
+    {
+      "stage": "train",
+      "exit_code": 0,
+      "seconds": 34.925
+    },
+    {
+      "stage": "test",
+      "exit_code": 0,
+      "seconds": 15.811
+    }
+  ],
+  "artificial_input_metrics": {
+    "ddi_rate": 0.0,
+    "jaccard": 0.0,
+    "prauc": 0.0589
+  },
+  "checkpoint_sha256": "50f4883ab3282ee95c90e171f42281d6da31c68aca37def94269cc152ed7a08b"
+}

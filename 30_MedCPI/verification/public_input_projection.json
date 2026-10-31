@@ -1,0 +1,33 @@
+{
+  "semantic_type_source": "SciSpaCy official UMLS2022AB; GraphCare TTL only when the CUI is absent from SciSpaCy",
+  "knowledge_direction": "Preserve GraphCare umls.csv first endpoint as CUI1 and second endpoint as CUI2; retain exact relation text. Source release REL/SAB/AUI/RUI/SUPPRESS not available and left blank.",
+  "known_projection_limit": "Full original MRREL release direction, source vocabulary and suppression flags cannot be recovered from the public graph export.",
+  "projected_concepts_with_names": 312853,
+  "projected_semantic_profiles": 387857,
+  "projected_relation_rows": 1212586,
+  "candidate_counts": {
+    "diagnosis": 273,
+    "procedure": 71,
+    "medication": 568
+  },
+  "unique_mention_coverage": {
+    "diagnosis_mapped": 273,
+    "diagnosis_unmapped": 6,
+    "medication_exact_ndc": 308,
+    "medication_ndc_current": 159,
+    "medication_mapped": 392,
+    "medication_exact_name": 84,
+    "medication_ndc_non11_digits_unconverted": 46,
+    "medication_unmapped": 116,
+    "medication_ndc_cross_version_conflict": 109,
+    "medication_ndc_historical_only": 149,
+    "procedure_mapped": 71
+  },
+  "mapping_policy": "Only a unique exact ICD code with original semantic-type eligibility, or unique exact official NDC/name RxCUI; unresolved inputs retained as unmapped. Original SapBERT mapper will run on these candidate sets.",
+  "rxnorm_versions": [
+    "20261005",
+    "20191202",
+    "20141201"
+  ],
+  "ndc_policy": "Preserve source leading zeroes; only 11-digit exact NDC accepted. All available versions must agree on a single RxCUI. Current release preferred, historical consistent entries fill gaps. Conflicting NDC may be resolved only independently by a unique exact drug-name match. No 10-digit padding."
+}

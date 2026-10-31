@@ -1,0 +1,40 @@
+{
+  "diagnosis": {
+    "counts": {
+      "native_outputs": 273,
+      "source_confirmed": 273,
+      "confirmed_exact_code": 273,
+      "source_unavailable_or_ambiguous": 6
+    },
+    "seconds": 148.482,
+    "original_mapper_exit_code": 0,
+    "all_native_outputs_passed_unchanged": true
+  },
+  "procedure": {
+    "counts": {
+      "native_outputs": 71,
+      "source_confirmed": 71,
+      "confirmed_exact_code": 71,
+      "source_unavailable_or_ambiguous": 0
+    },
+    "seconds": 20.619,
+    "original_mapper_exit_code": 0,
+    "all_native_outputs_passed_unchanged": true
+  },
+  "medication": {
+    "counts": {
+      "native_outputs": 392,
+      "source_confirmed": 335,
+      "confirmed_code_system_lexical_subset": 241,
+      "native_output_disagrees_with_exact_source": 57,
+      "confirmed_exact_text": 84,
+      "confirmed_code_system_subset": 10,
+      "source_unavailable_or_ambiguous": 116
+    },
+    "seconds": 78.303,
+    "original_mapper_exit_code": 0,
+    "all_native_outputs_passed_unchanged": true
+  },
+  "mapping_policy": "All native author mapper outputs are passed to the author alignment and graph stages unchanged. Source disagreements are recorded separately.",
+  "native_outputs_replaced_by_wrapper": 0
+}

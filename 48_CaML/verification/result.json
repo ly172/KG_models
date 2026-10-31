@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "author_commit": "88e2693ffa6996f8768b1eaa2b96f2a600643328",
+  "scope": "author network and original inner/outer updates on synthetic claims-shaped tasks",
+  "patient_data": "generated code occurrences in the author seven time windows",
+  "target_formula": "tanh(0.3*history[0]-0.2*history[1]+0.1*drug_embedding[0])",
+  "feature_names": [
+    "diagnosis_code_0_days_0",
+    "diagnosis_code_1_days_0",
+    "procedure_code_0_days_0",
+    "procedure_code_1_days_0",
+    "drug_code_0_days_0",
+    "drug_code_1_days_0",
+    "diagnosis_code_0_days_1",
+    "diagnosis_code_1_days_1",
+    "procedure_code_0_days_1",
+    "procedure_code_1_days_1",
+    "drug_code_0_days_1",
+    "drug_code_1_days_1",
+    "diagnosis_code_0_days_2_7",
+    "diagnosis_code_1_days_2_7",
+    "procedure_code_0_days_2_7",
+    "procedure_code_1_days_2_7",
+    "drug_code_0_days_2_7",
+    "drug_code_1_days_2_7",
+    "diagnosis_code_0_days_8_30",
+    "diagnosis_code_1_days_8_30",
+    "procedure_code_0_days_8_30",
+    "procedure_code_1_days_8_30",
+    "drug_code_0_days_8_30",
+    "drug_code_1_days_8_30",
+    "diagnosis_code_0_days_31_90",
+    "diagnosis_code_1_days_31_90",
+    "procedure_code_0_days_31_90",
+    "procedure_code_1_days_31_90",
+    "drug_code_0_days_31_90",
+    "drug_code_1_days_31_90",
+    "diagnosis_code_0_days_91_365",
+    "diagnosis_code_1_days_91_365",
+    "procedure_code_0_days_91_365",
+    "procedure_code_1_days_91_365",
+    "drug_code_0_days_91_365",
+    "drug_code_1_days_91_365",
+    "diagnosis_code_0_days_over_365",
+    "diagnosis_code_1_days_over_365",
+    "procedure_code_0_days_over_365",
+    "procedure_code_1_days_over_365",
+    "drug_code_0_days_over_365",
+    "drug_code_1_days_over_365"
+  ],
+  "drug_ids": [
+    "DB01060",
+    "DB00567",
+    "DB00537"
+  ],
+  "public_drug_vectors": 744,
+  "model": "MLPLateConcatModel, model_dim=256, n_layers=6, residual=True, batch_norm=False",
+  "meta_iterations": 2,
+  "meta_batch_size": 1,
+  "inner_updates_per_task": 1,
+  "updated_parameter_tensors": 18,
+  "validation_losses": [
+    0.22939331829547882,
+    0.3392336964607239
+  ],
+  "held_out_task": "DB00537",
+  "prediction_shape": [
+    32,
+    1
+  ],
+  "author_update_ranges": [
+    [
+      365,
+      375
+    ],
+    [
+      570,
+      588
+    ],
+    [
+      650,
+      653
+    ]
+  ]
+}

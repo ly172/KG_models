@@ -1,0 +1,62 @@
+[1] "Mediator formula"
+[1] "Drug ~ IND+ + C1 + C2 + C3 + C4"
+[1] "Treatment formula"
+[1] "IND ~ + C1 + C2 + C3 + C4"
+[1] "Treatment predictors"
+[1] "C1" "C2" "C3" "C4"
+[1] "Mediator covariates"
+[1] "IND" "C1"  "C2"  "C3"  "C4" 
+[1] "Mediator model formula"
+[1] "Drug ~ IND + IND + C1 + C2 + C3 + C4"
+[1] "Outcome model formula"
+[1] "SE ~ IND*Drug + IND + C1 + C2 + C3 + C4"
+[1] "Interaction term is not significant. Running model without interaction."
+
+Call:
+glm(formula = noint_outcome_model, family = binomial(link = "logit"), 
+    data = data)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.86368    0.11431 -16.304  < 2e-16 ***
+IND          0.72837    0.11232   6.485 8.90e-11 ***
+Drug         0.95968    0.11260   8.523  < 2e-16 ***
+C1           0.02728    0.10694   0.255 0.798675    
+C2           0.51227    0.10170   5.037 4.73e-07 ***
+C3           0.34652    0.09985   3.471 0.000519 ***
+C4           0.02653    0.10735   0.247 0.804805    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2663.2  on 2047  degrees of freedom
+Residual deviance: 2398.1  on 2041  degrees of freedom
+AIC: 2412.1
+
+Number of Fisher Scoring iterations: 4
+
+
+Causal Mediation Analysis 
+
+Quasi-Bayesian Confidence Intervals
+
+                         Estimate 95% CI Lower 95% CI Upper   p-value    
+ACME (control)           0.064268     0.040019     0.089683 < 2.2e-16 ***
+ACME (treated)           0.102744     0.070294     0.137441 < 2.2e-16 ***
+ADE (control)            0.133190     0.085539     0.185836 < 2.2e-16 ***
+ADE (treated)            0.171666     0.118856     0.220411 < 2.2e-16 ***
+Total Effect             0.235934     0.189195     0.283193 < 2.2e-16 ***
+Prop. Mediated (control) 0.270009     0.162651     0.402676 < 2.2e-16 ***
+Prop. Mediated (treated) 0.435530     0.295136     0.580578 < 2.2e-16 ***
+ACME (average)           0.083506     0.063385     0.106959 < 2.2e-16 ***
+ADE (average)            0.152428     0.105950     0.200018 < 2.2e-16 ***
+Prop. Mediated (average) 0.352769     0.259729     0.465886 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Sample Size Used: 2048 
+
+
+Simulations: 1000 
+

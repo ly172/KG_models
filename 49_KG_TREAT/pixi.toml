@@ -1,0 +1,23 @@
+[workspace]
+name = "kg-treat-synthetic-original-loss"
+version = "1.0.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+[dependencies]
+python = "3.12.*"
+[pypi-dependencies]
+torch = {version = "==2.9.0+cpu", index = "https://download.pytorch.org/whl/cpu"}
+numpy = "==2.3.3"
+scipy = "==1.16.2"
+transformers = "==4.57.1"
+torch-geometric = "==2.6.1"
+pyparsing = "==3.2.5"
+[target.win-64.pypi-dependencies]
+torch-scatter = {url = "https://data.pyg.org/whl/torch-2.9.0%2Bcpu/torch_scatter-2.1.2%2Bpt29cpu-cp312-cp312-win_amd64.whl"}
+torch-sparse = {url = "https://data.pyg.org/whl/torch-2.9.0%2Bcpu/torch_sparse-0.6.18%2Bpt29cpu-cp312-cp312-win_amd64.whl"}
+[target.linux-64.pypi-dependencies]
+torch-scatter = {url = "https://data.pyg.org/whl/torch-2.9.0%2Bcpu/torch_scatter-2.1.2%2Bpt29cpu-cp312-cp312-linux_x86_64.whl"}
+torch-sparse = {url = "https://data.pyg.org/whl/torch-2.9.0%2Bcpu/torch_sparse-0.6.18%2Bpt29cpu-cp312-cp312-linux_x86_64.whl"}
+[tasks]
+smoke = "python reproduce.py"
+reproduce = "python reproduce.py"

@@ -1,0 +1,72 @@
+{
+  "author/llm.py": {
+    "url": "https://raw.githubusercontent.com/amazon-science/GNP/a8b1a7376a513d739324ae8bbe30f5f3758f2f8b/llm.py",
+    "sha256": "d675a4b957acb48addf8fa2fc70b4f189352ce0050cb458c5870679fa0748b62",
+    "bytes": 77337
+  },
+  "author/gnn.py": {
+    "url": "https://raw.githubusercontent.com/amazon-science/GNP/a8b1a7376a513d739324ae8bbe30f5f3758f2f8b/gnn.py",
+    "sha256": "bb3e7f59b77a0b9704f2d09d2daa33e1f6f6666b5e14b7aa6e62583761682d90",
+    "bytes": 22664
+  },
+  "author/utils/data_utils.py": {
+    "url": "https://raw.githubusercontent.com/amazon-science/GNP/a8b1a7376a513d739324ae8bbe30f5f3758f2f8b/utils/data_utils.py",
+    "sha256": "df69966b793029aa5b605dc05b6c6075a793d5c6e73a216618fa8ab81c8d1f9c",
+    "bytes": 91105
+  },
+  "author/scripts/llm_obqa.sh": {
+    "url": "https://raw.githubusercontent.com/amazon-science/GNP/a8b1a7376a513d739324ae8bbe30f5f3758f2f8b/scripts/llm_obqa.sh",
+    "sha256": "9979d4c1db8ab2ed478b271e711aa8891d053fe059c5b3274fc151296455c98d",
+    "bytes": 6548
+  },
+  "flan-t5-xl/README.md": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/README.md",
+    "sha256": "c2210a137e81d30d03f2176cf6fba8132793d2f0286c38d944bd1b0122366515",
+    "bytes": 10747
+  },
+  "flan-t5-xl/config.json": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/config.json",
+    "sha256": "ed9df0075dda91de9e9431f193203a3f869189e4effa3fc00cf9d41864f514ba",
+    "bytes": 1438
+  },
+  "flan-t5-xl/generation_config.json": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/generation_config.json",
+    "sha256": "f5a1c7e2be8092018d8835128987edf0111637dd98e90599cc80310fef75d95a",
+    "bytes": 147
+  },
+  "flan-t5-xl/model-00001-of-00002.safetensors": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/model-00001-of-00002.safetensors",
+    "sha256": "99196ddfbe886e8ef860f52de979df64890edfc792c3d94ce0502991f347dd18",
+    "bytes": 9449619912
+  },
+  "flan-t5-xl/model-00002-of-00002.safetensors": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/model-00002-of-00002.safetensors",
+    "sha256": "c0c677ddeb21009b6efd97146f37fc3a0396707fb5e63ade7aff64884dce9806",
+    "bytes": 1949477672
+  },
+  "flan-t5-xl/model.safetensors.index.json": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/model.safetensors.index.json",
+    "sha256": "4af536474e3441bab3996748fcf730cd47bb4bd66842efda0acdcfdcaa7c7429",
+    "bytes": 53032
+  },
+  "flan-t5-xl/special_tokens_map.json": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/special_tokens_map.json",
+    "sha256": "5c87151ef0f72a99d1f766a4c418bd2a1f90aaa30a8e22fe5eca9641daebb64f",
+    "bytes": 2201
+  },
+  "flan-t5-xl/spiece.model": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/spiece.model",
+    "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "bytes": 791656
+  },
+  "flan-t5-xl/tokenizer.json": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/tokenizer.json",
+    "sha256": "fe2ebbbbde2985be723e0ce18217853e4020c5e9d35bd07be2c27ab9d3ead57a",
+    "bytes": 2424064
+  },
+  "flan-t5-xl/tokenizer_config.json": {
+    "url": "https://huggingface.co/google/flan-t5-xl/resolve/7d6315df2c2fb742f0f5b556879d730926ca9001/tokenizer_config.json",
+    "sha256": "ef30e0628a2d067c5d9d02d98cbf9a2040f4a51883e5d16e1809eea548db0eff",
+    "bytes": 2539
+  }
+}

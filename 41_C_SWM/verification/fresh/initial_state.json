@@ -1,0 +1,120 @@
+{
+  "fresh_directory": "<FRESH_CHECKOUT>",
+  "initial_environment_exists": false,
+  "initial_generated_data_exists": false,
+  "copied_files": [
+    {
+      "file": ".gitignore",
+      "sha256": "9fae8b11e055ba8ae35668f49c58c1a37890fe839524bf9f6180bf12c41f68e0"
+    },
+    {
+      "file": "assessment.json",
+      "sha256": "a582a25e3f526c965bb1360e60b858a8bd740d7af004cf62912b30ee668ca3df"
+    },
+    {
+      "file": "compatibility.patch",
+      "sha256": "bdf1799c820c36a2986419e98e90fdbebd60dd28486eef31be3074a7b6a104b1"
+    },
+    {
+      "file": "LICENSE",
+      "sha256": "3ffa63da9493aa6ae54e0e30108b4b83e297849e2ad3e7b5435d41ffad49bc91"
+    },
+    {
+      "file": "modifications.json",
+      "sha256": "a6ee230b1c85d45b30138b9dbefec35d9ef787e765abd7edc4a1162430284348"
+    },
+    {
+      "file": "pixi.lock",
+      "sha256": "056f3308d726e2b97fc9ad0a182410e1561319d848e87645ffdaed3cf2532e85"
+    },
+    {
+      "file": "pixi.toml",
+      "sha256": "02dc7836b8ce1de8fa087c83a7a81cf229e524c763d883a7e4d141259e250b52"
+    },
+    {
+      "file": "prepare.py",
+      "sha256": "f99c10374037a0e476dd94b55b3d885483c9e4016125141abc13f6348e770426"
+    },
+    {
+      "file": "README.md",
+      "sha256": "0d208d432ada3aa99109eabf625aae624af53237242df027511e11232b95ae09"
+    },
+    {
+      "file": "reproduce.py",
+      "sha256": "3847d6e7c4565e91aa1469561b5dc35aa55a9243646939795bee2e658325ea51"
+    },
+    {
+      "file": "run_author.py",
+      "sha256": "0cd0d97c673825280087a092661860f2252ca315c81679a6abf82ec1b2788e20"
+    },
+    {
+      "file": "source.json",
+      "sha256": "8f5cbbc787513334d6124099541507253d9c085315dc657c46cab1cab6f6afb2"
+    },
+    {
+      "file": "verify_compatibility.py",
+      "sha256": "e5c5e162f52237f588cf67c3769cec4982e6516c8a1ca0f064f24da2eebb645c"
+    },
+    {
+      "file": "复核说明.md",
+      "sha256": "e02ca3318d9015ab18098b7d8a3a068f76d6a2814c3cdcf166387e28ed5d6837"
+    },
+    {
+      "file": "upstream/eval.py",
+      "sha256": "9aeaa46f7434a45d2c327b8d8fd4ee14a8ca5425551f88fa73c6a6d5965527ac"
+    },
+    {
+      "file": "upstream/LICENSE",
+      "sha256": "3ffa63da9493aa6ae54e0e30108b4b83e297849e2ad3e7b5435d41ffad49bc91"
+    },
+    {
+      "file": "upstream/modules.py",
+      "sha256": "6e8159c2b2a3d28a24f4a2420139e3cde09bf1564ea5b62f0aec6763748dde21"
+    },
+    {
+      "file": "upstream/README.md",
+      "sha256": "556410f6031d1bb7d6c7e8d820b4ff430d598d5501460beb5792b60ea3849e45"
+    },
+    {
+      "file": "upstream/train.py",
+      "sha256": "1737fe1928e305b63bceca7f5b8832e716c0d0a5ba3d4e1a214dbcbf65121fb6"
+    },
+    {
+      "file": "upstream/utils.py",
+      "sha256": "44eaf8bd3481a22343acd4d1dc0f790600e90f40aeb14276c991fea6cad3bb46"
+    },
+    {
+      "file": "upstream/data_gen/env.py",
+      "sha256": "28810c4457d4a42f17a3224f5a2225ce423951f76adb1c6fa1b7c51f7416d73c"
+    },
+    {
+      "file": "upstream/data_gen/physics.py",
+      "sha256": "ccc0a4326dd9cb21fadb6f9736b1264becb7fa4d9b98019284eb0e0b6b0be8d5"
+    },
+    {
+      "file": "upstream/envs/block_pushing.py",
+      "sha256": "19bf14823c05b165d0fa0ad92171040f4f017b66488f0a3e4b4ae1042b9791a3"
+    },
+    {
+      "file": "upstream/envs/physics_sim.py",
+      "sha256": "db2e581b2bb1415fa1f50e565b2e91690b6c0b325f7e3a101220d26b7f6d32b5"
+    },
+    {
+      "file": "upstream/envs/__init__.py",
+      "sha256": "f50974181f8eca77e41269c80628cc62057f3362d95bed4810ff770af8b32438"
+    },
+    {
+      "file": "verification/reference/skimage_0_15_draw.txt",
+      "sha256": "1a645e9881c8d3a6f93d564528f5b26b4d48b2bc7712e41db3367dde17935063"
+    },
+    {
+      "file": "verification/reference/SKIMAGE_LICENSE.txt",
+      "sha256": "c76c8b912022c4c7f7d8bf63a42b0f6a2bab02fcdad641dda025d354c3591424"
+    },
+    {
+      "file": "verification/reference/source.json",
+      "sha256": "dd31755e4c19baab18075b3a37d03623f90c77447ad09efe81c1d8b242f4e0fc"
+    }
+  ],
+  "dependency_cache_reused": true
+}

@@ -1,0 +1,9 @@
+{
+  "first_wrapper_process_exit_code": 1,
+  "static_check": {
+    "type": "ImportError",
+    "message": "This modeling file requires the following packages that were not found in your environment: flash_attn. Run `pip install flash_attn`"
+  },
+  "public_source_sha256": "99ba535c53fb52c61067ddbc7f70e0b877ec3a2aa53bd89a559432a3efc7f0a7",
+  "scope": "Changed this package loading wrapper to direct Python import of the checked public class; its own optional FlashAttention condition and eager CPU code remain intact."
+}

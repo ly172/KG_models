@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "path": "CCSCM.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/resources/CCSCM.csv",
+      "sha256": "bd6f6db02017147e85bbc33bd5f954ece09acb4fc489e3611bfa3c94eaf20240",
+      "bytes": 9785
+    },
+    {
+      "path": "CCSPROC.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/resources/CCSPROC.csv",
+      "sha256": "120cc705b6b75568aaea1be16599b71a7cc7b203174263751611e7c34b6909c8",
+      "bytes": 9521
+    },
+    {
+      "path": "ATC.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/resources/ATC.csv",
+      "sha256": "56edce0c5225ca340dce88565535f267984bcccf69028af44a43662f53b9f7ef",
+      "bytes": 4676077
+    },
+    {
+      "path": "ICD10CM_to_CCSCM.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/resources/ICD10CM_to_CCSCM.csv",
+      "sha256": "8096e47b013c5ee86c7677e66924adb49f72fb913596685abc1de21ffb27e8ff",
+      "bytes": 898952
+    },
+    {
+      "path": "ICD10PROC_to_CCSPROC.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/resources/ICD10PROC_to_CCSPROC.csv",
+      "sha256": "ab1c4f7f436afc2af7475ab1cfdda9591d6a0ba3390e07bb4e9e6a87c732c379",
+      "bytes": 914764
+    },
+    {
+      "path": "ATC_to_UMLS.csv",
+      "url": "https://raw.githubusercontent.com/pat-jj/GraphCare/fe92aa67add80b62d4b5108d570b6483ee69a5d4/KG_mapping/ATC_to_UMLS.csv",
+      "sha256": "e1d259dbdbe06844e47704613226f926873828ff2eaacd51c30d5b8b3fc7e455",
+      "bytes": 115056
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[workspace]
+name = "gnp-original"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+[dependencies]
+python = "3.11.*"
+pip = "*"
+[pypi-dependencies]
+numpy = "==1.26.4"
+scipy = "==1.13.1"
+torch = { version = "==2.5.1", index = "https://download.pytorch.org/whl/cpu" }
+torch-geometric = "==2.6.1"
+transformers = "==4.46.3"
+accelerate = "==0.34.2"
+safetensors = "==0.4.5"
+sentencepiece = "==0.2.0"
+protobuf = "==5.28.3"
+truststore = "==0.10.4"
+[activation.env]
+OMP_NUM_THREADS = "2"
+MKL_NUM_THREADS = "2"
+OPENBLAS_NUM_THREADS = "2"
+PYTHONUTF8 = "1"
+[tasks]
+smoke = "python reproduce.py"

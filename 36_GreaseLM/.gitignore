@@ -1,0 +1,6 @@
+.pixi/
+assets/
+work/
+outputs/
+__pycache__/
+*.pyc

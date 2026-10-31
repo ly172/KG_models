@@ -1,0 +1,453 @@
+--- upstream/build_trees.py
++++ python3/build_trees.py
+@@ -1,5 +1,5 @@
+ import sys, copy
+-import cPickle as pickle
++import pickle as pickle
+ 
+ if __name__ == '__main__':
+     infile = sys.argv[1]
+@@ -63,15 +63,15 @@
+ 
+     rootCode = len(types)
+     types['A_ROOT'] = rootCode
+-    print rootCode
++    print(rootCode)
+ 
+-    print 'cat1count: %d' % cat1count
+-    print 'cat2count: %d' % cat2count
+-    print 'cat3count: %d' % cat3count
+-    print 'cat4count: %d' % cat4count
+-    print 'Number of total ancestors: %d' % (cat1count + cat2count + cat3count + cat4count + 1)
++    print('cat1count: %d' % cat1count)
++    print('cat2count: %d' % cat2count)
++    print('cat3count: %d' % cat3count)
++    print('cat4count: %d' % cat4count)
++    print('Number of total ancestors: %d' % (cat1count + cat2count + cat3count + cat4count + 1))
+     #print 'hit count: %d' % len(set(hitList))
+-    print 'miss count: %d' % len(startSet - set(hitList))
++    print('miss count: %d' % len(startSet - set(hitList)))
+     missSet = startSet - set(hitList)
+ 
+     #pickle.dump(types, open(outFile + '.types', 'wb'), -1)
+@@ -136,26 +136,26 @@
+     newTwoMap = {}
+     newOneMap = {}
+     newTypes = {}
+-    rtypes = dict([(v, k) for k, v in types.iteritems()])
++    rtypes = dict([(v, k) for k, v in types.items()])
+ 
+     codeCount = 0
+-    for icdCode, ancestors in fiveMap.iteritems():
++    for icdCode, ancestors in fiveMap.items():
+         newTypes[rtypes[icdCode]] = codeCount
+         newFiveMap[codeCount] = [codeCount] + ancestors[1:]
+         codeCount += 1
+-    for icdCode, ancestors in fourMap.iteritems():
++    for icdCode, ancestors in fourMap.items():
+         newTypes[rtypes[icdCode]] = codeCount
+         newFourMap[codeCount] = [codeCount] + ancestors[1:]
+         codeCount += 1
+-    for icdCode, ancestors in threeMap.iteritems():
++    for icdCode, ancestors in threeMap.items():
+         newTypes[rtypes[icdCode]] = codeCount
+         newThreeMap[codeCount] = [codeCount] + ancestors[1:]
+         codeCount += 1
+-    for icdCode, ancestors in twoMap.iteritems():
++    for icdCode, ancestors in twoMap.items():
+         newTypes[rtypes[icdCode]] = codeCount
+         newTwoMap[codeCount] = [codeCount] + ancestors[1:]
+         codeCount += 1
+-    for icdCode, ancestors in oneMap.iteritems():
++    for icdCode, ancestors in oneMap.items():
+         newTypes[rtypes[icdCode]] = codeCount
+         newOneMap[codeCount] = [codeCount] + ancestors[1:]
+         codeCount += 1
+--- upstream/create_glove_comap.py
++++ python3/create_glove_comap.py
+@@ -1,5 +1,5 @@
+ import sys
+-import cPickle as pickle
++import pickle as pickle
+ import numpy as np
+ 
+ def augmentVisit(visit, code, treeList):
+@@ -37,7 +37,7 @@
+ 	coMap = {}
+ 	count = 0
+ 	for patient in seqs:
+-		if count % 1000 == 0: print count
++		if count % 1000 == 0: print(count)
+ 		count += 1
+ 		for visit in patient:
+ 			for code in visit: 
+--- upstream/glove.py
++++ python3/glove.py
+@@ -7,7 +7,7 @@
+ from theano import config
+ from theano.ifelse import ifelse
+ 
+-import cPickle as pickle
++import pickle as pickle
+ 
+ from collections import OrderedDict
+ 
+@@ -16,7 +16,7 @@
+ 
+ def unzip(zipped):
+ 	new_params = OrderedDict()
+-	for k, v in zipped.iteritems():
++	for k, v in zipped.items():
+ 		new_params[k] = v.get_value()
+ 	return new_params
+ 
+@@ -38,7 +38,7 @@
+ 
+ def init_tparams(params):
+ 	tparams = OrderedDict()
+-	for k, v in params.iteritems():
++	for k, v in params.items():
+ 		tparams[k] = theano.shared(v, name=k)
+ 	return tparams
+ 
+@@ -51,9 +51,9 @@
+ 	return weightVector, iVector, jVector, cost.sum()
+ 
+ def adadelta(tparams, grads, weightVector, iVector, jVector, cost):
+-	zipped_grads = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_grad' % k) for k, p in tparams.iteritems()]
+-	running_up2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rup2' % k) for k, p in tparams.iteritems()]
+-	running_grads2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rgrad2' % k) for k, p in tparams.iteritems()]
++	zipped_grads = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_grad' % k) for k, p in tparams.items()]
++	running_up2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rup2' % k) for k, p in tparams.items()]
++	running_grads2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rgrad2' % k) for k, p in tparams.items()]
+ 
+ 	zgup = [(zg, g) for zg, g in zip(zipped_grads, grads)]
+ 	rg2up = [(rg2, 0.95 * rg2 + 0.05 * (g ** 2)) for rg2, g in zip(running_grads2, grads)]
+@@ -62,7 +62,7 @@
+ 
+ 	updir = [-T.sqrt(ru2 + 1e-6) / T.sqrt(rg2 + 1e-6) * zg for zg, ru2, rg2 in zip(zipped_grads, running_up2, running_grads2)]
+ 	ru2up = [(ru2, 0.95 * ru2 + 0.05 * (ud ** 2)) for ru2, ud in zip(running_up2, updir)]
+-	param_up = [(p, p + ud) for p, ud in zip(tparams.values(), updir)]
++	param_up = [(p, p + ud) for p, ud in zip(list(tparams.values()), updir)]
+ 
+ 	f_update = theano.function([], [], updates=ru2up + param_up, on_unused_input='ignore', name='adadelta_f_update')
+ 
+@@ -79,7 +79,7 @@
+ 	I = []
+ 	J = []
+ 	Weight = []
+-	for key, value in cooccurMap.iteritems():
++	for key, value in cooccurMap.items():
+ 		I.append(key[0])
+ 		J.append(key[1])
+ 		Weight.append(weightFunction(value))
+@@ -95,25 +95,25 @@
+ 
+ def train_glove(infile, inputSize=20000, batchSize=100, dimensionSize=100, maxEpochs=1000, outfile='result', x_max=100, alpha=0.75):
+ 	options = locals().copy()
+-	print 'initializing parameters'
++	print('initializing parameters')
+ 	params = init_params(options)
+ 	tparams = init_tparams(params)
+ 
+-	print 'loading data'
++	print('loading data')
+ 	I, J, Weight = load_data(infile)
+ 	n_batches = int(np.ceil(float(I.get_value(borrow=True).shape[0]) / float(batchSize)))
+ 
+-	print 'building models'
++	print('building models')
+ 	weightVector, iVector, jVector, cost = build_model(tparams, options)
+-	grads = T.grad(cost, wrt=tparams.values())
++	grads = T.grad(cost, wrt=list(tparams.values()))
+ 	f_grad_shared, f_update = adadelta(tparams, grads, weightVector, iVector, jVector, cost)
+ 
+ 	logFile = outfile + '.log'
+-	print 'training start'
+-	for epoch in xrange(maxEpochs):
++	print('training start')
++	for epoch in range(maxEpochs):
+ 		costVector = []
+ 		iteration = 0
+-		for batchIndex in random.sample(range(n_batches), n_batches):
++		for batchIndex in random.sample(list(range(n_batches)), n_batches):
+ 			cost = f_grad_shared(Weight.get_value(borrow=True, return_internal_type=True)[batchIndex*batchSize:(batchIndex+1)*batchSize],
+ 								I.get_value(borrow=True, return_internal_type=True)[batchIndex*batchSize: (batchIndex+1)*batchSize],
+ 								J.get_value(borrow=True, return_internal_type=True)[batchIndex*batchSize: (batchIndex+1)*batchSize])
+@@ -122,19 +122,19 @@
+ 
+ 			if (iteration % 1000 == 0):
+ 				buf = 'epoch:%d, iteration:%d/%d, cost:%f' % (epoch, iteration, n_batches, cost)
+-				print buf
++				print(buf)
+ 				print2file(buf, logFile)
+ 			iteration += 1
+ 		trainCost = np.mean(costVector)
+ 		buf = 'epoch:%d, cost:%f' % (epoch, trainCost)
+-		print buf
++		print(buf)
+ 		print2file(buf, logFile)
+ 		tempParams = unzip(tparams)
+ 		np.savez_compressed(outfile + '.' + str(epoch), **tempParams)
+ 
+ def get_rootCode(treeFile):
+ 	tree = pickle.load(open(treeFile, 'rb'))
+-	return tree.values()[0][1]
++	return list(tree.values())[0][1]
+ 
+ if __name__=='__main__':
+ 	infile = sys.argv[1]
+--- upstream/gram.py
++++ python3/gram.py
+@@ -5,7 +5,7 @@
+ 
+ import sys, random, time, argparse
+ from collections import OrderedDict
+-import cPickle as pickle
++import pickle as pickle
+ import numpy as np
+ 
+ import theano
+@@ -18,7 +18,7 @@
+ 
+ def unzip(zipped):
+     new_params = OrderedDict()
+-    for key, value in zipped.iteritems():
++    for key, value in zipped.items():
+         new_params[key] = value.get_value()
+     return new_params
+ 
+@@ -65,7 +65,7 @@
+ 
+ def init_tparams(params):
+     tparams = OrderedDict()
+-    for key, value in params.iteritems():
++    for key, value in params.items():
+         tparams[key] = theano.shared(value, name=key)
+     return tparams
+ 
+@@ -178,7 +178,7 @@
+         valid_set_t = times[valid_indices]
+ 
+     def len_argsort(seq):
+-        return sorted(range(len(seq)), key=lambda x: len(seq[x]))
++        return sorted(list(range(len(seq))), key=lambda x: len(seq[x]))
+ 
+     train_sorted_index = len_argsort(train_set_x)
+     train_set_x = [train_set_x[i] for i in train_sorted_index]
+@@ -204,9 +204,9 @@
+     return train_set, valid_set, test_set
+ 
+ def adadelta(tparams, grads, x, y, mask, lengths, cost):
+-    zipped_grads = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_grad' % k) for k, p in tparams.iteritems()]
+-    running_up2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rup2' % k) for k, p in tparams.iteritems()]
+-    running_grads2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rgrad2' % k) for k, p in tparams.iteritems()]
++    zipped_grads = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_grad' % k) for k, p in tparams.items()]
++    running_up2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rup2' % k) for k, p in tparams.items()]
++    running_grads2 = [theano.shared(p.get_value() * numpy_floatX(0.), name='%s_rgrad2' % k) for k, p in tparams.items()]
+ 
+     zgup = [(zg, g) for zg, g in zip(zipped_grads, grads)]
+     rg2up = [(rg2, 0.95 * rg2 + 0.05 * (g ** 2)) for rg2, g in zip(running_grads2, grads)]
+@@ -215,7 +215,7 @@
+ 
+     updir = [-T.sqrt(ru2 + 1e-6) / T.sqrt(rg2 + 1e-6) * zg for zg, ru2, rg2 in zip(zipped_grads, running_up2, running_grads2)]
+     ru2up = [(ru2, 0.95 * ru2 + 0.05 * (ud ** 2)) for ru2, ud in zip(running_up2, updir)]
+-    param_up = [(p, p + ud) for p, ud in zip(tparams.values(), updir)]
++    param_up = [(p, p + ud) for p, ud in zip(list(tparams.values()), updir)]
+ 
+     f_update = theano.function([], [], updates=ru2up + param_up, on_unused_input='ignore', name='adadelta_f_update')
+ 
+@@ -244,7 +244,7 @@
+     n_batches = int(np.ceil(float(len(dataset[0])) / float(batchSize)))
+     costSum = 0.0
+     dataCount = 0
+-    for index in xrange(n_batches):
++    for index in range(n_batches):
+         batchX = dataset[0][index*batchSize:(index+1)*batchSize]
+         batchY = dataset[1][index*batchSize:(index+1)*batchSize]
+         x, y, mask, lengths = padMatrix(batchX, batchY, options)
+@@ -260,10 +260,14 @@
+ 
+ def build_tree(treeFile):
+     treeMap = pickle.load(open(treeFile, 'rb'))
+-    ancestors = np.array(treeMap.values()).astype('int32')
++    if not treeMap:
++        width = int(treeFile.rsplit('.level', 1)[1].split('.')[0]) + 1
++        empty = np.empty((0, width), dtype='int32')
++        return empty, empty.copy()
++    ancestors = np.array(list(treeMap.values())).astype('int32')
+     ancSize = ancestors.shape[1]
+     leaves = []
+-    for k in treeMap.keys():
++    for k in list(treeMap.keys()):
+         leaves.append([k] * ancSize)
+     leaves = np.array(leaves).astype('int32')
+     return leaves, ancestors
+@@ -298,35 +302,35 @@
+         leavesList.append(sharedLeaves)
+         ancestorsList.append(sharedAncestors)
+     
+-    print 'Building the model ... ',
++    print('Building the model ... ', end=' ')
+     params = init_params(options)
+     tparams = init_tparams(params)
+     use_noise, x, y, mask, lengths, cost, cost_noreg, y_hat =  build_model(tparams, leavesList, ancestorsList, options)
+     get_cost = theano.function(inputs=[x, y, mask, lengths], outputs=cost_noreg, name='get_cost')
+-    print 'done!!'
++    print('done!!')
+     
+-    print 'Constructing the optimizer ... ',
+-    grads = T.grad(cost, wrt=tparams.values())
++    print('Constructing the optimizer ... ', end=' ')
++    grads = T.grad(cost, wrt=list(tparams.values()))
+     f_grad_shared, f_update = adadelta(tparams, grads, x, y, mask, lengths, cost)
+-    print 'done!!'
+-
+-    print 'Loading data ... ',
++    print('done!!')
++
++    print('Loading data ... ', end=' ')
+     trainSet, validSet, testSet = load_data(seqFile, labelFile)
+     n_batches = int(np.ceil(float(len(trainSet[0])) / float(batchSize)))
+-    print 'done!!'
+-
+-    print 'Optimization start !!'
++    print('done!!')
++
++    print('Optimization start !!')
+     bestTrainCost = 0.0
+     bestValidCost = 100000.0
+     bestTestCost = 0.0
+     epochDuration = 0.0
+     bestEpoch = 0
+     logFile = outFile + '.log'
+-    for epoch in xrange(max_epochs):
++    for epoch in range(max_epochs):
+         iteration = 0
+         costVec = []
+         startTime = time.time()
+-        for index in random.sample(range(n_batches), n_batches):
++        for index in random.sample(list(range(n_batches)), n_batches):
+             use_noise.set_value(1.)
+             batchX = trainSet[0][index*batchSize:(index+1)*batchSize]
+             batchY = trainSet[1][index*batchSize:(index+1)*batchSize]
+@@ -337,7 +341,7 @@
+ 
+             if iteration % 100 == 0 and verbose:
+                 buf = 'Epoch:%d, Iteration:%d/%d, Train_Cost:%f' % (epoch, iteration, n_batches, costValue)
+-                print buf
++                print(buf)
+             iteration += 1
+         duration = time.time() - startTime
+         use_noise.set_value(0.)
+@@ -345,7 +349,7 @@
+         validCost = calculate_cost(get_cost, validSet, options)
+         testCost = calculate_cost(get_cost, testSet, options)
+         buf = 'Epoch:%d, Duration:%f, Train_Cost:%f, Valid_Cost:%f, Test_Cost:%f' % (epoch, duration, trainCost, validCost, testCost)
+-        print buf
++        print(buf)
+         print2file(buf, logFile)
+         epochDuration += duration
+         if validCost < bestValidCost:
+@@ -356,7 +360,7 @@
+             tempParams = unzip(tparams)
+             np.savez_compressed(outFile + '.' + str(epoch), **tempParams)
+     buf = 'Best Epoch:%d, Avg_Duration:%f, Train_Cost:%f, Valid_Cost:%f, Test_Cost:%f' % (bestEpoch, epochDuration/max_epochs, bestTrainCost, bestValidCost, bestTestCost)
+-    print buf
++    print(buf)
+     print2file(buf, logFile)
+ 
+ def parse_arguments(parser):
+@@ -388,7 +392,7 @@
+ 
+ def get_rootCode(treeFile):
+     tree = pickle.load(open(treeFile, 'rb'))
+-    rootCode = tree.values()[0][1]
++    rootCode = list(tree.values())[0][1]
+     return rootCode
+ 
+ if __name__ == '__main__':
+--- upstream/process_mimic.py
++++ python3/process_mimic.py
+@@ -11,7 +11,7 @@
+ # <output file>.types: Python dictionary that maps string diagnosis codes to integer diagnosis codes.
+ 
+ import sys
+-import cPickle as pickle
++import pickle as pickle
+ from datetime import datetime
+ 
+ def convert_to_icd9(dxStr):
+@@ -35,7 +35,7 @@
+     diagnosisFile = sys.argv[2]
+     outFile = sys.argv[3]
+ 
+-    print 'Building pid-admission mapping, admission-date mapping'
++    print('Building pid-admission mapping, admission-date mapping')
+     pidAdmMap = {}
+     admDateMap = {}
+     infd = open(admissionFile, 'r')
+@@ -50,7 +50,7 @@
+         else: pidAdmMap[pid] = [admId]
+     infd.close()
+ 
+-    print 'Building admission-dxList mapping'
++    print('Building admission-dxList mapping')
+     admDxMap = {}
+     admDxMap_3digit = {}
+     infd = open(diagnosisFile, 'r')
+@@ -72,10 +72,10 @@
+             admDxMap_3digit[admId] = [dxStr_3digit]
+     infd.close()
+ 
+-    print 'Building pid-sortedVisits mapping'
++    print('Building pid-sortedVisits mapping')
+     pidSeqMap = {}
+     pidSeqMap_3digit = {}
+-    for pid, admIdList in pidAdmMap.iteritems():
++    for pid, admIdList in pidAdmMap.items():
+         if len(admIdList) < 2: continue
+ 
+         sortedList = sorted([(admDateMap[admId], admDxMap[admId]) for admId in admIdList])
+@@ -84,11 +84,11 @@
+         sortedList_3digit = sorted([(admDateMap[admId], admDxMap_3digit[admId]) for admId in admIdList])
+         pidSeqMap_3digit[pid] = sortedList_3digit
+     
+-    print 'Building pids, dates, strSeqs'
++    print('Building pids, dates, strSeqs')
+     pids = []
+     dates = []
+     seqs = []
+-    for pid, visits in pidSeqMap.iteritems():
++    for pid, visits in pidSeqMap.items():
+         pids.append(pid)
+         seq = []
+         date = []
+@@ -98,15 +98,15 @@
+         dates.append(date)
+         seqs.append(seq)
+     
+-    print 'Building pids, dates, strSeqs for 3digit ICD9 code'
++    print('Building pids, dates, strSeqs for 3digit ICD9 code')
+     seqs_3digit = []
+-    for pid, visits in pidSeqMap_3digit.iteritems():
++    for pid, visits in pidSeqMap_3digit.items():
+         seq = []
+         for visit in visits:
+             seq.append(visit[1])
+         seqs_3digit.append(seq)
+     
+-    print 'Converting strSeqs to intSeqs, and making types'
++    print('Converting strSeqs to intSeqs, and making types')
+     types = {}
+     newSeqs = []
+     for patient in seqs:
+@@ -122,7 +122,7 @@
+             newPatient.append(newVisit)
+         newSeqs.append(newPatient)
+     
+-    print 'Converting strSeqs to intSeqs, and making types for 3digit ICD9 code'
++    print('Converting strSeqs to intSeqs, and making types for 3digit ICD9 code')
+     types_3digit = {}
+     newSeqs_3digit = []
+     for patient in seqs_3digit:

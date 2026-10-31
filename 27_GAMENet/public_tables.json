@@ -1,0 +1,14 @@
+[
+  {
+    "file": "ndc2atc_level4.csv",
+    "url": "https://raw.githubusercontent.com/sjy1203/GAMENet/da695b4fc9390882f3a681c82115e81291ae6380/data/ndc2atc_level4.csv",
+    "sha256": "162fefc5cc374ac545501dec0d3738cb7a362e1e08b46b64d1a779eaeda7888e",
+    "bytes": 12195031
+  },
+  {
+    "file": "ndc2rxnorm_mapping.txt",
+    "url": "https://raw.githubusercontent.com/sjy1203/GAMENet/da695b4fc9390882f3a681c82115e81291ae6380/data/ndc2rxnorm_mapping.txt",
+    "sha256": "31b78823f61d23e8f563eeff353fc2d589cfff6808a831178a3736bbac225278",
+    "bytes": 109954
+  }
+]

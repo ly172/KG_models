@@ -1,0 +1,38 @@
+--- upstream/code/models.py
++++ runtime/code/models.py
+@@ -2,7 +2,6 @@
+ import torch.nn as nn
+ import torch.nn.functional as F
+ import numpy as np
+-from dnc import DNC
+ from layers import GraphConvolution
+ 
+ '''
+--- upstream/code/train_GAMENet.py
++++ runtime/code/train_GAMENet.py
+@@ -97,7 +97,7 @@
+ 
+     ehr_adj_path = '../data/ehr_adj_final.pkl'
+     ddi_adj_path = '../data/ddi_A_final.pkl'
+-    device = torch.device('cuda:0')
++    device = torch.device(os.environ.get('KG_DEVICE', 'cuda:0'))
+ 
+     ehr_adj = dill.load(open(ehr_adj_path, 'rb'))
+     ddi_adj = dill.load(open(ddi_adj_path, 'rb'))
+@@ -111,7 +111,7 @@
+     data_test = data[split_point:split_point + eval_len]
+     data_eval = data[split_point+eval_len:]
+ 
+-    EPOCH = 40
++    EPOCH = int(os.environ.get('KG_EPOCHS', '40'))
+     LR = 0.0002
+     TEST = args.eval
+     Neg_Loss = args.ddi
+--- upstream/code/util.py
++++ runtime/code/util.py
+@@ -1,4 +1,4 @@
+-from sklearn.metrics import jaccard_similarity_score, roc_auc_score, precision_score, f1_score, average_precision_score
++from sklearn.metrics import roc_auc_score, precision_score, f1_score, average_precision_score
+ import numpy as np
+ import pandas as pd
+ from sklearn.model_selection import train_test_split

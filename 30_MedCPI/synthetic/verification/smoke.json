@@ -1,0 +1,133 @@
+{
+  "entry": "medcpi-synthetic",
+  "package": "30_MedCPI/synthetic",
+  "command": [
+    "pixi",
+    "run",
+    "--locked",
+    "smoke"
+  ],
+  "exit_code": 0,
+  "seconds": 207.229,
+  "result": {
+    "status": "passed",
+    "data_kind": "entirely_synthetic",
+    "training_runner": "author_run_single_seed",
+    "report_fix": "Removed two duplicate fields referring to undefined seed_results; parameter counts use the existing local variables.",
+    "selection_metric": "validation_auroc",
+    "seed": 20261029,
+    "device": "cpu",
+    "threads": 2,
+    "examples": {
+      "train": 32,
+      "validation": 8,
+      "test": 8
+    },
+    "network": {
+      "concept_vocab_size": 34,
+      "relation_vocab_size": 6,
+      "embedding_dim": 64,
+      "hidden_dim": 64,
+      "num_heads": 4,
+      "num_htt_layers": 1,
+      "num_rgcn_layers": 2,
+      "dropout": 0.1,
+      "granularity": "visit",
+      "fusion_strategy": "cross_attention"
+    },
+    "parameters": 203650,
+    "updated_parameter_groups": {
+      "ehr_encoder.": true,
+      "pkg_encoder.": true,
+      "cross_attention.": true,
+      "concat_fusion.": true,
+      "prediction_head.": true
+    },
+    "checkpoint_reloaded_predictions_equal": true,
+    "output_shape": [
+      8
+    ],
+    "training": {
+      "dataset": "generated_visits",
+      "task": "mortality",
+      "seed": 20261029,
+      "granularity": "visit",
+      "device": "cpu",
+      "cuda_available": false,
+      "fusion_strategy": "cross_attention",
+      "selection_metric_name": "auroc",
+      "output_suffix": "smoke_seed20261029",
+      "num_parameters": 203650,
+      "num_trainable_parameters": 203650,
+      "batch_size": 8,
+      "epochs_requested": 3,
+      "epochs_ran": 3,
+      "patience": 10,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "embedding_dim": 64,
+      "hidden_dim": 64,
+      "num_heads": 4,
+      "num_htt_layers": 1,
+      "num_rgcn_layers": 2,
+      "dropout": 0.1,
+      "concept_vocab_size": 34,
+      "relation_vocab_size": 6,
+      "num_train_examples": 32,
+      "num_valid_examples": 8,
+      "num_test_examples": 8,
+      "best_epoch": 2,
+      "best_valid_metric": 0.5,
+      "best_valid_loss": 0.6934338808059692,
+      "best_checkpoint_path": "<PACKAGE_ROOT>\\outputs\\best_valid_formal_smoke_seed20261029.pt",
+      "epoch_summaries": [
+        {
+          "seed": 20261029,
+          "epoch": 1,
+          "train_loss": 0.6914054900407791,
+          "valid_loss": 0.6935131549835205,
+          "valid_auroc": 0.4375,
+          "valid_auprc": 0.6178571428571429,
+          "selection_metric_name": "auroc",
+          "selection_metric": 0.4375
+        },
+        {
+          "seed": 20261029,
+          "epoch": 2,
+          "train_loss": 0.6948772668838501,
+          "valid_loss": 0.6934338808059692,
+          "valid_auroc": 0.5,
+          "valid_auprc": 0.6428571428571428,
+          "selection_metric_name": "auroc",
+          "selection_metric": 0.5
+        },
+        {
+          "seed": 20261029,
+          "epoch": 3,
+          "train_loss": 0.6926242113113403,
+          "valid_loss": 0.6934940814971924,
+          "valid_auroc": 0.5,
+          "valid_auprc": 0.6428571428571428,
+          "selection_metric_name": "auroc",
+          "selection_metric": 0.5
+        }
+      ],
+      "test_metrics": {
+        "loss": 0.6928607821464539,
+        "num_examples": 8,
+        "positive_rate": 0.5,
+        "auroc": 0.5,
+        "auprc": 0.5595238095238095
+      },
+      "progress_path": "<PACKAGE_ROOT>\\outputs\\formal_train_progress_smoke_seed20261029.json"
+    },
+    "test": {
+      "loss": 0.6928607821464539,
+      "num_examples": 8,
+      "positive_rate": 0.5,
+      "auroc": 0.5,
+      "auprc": 0.5595238095238095
+    },
+    "author_files_verified": 5
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "component_passed",
+  "scope": "original PSI construction and author query on generated triples",
+  "triples": 12,
+  "vector_parameters": {
+    "dimension": 32000,
+    "vectortype": "binary",
+    "termweight": "idf"
+  },
+  "vectors": {
+    "elementalvectors.bin": 48195,
+    "semanticvectors.bin": 48195,
+    "predicatevectors.bin": 16072
+  },
+  "predictions": [
+    {
+      "score": 0.504625,
+      "concept": "syn_conditionb"
+    },
+    {
+      "score": 0.497375,
+      "concept": "syn_conditiona"
+    },
+    {
+      "score": 0.2555,
+      "concept": "syn_conditionc"
+    },
+    {
+      "score": 0.244375,
+      "concept": "syn_conditiond"
+    },
+    {
+      "score": 0.010625,
+      "concept": "syn_otheroutcome"
+    }
+  ],
+  "commands": [
+    {
+      "entry": "pitt.search.lucene.LuceneIndexFromTriples",
+      "arguments": [
+        "triples.tsv"
+      ],
+      "exit_code": 0
+    },
+    {
+      "entry": "pitt.search.semanticvectors.PSI",
+      "arguments": [
+        "-dimension",
+        "32000",
+        "-vectortype",
+        "binary",
+        "-termweight",
+        "idf",
+        "-luceneindexpath",
+        "predication_index"
+      ],
+      "exit_code": 0
+    },
+    {
+      "entry": "pitt.search.semanticvectors.Search",
+      "arguments": [
+        "-elementalvectorfile",
+        "elementalvectors.bin",
+        "-semanticvectorfile",
+        "semanticvectors.bin",
+        "-elementalpredicatevectorfile",
+        "predicatevectors.bin",
+        "-matchcase",
+        "-searchvectorfile",
+        "elementalvectors.bin",
+        "-searchtype",
+        "boundproduct",
+        "-numsearchresults",
+        "5",
+        "S(syn_druga)*P(TREATS)+S(syn_outcome)*P(CAUSES-INV)"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

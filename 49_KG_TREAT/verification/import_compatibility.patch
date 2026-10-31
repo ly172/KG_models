@@ -1,0 +1,59 @@
+--- upstream/model/bert_custom.py
++++ compatible/model/bert_custom.py
+@@ -14,8 +14,8 @@
+ from torch import nn
+ from torch.nn import BCEWithLogitsLoss, CrossEntropyLoss, MSELoss
+ 
+-from transformers.modeling_utils import PreTrainedModel, apply_chunking_to_forward, find_pruneable_heads_and_indices, \
+-    prune_linear_layer
++from transformers.modeling_utils import PreTrainedModel
++from transformers.pytorch_utils import apply_chunking_to_forward, find_pruneable_heads_and_indices, prune_linear_layer
+ from transformers.activations import ACT2FN
+ from transformers.modeling_outputs import (
+     BaseModelOutputWithPastAndCrossAttentions,
+@@ -794,7 +794,7 @@
+         )
+ 
+ from model.modeling_kgtreat import MLP
+-from transformers.modeling_utils import ModelOutput
++from transformers.utils import ModelOutput
+ @dataclass
+ class GreaseLMSequenceClassifierOutput(ModelOutput):
+     """
+--- upstream/model/modeling_kgtreat.py
++++ compatible/model/modeling_kgtreat.py
+@@ -25,7 +25,7 @@
+ from torch.autograd import Variable
+ from torch.nn import CrossEntropyLoss, BCEWithLogitsLoss, MSELoss
+ from torch.utils.hooks import RemovableHandle
+-from transformers.utils.versions import importlib_metadata
++from importlib import metadata as importlib_metadata
+ import importlib.util
+ 
+ import pyparsing as pp
+@@ -34,13 +34,9 @@
+ from transformers.activations import ACT2FN
+ from transformers.models.bert.modeling_bert import BertOnlyMLMHead
+ 
+-from transformers.modeling_utils import (
+-    ModelOutput,
+-    logging,
+-)
+-from transformers.file_utils import (
+-    is_scatter_available
+-)
++from transformers.utils import ModelOutput, logging
++def is_scatter_available():
++    return importlib.util.find_spec("torch_scatter") is not None
+ 
+ from model.gnn import DistMultDecoder, TransEDecoder, RotatEDecoder
+ from torch_geometric.utils import softmax as geo_softmax
+--- upstream/utils/configuration_utils.py
++++ compatible/utils/configuration_utils.py
+@@ -1,4 +1,5 @@
+-from transformers.modeling_utils import logging, PretrainedConfig
++from transformers.utils import logging
++from transformers import PretrainedConfig
+ 
+ 
+ logger = logging.get_logger(__name__)

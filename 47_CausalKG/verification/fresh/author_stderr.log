@@ -1,0 +1,17 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+Loading required package: MASS
+Loading required package: Matrix
+Loading required package: mvtnorm
+Loading required package: sandwich
+mediation: Causal Mediation Analysis
+Version: 4.5.1
+
+Loaded glmnet 4.1-10
+Loading required package: carData
+Registered S3 method overwritten by 'car':
+  method           from
+  na.action.merMod lme4

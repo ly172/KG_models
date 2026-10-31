@@ -1,0 +1,6 @@
+.pixi/
+cache/
+work/
+outputs/
+*.log
+__pycache__/

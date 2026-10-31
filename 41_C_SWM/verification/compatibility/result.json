@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "scope": "Numerical and API compatibility checks; original full-model training/evaluation was run separately by reproduce.py.",
+  "prior_actual_entrypoint_probes": [
+    {
+      "log": "01_original_environment.log",
+      "marker_present": "circle",
+      "exit_code": 1,
+      "process_end": "natural_exit"
+    },
+    {
+      "log": "02_circle_name_fixed.log",
+      "marker_present": "NoneType",
+      "exit_code": 1,
+      "process_end": "natural_exit"
+    },
+    {
+      "log": "03_environment_fixed.log",
+      "marker_present": "iter 0",
+      "exit_code": 0,
+      "process_end": "natural_exit"
+    },
+    {
+      "log": "04_original_train.log",
+      "marker_present": "bootstrapping phase",
+      "exit_code": null,
+      "process_end": "terminated_after_exception_during_worker_cleanup"
+    }
+  ],
+  "original_int32_error": "scatter(): Expected dtype int64 for index",
+  "original_iterator_error_on_native_dataset": "'_SingleProcessDataLoaderIter' object has no attribute 'next'",
+  "corrected_iterator_batch_shape": [
+    128,
+    3,
+    50,
+    50
+  ],
+  "native_training_transitions": 2000,
+  "model_and_data_generator_files_exactly_original": {
+    "modules.py": true,
+    "data_gen/env.py": true,
+    "envs/__init__.py": true
+  },
+  "old_dependency_source_sha256": "1a645e9881c8d3a6f93d564528f5b26b4d48b2bc7712e41db3367dde17935063",
+  "full_model_stages_naturally_exited_zero": [
+    "generate_train",
+    "generate_eval",
+    "train",
+    "evaluate_1",
+    "evaluate_5",
+    "evaluate_10"
+  ],
+  "publication_note": "Only local filesystem path prefixes were replaced for publication. Original errors, exit codes, and numerical values are preserved."
+}

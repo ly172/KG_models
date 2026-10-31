@@ -1,0 +1,7 @@
+{
+  "sha256": "3b488908c2a6f00df01a5ce3039530185373d076f2accd2a9d288e67465e0bb1",
+  "release": "2015",
+  "provider": "AHRQ HCUP",
+  "archive_member": "ccs_multi_dx_tool_2015.csv",
+  "url": "https://hcup-us.ahrq.gov/toolssoftware/ccs/Multi_Level_CCS_2015.zip"
+}

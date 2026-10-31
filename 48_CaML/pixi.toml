@@ -1,0 +1,20 @@
+[workspace]
+name = "caml-small-tasks"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+[dependencies]
+python = "3.11.*"
+pip = "*"
+[pypi-dependencies]
+numpy = "==1.26.4"
+torch = { version = "==2.5.1", index = "https://download.pytorch.org/whl/cpu" }
+tqdm = "==4.67.1"
+truststore = "==0.10.4"
+[activation.env]
+OMP_NUM_THREADS = "2"
+MKL_NUM_THREADS = "2"
+OPENBLAS_NUM_THREADS = "2"
+PYTHONUTF8 = "1"
+[tasks]
+smoke = "python reproduce.py"

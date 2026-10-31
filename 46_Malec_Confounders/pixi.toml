@@ -1,0 +1,19 @@
+[workspace]
+name = "malec-psi-component"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[dependencies]
+python = "3.11.*"
+openjdk = "17.*"
+pip = "*"
+
+[pypi-dependencies]
+truststore = "==0.10.4"
+
+[activation.env]
+PYTHONUTF8 = "1"
+
+[tasks]
+smoke = "python reproduce.py"

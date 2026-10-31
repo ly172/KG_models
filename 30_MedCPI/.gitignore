@@ -1,0 +1,6 @@
+.private/
+.pixi/
+.assets/
+author/
+__pycache__/
+*.pyc

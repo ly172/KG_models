@@ -1,0 +1,141 @@
+{
+  "status": "failed",
+  "mode": "quick",
+  "author_model": "C-SWM",
+  "source_commit": "e944b24bcaa42d9ee847f30163437a50f0237aa0",
+  "data_source": "Original author's ShapesTrain-v0 and ShapesEval-v0 simulator, via original data_gen/env.py",
+  "cpu_threads": 2,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.22",
+  "versions": {
+    "torch": "2.5.1+cpu",
+    "numpy": "1.23.5",
+    "gym": "0.17.3",
+    "scikit-image": "0.21.0",
+    "h5py": "3.10.0"
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 128,
+    "hidden_dim": 512,
+    "embedding_dim": 2,
+    "num_objects": 5,
+    "encoder": "small",
+    "learning_rate": 0.0005,
+    "seed": 42,
+    "initialization": "Author random initialization; parameters trained from scratch on the native Shapes training data."
+  },
+  "steps": [
+    {
+      "stage": "generate_train",
+      "entry": "data_gen/env.py",
+      "arguments": [
+        "--env_id",
+        "ShapesTrain-v0",
+        "--fname",
+        "<PACKAGE_ROOT>\\outputs\\quick\\data\\shapes_train.h5",
+        "--num_episodes",
+        "20",
+        "--seed",
+        "1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 77.296,
+      "log": "generate_train.log"
+    },
+    {
+      "stage": "generate_eval",
+      "entry": "data_gen/env.py",
+      "arguments": [
+        "--env_id",
+        "ShapesEval-v0",
+        "--fname",
+        "<PACKAGE_ROOT>\\outputs\\quick\\data\\shapes_eval.h5",
+        "--num_episodes",
+        "100",
+        "--seed",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.219,
+      "log": "generate_eval.log"
+    }
+  ],
+  "source_manifest_sha256": "8f5cbbc787513334d6124099541507253d9c085315dc657c46cab1cab6f6afb2",
+  "pixi_lock_sha256": "056f3308d726e2b97fc9ad0a182410e1561319d848e87645ffdaed3cf2532e85",
+  "datasets": {
+    "train": {
+      "episodes": 20,
+      "transitions": 2000,
+      "steps_per_episode": [
+        100
+      ],
+      "observation_shape": [
+        3,
+        50,
+        50
+      ],
+      "observed_action_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "8eba026189a43e1ac65cf05b04e587db3c08499e98f4fb720ce2f804e1e9bf1a"
+    },
+    "evaluation": {
+      "episodes": 100,
+      "transitions": 1000,
+      "steps_per_episode": [
+        10
+      ],
+      "observation_shape": [
+        3,
+        50,
+        50
+      ],
+      "observed_action_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "fd416e895c0ef094184b9cc51805f323f5621c0701a744ab50f242568837f259"
+    }
+  },
+  "error": "RuntimeError('train failed with exit code 1; see <PACKAGE_ROOT>\\\\outputs\\\\quick\\\\train.log')",
+  "elapsed_seconds": 146.42,
+  "publication_note": "Only local filesystem path prefixes were replaced for publication. Original errors, exit codes, and numerical values are preserved."
+}

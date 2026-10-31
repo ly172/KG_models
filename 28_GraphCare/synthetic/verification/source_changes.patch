@@ -1,0 +1,40 @@
+--- upstream/graphcare.py
++++ runtime/graphcare.py
+@@ -2,8 +2,6 @@
+ import json
+ import random
+ import networkx as nx
+-from pyhealth.datasets import SampleDataset
+-from graphcare_ import split_by_patient
+ from torch_geometric.utils import to_networkx, from_networkx
+ from tqdm import tqdm
+ import numpy as np
+@@ -12,12 +10,10 @@
+ from torch_geometric.utils import k_hop_subgraph
+ from graphcare_ import GAT, GIN, GraphCare
+ from tqdm import tqdm
+-from pyhealth.metrics import multilabel_metrics_fn
+ import torch.nn.functional as F
+ from sklearn.metrics import average_precision_score, roc_auc_score, accuracy_score, f1_score, precision_score, recall_score, jaccard_score, cohen_kappa_score
+ import argparse
+ import logging
+-import neptune
+ from copy import deepcopy
+ 
+ 
+--- upstream/graphcare_/__init__.py
++++ runtime/graphcare_/__init__.py
+@@ -2,4 +2,3 @@
+ from .utils import *
+ from .model import *
+ # from .model_2 import *
+-from .splitter import *--- upstream/graphcare_/model.py
++++ runtime/graphcare_/model.py
+@@ -2,7 +2,6 @@
+ import torch.nn as nn
+ import torch.nn.functional as F
+ from torch_geometric.nn import GINEConv, GATConv, GINConv
+-from pyhealth.models import RETAINLayer
+ from torch_geometric.nn.inits import reset
+ 
+ from typing import Callable, Optional, Union

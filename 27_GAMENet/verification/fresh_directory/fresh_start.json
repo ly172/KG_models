@@ -1,0 +1,25 @@
+{
+  "no_environment": true,
+  "no_generated_inputs": true,
+  "copied_files": [
+    ".gitattributes",
+    ".gitignore",
+    "pixi.lock",
+    "pixi.toml",
+    "prepare_author.py",
+    "read_legacy_vocabulary.py",
+    "reproduce.py",
+    "simulate_inputs.py",
+    "source.json",
+    "verify_compatibility.py",
+    "upstream/LICENSE",
+    "upstream/README.md",
+    "upstream/code/layers.py",
+    "upstream/code/models.py",
+    "upstream/code/train_GAMENet.py",
+    "upstream/code/util.py",
+    "upstream/data/ddi_A_final.pkl",
+    "upstream/data/ehr_adj_final.pkl",
+    "upstream/data/voc_final.pkl"
+  ]
+}

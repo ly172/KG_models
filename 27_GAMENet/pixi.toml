@@ -1,0 +1,22 @@
+[workspace]
+name = "gamenet-simulated-input"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[tasks]
+smoke = "python reproduce.py --public-demo"
+smoke-synthetic = "python reproduce.py"
+reproduce = "python reproduce.py"
+
+[dependencies]
+python = "3.10.*"
+pip = "*"
+numpy = "1.23.5.*"
+scipy = "1.10.1.*"
+scikit-learn = "1.2.2.*"
+pandas = "1.5.3.*"
+dill = "0.3.8.*"
+
+[pypi-dependencies]
+torch = {version = "==2.5.1+cpu", index = "https://download.pytorch.org/whl/cpu"}

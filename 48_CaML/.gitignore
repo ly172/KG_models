@@ -1,0 +1,5 @@
+.pixi/
+cache/
+outputs/
+__pycache__/
+*.log

@@ -1,0 +1,7 @@
+Starting model training...
+Epoch: 1 [0/2000 (0%)]	Loss: 0.008473
+====> Epoch: 1 Average loss: 0.015854
+Epoch: 2 [0/2000 (0%)]	Loss: 0.002608
+====> Epoch: 2 Average loss: 0.002156
+Epoch: 3 [0/2000 (0%)]	Loss: 0.001589
+====> Epoch: 3 Average loss: 0.001364

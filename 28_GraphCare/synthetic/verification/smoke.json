@@ -1,0 +1,94 @@
+{
+  "entry": "graphcare-synthetic",
+  "package": "28_GraphCare/synthetic",
+  "command": [
+    "pixi",
+    "run",
+    "--locked",
+    "smoke"
+  ],
+  "exit_code": 0,
+  "seconds": 194.784,
+  "result": {
+    "status": "passed",
+    "model": "Author GraphCare (alpha=False, beta=False)",
+    "inputs": {
+      "kind": "entirely_simulated_graphs_visits_embeddings_and_binary_labels",
+      "seed": 20261029,
+      "patients": 256,
+      "split": {
+        "train": 128,
+        "validation": 64,
+        "test": 64
+      },
+      "vocabulary_nodes": 32,
+      "relation_types": 5,
+      "nodes_per_patient_graph": 12,
+      "edges_per_patient_graph": 24,
+      "max_visits": 3,
+      "concepts_per_visit": 4,
+      "embedding_dimension": 1536,
+      "embedding_source": "Independent normal draws, mean 0 and standard deviation 0.1; no language model or medical knowledge is encoded.",
+      "graph_generation": "Twelve uniformly sampled vocabulary nodes; directed edges to the next one and next two local positions; uniformly sampled relation indices.",
+      "visit_generation": "One to three visits; each selects four nodes from that patient graph, then pads remaining visits with zeros.",
+      "label_generation": "Alternating 0 and 1 labels independent of the simulated clinical features.",
+      "clinical_meaning": "None. These artificial tensors exercise the original binary prediction model only."
+    },
+    "core_source_checks": {
+      "graphcare.py:train": {
+        "original": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c",
+        "runtime": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c"
+      },
+      "graphcare.py:evaluate": {
+        "original": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2",
+        "runtime": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2"
+      },
+      "graphcare.py:get_mode_and_out_channels_and_loss_func": {
+        "original": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0",
+        "runtime": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0"
+      },
+      "graphcare_/model.py:GraphCare": {
+        "original": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918",
+        "runtime": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918"
+      },
+      "graphcare_/model.py:BiAttentionGNNConv": {
+        "original": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d",
+        "runtime": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d"
+      }
+    },
+    "settings": {
+      "hidden_dim": 128,
+      "layers": 3,
+      "dropout": 0.5,
+      "decay_rate": 0.01,
+      "batch_size": 64,
+      "epochs": 1,
+      "optimizer_steps_per_epoch": 2,
+      "patient_mode": "joint",
+      "gnn": "BAT",
+      "alpha": false,
+      "beta": false,
+      "edge_attention": true,
+      "loss": "author binary_cross_entropy_with_logits",
+      "optimizer": "Adam",
+      "learning_rate": 0.001,
+      "weight_decay": 1e-05
+    },
+    "epochs": [
+      {
+        "epoch": 1,
+        "mean_training_loss": 0.7234326004981995,
+        "artificial_validation_auroc": 0.6279296875,
+        "artificial_validation_auprc": 0.6436921028990643
+      }
+    ],
+    "artificial_test_metrics": {
+      "auroc": 0.4990234375,
+      "auprc": 0.5076595041101932
+    },
+    "updated_parameter_tensors": 18,
+    "finite_gradients": true,
+    "checkpoint_reloaded_predictions_equal": true,
+    "seconds": 2.026
+  }
+}

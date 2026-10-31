@@ -1,0 +1,25 @@
+[workspace]
+name = "c-swm-shapes"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[tasks]
+smoke = "python reproduce.py"
+reproduce = "python reproduce.py"
+paper-scale = "python reproduce.py --paper-scale"
+verify-compatibility = "python verify_compatibility.py"
+
+[dependencies]
+python = "3.10.*"
+pip = "*"
+numpy = "1.23.5.*"
+scipy = "1.10.1.*"
+h5py = "3.10.*"
+matplotlib-base = "3.7.3.*"
+scikit-image = "0.21.*"
+pillow = "9.5.*"
+
+[pypi-dependencies]
+torch = {version = "==2.5.1+cpu", index = "https://download.pytorch.org/whl/cpu"}
+gym = "==0.17.3"

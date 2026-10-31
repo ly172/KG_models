@@ -1,0 +1,152 @@
+{
+  "entry": "graphcare-public-kg",
+  "package": "28_GraphCare/synthetic/public_umls",
+  "command": [
+    "pixi",
+    "run",
+    "--locked",
+    "smoke"
+  ],
+  "exit_code": 0,
+  "seconds": 177.617,
+  "result": {
+    "status": "passed",
+    "model": "Author GraphCare (alpha=False, beta=False)",
+    "input_kind": "author_public_UMLS_and_local_GTE_vectors_with_synthetic_patient_visits",
+    "assets": {
+      "verified_files": [
+        "model/config.json",
+        "model/modeling_qwen.py",
+        "model/tokenization_qwen.py",
+        "model/tokenizer_config.json",
+        "model/tokenizer.json",
+        "model/special_tokens_map.json",
+        "model/added_tokens.json",
+        "model/vocab.json",
+        "model/merges.txt",
+        "model/model.safetensors.index.json",
+        "model/model-00001-of-00002.safetensors",
+        "model/model-00002-of-00002.safetensors",
+        "model/README.md",
+        "umls/concepts.txt",
+        "umls/concept_names.txt",
+        "umls/relations.txt",
+        "umls/umls.csv"
+      ],
+      "total_bytes": 7173909602,
+      "encoder_revision": "a9af15a6372d7d6b25e9fb07c2ccb9e1fe645644",
+      "graph_commit": "fe92aa67add80b62d4b5108d570b6483ee69a5d4"
+    },
+    "graph_summary": {
+      "seed_cui": "C0011849",
+      "seed_name": "Diabetes mellitus",
+      "selection": "Seed C0011849 fixed before model output; take the first 31 unique neighbor CUIs in lexical order, then retain all source triples whose endpoints are in the 32-node set.",
+      "source_rows_scanned": 1212586,
+      "seed_incident_rows": 306,
+      "seed_unique_neighbors": 292,
+      "selected_source_rows": 109,
+      "unique_selected_triples": 109,
+      "invented_or_reversed_edges": 0,
+      "edge_weight_handling": "The fourth source column is not supplied to GraphCare; the author UMLS sampling script also represents a triple by source, relation, target only."
+    },
+    "node_count": 32,
+    "relation_count": 10,
+    "vector_encoding": {
+      "encoder": "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+      "revision": "a9af15a6372d7d6b25e9fb07c2ccb9e1fe645644",
+      "device": "cpu",
+      "dtype": "float32",
+      "attention": "eager, bidirectional",
+      "batch_size": 4,
+      "max_tokens": 128,
+      "pooling": "last unpadded token, followed by L2 normalization",
+      "input_texts": 42,
+      "concepts": 32,
+      "relations": 10,
+      "output_width": 1536,
+      "minimum_norm": 0.9999998807907104,
+      "maximum_norm": 1.0000001192092896,
+      "vector_bytes_sha256": "b5536ba8f55a9c5940b9261e1583d5ff1248a7b9f9d546f7b1e4701a1913827d",
+      "inference_api_calls": 0,
+      "input_text_origin": "Actual concept and relation names from author-public UMLS files.",
+      "loading_method": "Direct import of hash-checked local Qwen2Model class, retaining its conditional optional FlashAttention import and selecting its eager CPU implementation."
+    },
+    "simulated_visits": {
+      "kind": "synthetic_patient_visits_and_labels_on_real_public_knowledge_graph",
+      "patients": 640,
+      "train_patients": 512,
+      "validation_patients": 64,
+      "test_patients": 64,
+      "max_visits": 3,
+      "visit_generation": "Every simulated visit contains the fixed seed plus three uniformly sampled neighbors. Each patient has one to three visits.",
+      "label_generation": "Alternating binary labels assigned before patient permutation, independent of clinical meaning.",
+      "generation_seed": 20261029,
+      "patient_permutation_seed": 528
+    },
+    "core_source_checks": {
+      "graphcare.py:train": {
+        "original": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c",
+        "runtime": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c"
+      },
+      "graphcare.py:evaluate": {
+        "original": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2",
+        "runtime": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2"
+      },
+      "graphcare.py:get_mode_and_out_channels_and_loss_func": {
+        "original": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0",
+        "runtime": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0"
+      },
+      "graphcare_/model.py:GraphCare": {
+        "original": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918",
+        "runtime": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918"
+      },
+      "graphcare_/model.py:BiAttentionGNNConv": {
+        "original": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d",
+        "runtime": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d"
+      },
+      "graphcare.py:get_subgraph": {
+        "original": "ad318cfc0c32d73737b34eea80ca7ac6a92a852855ec4fd8924a7eac6bb2409e",
+        "runtime": "ad318cfc0c32d73737b34eea80ca7ac6a92a852855ec4fd8924a7eac6bb2409e"
+      },
+      "graphcare.py:get_dataloader": {
+        "original": "b2e920acfc4ad262076d443bf9193307142482c0dff9250272c0a726aff928a6",
+        "runtime": "b2e920acfc4ad262076d443bf9193307142482c0dff9250272c0a726aff928a6"
+      },
+      "graphcare.py:Dataset": {
+        "original": "536881d0dd94dfdef09cf8114857f0157a3eec0da03e9f414475225fd8ae1aa0",
+        "runtime": "536881d0dd94dfdef09cf8114857f0157a3eec0da03e9f414475225fd8ae1aa0"
+      }
+    },
+    "settings": {
+      "layers": 3,
+      "hidden_dimension": 128,
+      "input_dimension": 1536,
+      "batch_size": 64,
+      "dropout": 0.5,
+      "decay_rate": 0.01,
+      "patient_mode": "joint",
+      "gnn": "BAT",
+      "optimizer": "Adam",
+      "learning_rate": 0.001,
+      "weight_decay": 1e-05,
+      "epochs": 1,
+      "updates_per_epoch": 8
+    },
+    "epochs": [
+      {
+        "epoch": 1,
+        "mean_training_loss": 0.8135920166969299,
+        "artificial_validation_auroc": 0.5088235294117648,
+        "artificial_validation_auprc": 0.5561109136468245
+      }
+    ],
+    "artificial_test_metrics": {
+      "auroc": 0.5943304007820136,
+      "auprc": 0.560238996980677
+    },
+    "updated_parameter_tensors": 18,
+    "finite_gradients": true,
+    "checkpoint_reloaded_predictions_equal": true,
+    "seconds": 46.983
+  }
+}

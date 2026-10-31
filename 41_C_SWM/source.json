@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/tkipf/c-swm",
+  "commit": "e944b24bcaa42d9ee847f30163437a50f0237aa0",
+  "archive_url": "https://codeload.github.com/tkipf/c-swm/zip/e944b24bcaa42d9ee847f30163437a50f0237aa0",
+  "archive_sha256": "821ba92d60480daf6a93befdfe0e9476f0a2339144bbdfe9899c59a167c672ae",
+  "files": {
+    "LICENSE": "3ffa63da9493aa6ae54e0e30108b4b83e297849e2ad3e7b5435d41ffad49bc91",
+    "README.md": "556410f6031d1bb7d6c7e8d820b4ff430d598d5501460beb5792b60ea3849e45",
+    "data_gen/env.py": "28810c4457d4a42f17a3224f5a2225ce423951f76adb1c6fa1b7c51f7416d73c",
+    "data_gen/physics.py": "ccc0a4326dd9cb21fadb6f9736b1264becb7fa4d9b98019284eb0e0b6b0be8d5",
+    "envs/__init__.py": "f50974181f8eca77e41269c80628cc62057f3362d95bed4810ff770af8b32438",
+    "envs/block_pushing.py": "19bf14823c05b165d0fa0ad92171040f4f017b66488f0a3e4b4ae1042b9791a3",
+    "envs/physics_sim.py": "db2e581b2bb1415fa1f50e565b2e91690b6c0b325f7e3a101220d26b7f6d32b5",
+    "eval.py": "9aeaa46f7434a45d2c327b8d8fd4ee14a8ca5425551f88fa73c6a6d5965527ac",
+    "modules.py": "6e8159c2b2a3d28a24f4a2420139e3cde09bf1564ea5b62f0aec6763748dde21",
+    "train.py": "1737fe1928e305b63bceca7f5b8832e716c0d0a5ba3d4e1a214dbcbf65121fb6",
+    "utils.py": "44eaf8bd3481a22343acd4d1dc0f790600e90f40aeb14276c991fea6cad3bb46"
+  }
+}

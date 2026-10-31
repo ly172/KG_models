@@ -1,0 +1,5 @@
+.pixi/
+.private/
+.run/
+__pycache__/
+*.pyc

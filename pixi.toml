@@ -1,0 +1,12 @@
+[workspace]
+name = "kg_model"
+version = "0.2.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[dependencies]
+python = "3.11.*"
+
+[tasks]
+list = "python run_models.py --list"
+smoke = "python -u run_models.py"

@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "case": "original_import",
+      "exit_code": 1,
+      "expected_success": false,
+      "expectation_met": true
+    },
+    {
+      "case": "repaired_import",
+      "exit_code": 0,
+      "expected_success": true,
+      "expectation_met": true
+    }
+  ],
+  "core_source_checks": {
+    "graphcare.py:train": {
+      "original": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c",
+      "runtime": "166e98ce0b6f931db11eb5b365800560876361d64f17c1db971f014cf959703c"
+    },
+    "graphcare.py:evaluate": {
+      "original": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2",
+      "runtime": "f66f5790ca1d7bec101b749e25014a89bbb73232d9bf0c1007d0210f0c2aa0b2"
+    },
+    "graphcare.py:get_mode_and_out_channels_and_loss_func": {
+      "original": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0",
+      "runtime": "1e17f9afd5c3dd207dd2db1b032755f1e419d01146c3b575f08df0c30e4659f0"
+    },
+    "graphcare_/model.py:GraphCare": {
+      "original": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918",
+      "runtime": "77f75daaa1dbea72482bdeab27185df6967c0c977f1dd0a55dda8c9d242f0918"
+    },
+    "graphcare_/model.py:BiAttentionGNNConv": {
+      "original": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d",
+      "runtime": "5d61d9cafb3d6bd35a21cc9e08e9f0564c42e784423df29f1ed947e45309634d"
+    }
+  },
+  "log_edit": "Only package absolute path replaced with <PACKAGE_ROOT>; errors retained."
+}

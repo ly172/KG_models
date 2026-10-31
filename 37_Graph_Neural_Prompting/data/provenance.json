@@ -1,0 +1,27 @@
+{
+  "archive_url": "https://drive.google.com/file/d/1w_0x9BxQ2xvdl-PkBP5AU5VusEFQecTu/view",
+  "archive_sha256": "41e5304230a533c3e6901fa7d3e400b524a55e5f9fd63f1ba8a1740b62e154ef",
+  "sources": {
+    "obqa/statement/train.statement.jsonl": {
+      "sha256": "c16de882dedbec6a2d6c89522746ece00affc63b10cb7b8eac0a27342a87324e",
+      "bytes": 4425919
+    },
+    "obqa/graph/train.graph.adj.pk": {
+      "sha256": "612685e5e9983ef5d5a37e47aa398c3fddd151c5d2b922e0841eed52f480217f",
+      "bytes": 258138323
+    },
+    "cpnet/tzw.ent.npy": {
+      "sha256": "bf559859b31c9cbfc0f517ebf33ffe70b56e95fb07f368c635c13186dd2cc00c",
+      "bytes": 3273822336
+    }
+  },
+  "selection": "First training question, original first four choice graphs; embeddings for the concept rows used under the original 200-node limit",
+  "question_id": "7-980",
+  "graphs": 4,
+  "embedding_rows": 442,
+  "embedding_dimension": 1024,
+  "files": {
+    "example.json": "9fd217427bd2e88910f18b11a4c6eeab91cf86f46b1914df226672a52adb19b6",
+    "concept_embeddings.npy": "7612beef7574011e57abdbb4092655c51499ec63dc4b7ee92a87764fe5fff8a5"
+  }
+}

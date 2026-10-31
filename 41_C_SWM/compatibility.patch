@@ -1,0 +1,60 @@
+--- upstream/envs/block_pushing.py
++++ compatible/envs/block_pushing.py
+@@ -118,8 +118,8 @@
+             im = np.zeros((self.width*10, self.height*10, 3), dtype=np.float32)
+             for idx, pos in enumerate(self.objects):
+                 if idx % 3 == 0:
+-                    rr, cc = skimage.draw.circle(
+-                        pos[0]*10 + 5, pos[1]*10 + 5, 5, im.shape)
++                    rr, cc = skimage.draw.disk(
++                        (pos[0]*10 + 5, pos[1]*10 + 5), 5, shape=im.shape[:2])
+                     im[rr, cc, :] = self.colors[idx][:3]
+                 elif idx % 3 == 1:
+                     rr, cc = triangle(
+@@ -206,4 +206,4 @@
+ 
+         state_obs = (self.get_state(), self.render())
+ 
+-        return state_obs, reward, done, None
++        return state_obs, reward, done, {}
+--- upstream/eval.py
++++ compatible/eval.py
+@@ -48,10 +48,10 @@
+ dataset = utils.PathDataset(
+     hdf5_file=args.dataset, path_length=args_eval.num_steps)
+ eval_loader = data.DataLoader(
+-    dataset, batch_size=args.batch_size, shuffle=False, num_workers=4)
++    dataset, batch_size=args.batch_size, shuffle=False, num_workers=0)
+ 
+ # Get data sample
+-obs = eval_loader.__iter__().next()[0]
++obs = next(iter(eval_loader))[0]
+ input_shape = obs[0][0].size()
+ 
+ model = modules.ContrastiveSWM(
+--- upstream/train.py
++++ compatible/train.py
+@@ -98,10 +98,10 @@
+ dataset = utils.StateTransitionsDataset(
+     hdf5_file=args.dataset)
+ train_loader = data.DataLoader(
+-    dataset, batch_size=args.batch_size, shuffle=True, num_workers=4)
++    dataset, batch_size=args.batch_size, shuffle=True, num_workers=0)
+ 
+ # Get data sample
+-obs = train_loader.__iter__().next()[0]
++obs = next(iter(train_loader))[0]
+ input_shape = obs[0].size()
+ 
+ model = modules.ContrastiveSWM(
+--- upstream/utils.py
++++ compatible/utils.py
+@@ -108,7 +108,7 @@
+     zeros = torch.zeros(
+         indices.size()[0], max_index, dtype=torch.float32,
+         device=indices.device)
+-    return zeros.scatter_(1, indices.unsqueeze(1), 1)
++    return zeros.scatter_(1, indices.long().unsqueeze(1), 1)
+ 
+ 
+ def to_float(np_array):

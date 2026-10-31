@@ -1,0 +1,10 @@
+.pixi/
+cache/
+outputs/
+*.log
+__pycache__/
+!data/
+data/*
+!data/example.json
+!data/concept_embeddings.npy
+!data/provenance.json

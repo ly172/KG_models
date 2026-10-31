@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "train_question_ids": [
+    "7-980"
+  ],
+  "optimizer_steps": 2,
+  "losses": [
+    0.08400756120681763,
+    0.08211391419172287
+  ],
+  "changed_parameter_tensors": 39,
+  "llm": "google/flan-t5-xl",
+  "model": "author MyModel plus MyGNN",
+  "changes": [
+    "CUDA placement uses CPU",
+    "CPU memory map",
+    "CPU float32 arithmetic"
+  ],
+  "input_kind": "real OpenBookQA training question and author ConceptNet graphs",
+  "question_token_counts": [
+    43
+  ],
+  "maximum_tokens": 100,
+  "maximum_nodes": 200,
+  "gnn_layers": 3,
+  "gnn_dimension": 1024,
+  "seconds": 337.82924813399995,
+  "training_settings": {
+    "scaled_distmult": false,
+    "link_negative_adversarial_sampling": true,
+    "p_dropout_gnn": 0.2,
+    "link_task": 0.1,
+    "seed": 12024,
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "learning_rate_schedule": "constant",
+    "max_grad_norm": 1.0
+  },
+  "generated_answers": [
+    "plants sprouting, blooming and wilting"
+  ],
+  "gold_answers": [
+    "plants sprouting, blooming and wilting"
+  ],
+  "peak_working_set_bytes": 6169219072
+}

@@ -1,0 +1,9 @@
+parameters 455002
+
+
+Eval--Epoch: 0, Step: 0/6
+Eval--Epoch: 0, Step: 1/6
+Eval--Epoch: 0, Step: 2/6
+Eval--Epoch: 0, Step: 3/6
+Eval--Epoch: 0, Step: 4/6
+Eval--Epoch: 0, Step: 5/6	DDI Rate: 0.0000, Jaccard: 0.0000,  PRAUC: 0.0589, AVG_PRC: 0.0000, AVG_RECALL: 0.0000, AVG_F1: 0.0000

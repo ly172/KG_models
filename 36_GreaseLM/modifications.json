@@ -1,0 +1,26 @@
+{
+  "source_commit": "6ccbc964152eeae6a040f3bbe39116c3baa75616",
+  "changes": [
+    {
+      "file": "work/greaselm_entry.py, generated from author/greaselm.py",
+      "change": "Remove exactly the deletion of lmgnn.concept_emb.emb.weight from the temporary saving dictionary.",
+      "effect": "Keeps the frozen concept table in the saved model so it can be loaded with strict parameter matching."
+    },
+    {
+      "file": "work/greaselm_entry.py entry call",
+      "change": "Call the local run_selected wrapper, which calls the original train function.",
+      "effect": "Select CPU devices and disabled experiment logging; record training and reload evidence."
+    },
+    {
+      "file": "reproduce.py",
+      "change": "Register the pinned local SapBERT path as BERT for the original loader.",
+      "effect": "Uses the original author-selected text encoder from local files."
+    },
+    {
+      "file": "reproduce.py input selection",
+      "change": "Take the first 8 train, 4 dev, 4 test questions and their exact matching option graphs.",
+      "effect": "Reduces experiment size while preserving original content, labels, graph values, and split membership."
+    }
+  ],
+  "retained_original_issue": "The original initialization overwrites the supplied concept vectors; the resulting table remains frozen during training."
+}

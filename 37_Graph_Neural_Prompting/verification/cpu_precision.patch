@@ -1,0 +1,46 @@
+--- author/llm.py
++++ runtime/llm_cpu.py
+@@ -450,13 +450,13 @@
+                 my_max_memory[i] = "12GB"
+ 
+         if args.prompt == False:
+-            self.llm = AutoModelForSeq2SeqLM.from_pretrained(args.encoder, torch_dtype=torch.bfloat16, device_map='auto')
++            self.llm = AutoModelForSeq2SeqLM.from_pretrained(args.encoder, torch_dtype=torch.float32, device_map='auto')
+             self.llm.gradient_checkpointing_enable()
+         elif args.prompt == 'regular':
+-            self.llm = AutoModelForSeq2SeqLM.from_pretrained(args.encoder, torch_dtype=torch.bfloat16, device_map='auto')
++            self.llm = AutoModelForSeq2SeqLM.from_pretrained(args.encoder, torch_dtype=torch.float32, device_map='auto')
+             self.llm.gradient_checkpointing_enable()
+         else:
+-            self.llm = AutoModelForSeq2SeqLM.from_pretrained(args.encoder, torch_dtype=torch.bfloat16, device_map='auto', max_memory=my_max_memory)
++            self.llm = AutoModelForSeq2SeqLM.from_pretrained(args.encoder, torch_dtype=torch.float32, device_map='auto', max_memory={'cpu':'16GiB'})
+             self.llm.gradient_checkpointing_enable()
+         print(self.llm.hf_device_map)
+ 
+@@ -509,7 +509,7 @@
+ 
+         # GNN prompt
+         elif args.prompt == 'gnn':
+-            self.gnn_model = MyGNN(args, cp_emb).to('cuda:0')  # self.llm.device
++            self.gnn_model = MyGNN(args, cp_emb).to('cpu')  # self.llm.device
+             print('self.gnn_model: ', self.gnn_model)
+             # how many tokens we get from gnn output
+             self.record_gnn_num_virtual_tokens = True
+@@ -552,7 +552,7 @@
+ 
+             elif args.prompt == 'gnn':
+                 # prepare for cross-modality attention
+-                text_to_GNN_inputs = inputs_embeds.to('cuda:0'), attention_mask.to('cuda:0')
++                text_to_GNN_inputs = inputs_embeds.to('cpu'), attention_mask.to('cpu')
+ 
+                 # attention from gnn to llm
+                 if args.use_cross_modality_for_text:
+@@ -600,7 +600,7 @@
+ 
+         elif args.prompt == 'gnn':
+             # prepare for cross-modality attention
+-            text_to_GNN_inputs = inputs_embeds.to('cuda:0'), attention_mask.to('cuda:0')
++            text_to_GNN_inputs = inputs_embeds.to('cpu'), attention_mask.to('cpu')
+ 
+             # attention from gnn to llm
+             if args.use_cross_modality_for_text:

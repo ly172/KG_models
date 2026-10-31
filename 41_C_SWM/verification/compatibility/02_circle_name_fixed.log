@@ -1,0 +1,15 @@
+INFO: Making new env: ShapesTrain-v0
+Traceback (most recent call last):
+  File "<PACKAGE_ROOT>\run_author.py", line 17, in <module>
+    runpy.run_path(str(entry), run_name="__main__")
+  File "<PACKAGE_ROOT>\.pixi\envs\default\lib\runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "<PACKAGE_ROOT>\.pixi\envs\default\lib\runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "<PACKAGE_ROOT>\.pixi\envs\default\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "<PACKAGE_ROOT>\.run\compatibility_probe\data_gen\env.py", line 126, in <module>
+    ob, reward, done, _ = env.step(action)
+  File "<PACKAGE_ROOT>\.pixi\envs\default\lib\site-packages\gym\wrappers\time_limit.py", line 19, in step
+    info['TimeLimit.truncated'] = not done
+TypeError: 'NoneType' object does not support item assignment

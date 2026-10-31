@@ -1,0 +1,27 @@
+[workspace]
+name = "graphcare-public-umls-local-vectors"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[tasks]
+smoke = "python reproduce.py"
+reproduce = "python reproduce.py"
+prepare-assets = "python fetch_assets.py"
+
+[dependencies]
+python = "3.10.*"
+pip = "*"
+numpy = "1.23.5.*"
+scipy = "1.10.1.*"
+scikit-learn = "1.2.2.*"
+networkx = "3.1.*"
+tqdm = "4.66.5.*"
+
+[pypi-dependencies]
+torch = {version = "==2.5.1+cpu", index = "https://download.pytorch.org/whl/cpu"}
+torch-geometric = "==2.6.1"
+transformers = "==4.41.2"
+safetensors = "==0.4.5"
+huggingface-hub = "==0.26.2"
+accelerate = "==0.30.1"

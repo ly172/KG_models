@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/pat-jj/GraphCare",
+  "commit": "fe92aa67add80b62d4b5108d570b6483ee69a5d4",
+  "checked_date": "2026-10-30",
+  "files": [
+    {
+      "path": "KG_mapping/umls/concepts.txt",
+      "bytes": 2681343,
+      "lines": 297927,
+      "sha256": "51e7c0feb204ab719dfdd35dc6667a4843c8c1c9177380bbd567778d86088d9a",
+      "actual_text_records": true,
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "KG_mapping/umls/concept_names.txt",
+      "bytes": 12958021,
+      "lines": 297927,
+      "sha256": "f92cc881d3a2ec917b6a155eaf4fa9c630f46080e02d6149edef7c81cfea773c",
+      "actual_text_records": true,
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "KG_mapping/umls/relations.txt",
+      "bytes": 2020,
+      "lines": 98,
+      "sha256": "399ff6ed4ebf2c96ba8eba157af97563759732631ce335e6a0161938505c5d05",
+      "actual_text_records": true,
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "KG_mapping/umls/umls.csv",
+      "bytes": 41711904,
+      "lines": 1212586,
+      "sha256": "21767d8a6c5aa613046722b06c8144e7dfc3931ee805e0c45b546e0fc0ab5ee6",
+      "actual_text_records": true,
+      "git_lfs_pointer": false
+    }
+  ],
+  "correction": "Author-public UMLS relations and names are available; missing resources refer to complete GPT concept-specific graphs and original embeddings, not all graph data.",
+  "scope": "Public author-exported UMLS relations, not evidence of possession of the complete source MRCONSO/MRREL distribution."
+}

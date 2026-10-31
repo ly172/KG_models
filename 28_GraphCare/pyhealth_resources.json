@@ -1,0 +1,23 @@
+{
+  "source_code": "https://github.com/sunlabuiuc/PyHealth/blob/v1.1.6/pyhealth/medcode/utils.py",
+  "files": [
+    {
+      "path": "ICD9CM_to_CCSCM.csv",
+      "url": "https://storage.googleapis.com/pyhealth/resource/ICD9CM_to_CCSCM.csv",
+      "bytes": 156092,
+      "sha256": "ac32ecd2a9ca4fef904584429412caa5652a5a5c8b8d6e0c10cb8125dc8f95ad"
+    },
+    {
+      "path": "ICD9PROC_to_CCSPROC.csv",
+      "url": "https://storage.googleapis.com/pyhealth/resource/ICD9PROC_to_CCSPROC.csv",
+      "bytes": 37228,
+      "sha256": "545ef94157dcfd02a2af6e4335a21029bfb30b2618a918a41b709ecc85aa9457"
+    },
+    {
+      "path": "NDC_to_ATC.csv",
+      "url": "https://storage.googleapis.com/pyhealth/resource/NDC_to_ATC.csv",
+      "bytes": 22452218,
+      "sha256": "82af3bd9a983581af44754ba2b2b343cde46686a0c08d5aa18a4f46c94de6899"
+    }
+  ]
+}

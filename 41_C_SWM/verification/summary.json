@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "date": "2026-10-29",
+  "author_commit": "e944b24bcaa42d9ee847f30163437a50f0237aa0",
+  "model": "Original C-SWM with original Shapes simulation and author train/eval entry points",
+  "quick_run_exit_code": 0,
+  "fresh_directory_run_exit_code": 0,
+  "compatibility_verification_exit_code": 0,
+  "initial_failed_training_exit_code": 1,
+  "initial_failure_reason": "Windows int32 action indices were rejected by PyTorch scatter, which requires int64.",
+  "failure_and_success_input_h5_hashes_equal": {
+    "train": true,
+    "evaluation": true
+  },
+  "first_and_fresh_input_h5_hashes_equal": {
+    "train": true,
+    "evaluation": true
+  },
+  "first_and_fresh_metrics_equal": true,
+  "first_and_fresh_checkpoint_sha256_equal": true,
+  "runtime_files_identical_between_directories": [
+    "prepare.py",
+    "reproduce.py",
+    "run_author.py",
+    "pixi.toml",
+    "pixi.lock",
+    "source.json"
+  ],
+  "quick_evaluation": {
+    "1": {
+      "hits_at_1": 0.98,
+      "mrr": 0.99,
+      "episodes_evaluated": 100
+    },
+    "5": {
+      "hits_at_1": 0.62,
+      "mrr": 0.7299821428571428,
+      "episodes_evaluated": 100
+    },
+    "10": {
+      "hits_at_1": 0.27,
+      "mrr": 0.43545235947563554,
+      "episodes_evaluated": 100
+    }
+  },
+  "quick_training": {
+    "epochs": 3,
+    "batch_size": 128,
+    "hidden_dim": 512,
+    "embedding_dim": 2,
+    "num_objects": 5,
+    "encoder": "small",
+    "learning_rate": 0.0005,
+    "seed": 42,
+    "initialization": "Author random initialization; parameters trained from scratch on the native Shapes training data.",
+    "author_reported_average_losses": [
+      0.015854,
+      0.002156,
+      0.001364
+    ],
+    "optimizer_steps": 48
+  },
+  "scale_changes": {
+    "training_episodes": {
+      "author_readme": 1000,
+      "quick": 20
+    },
+    "epochs": {
+      "author_default": 100,
+      "quick": 3
+    },
+    "batch_size": {
+      "author_default": 1024,
+      "quick": 128
+    },
+    "evaluation_candidates": {
+      "author_readme": 10000,
+      "quick": 100
+    },
+    "effects": [
+      "The smaller batch changes the pool from which the author samples negative states.",
+      "Fewer evaluation candidates change the retrieval difficulty."
+    ]
+  },
+  "scope": "Reduced-scale native Shapes training and evaluation; paper-scale metrics have not been reproduced.",
+  "platform_executed": "win-64",
+  "platform_lock_only": [
+    "linux-64"
+  ],
+  "publication_note": "Only local filesystem path prefixes were replaced for publication. Original errors, exit codes, and numerical values are preserved."
+}
